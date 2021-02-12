@@ -1,0 +1,13 @@
+{
+  "locale": "en-mx",
+  "info": {
+    "name": "Rafael Hidalgo",
+    "social": [
+      {
+        "name": "Githud",
+        "icon": "fab fa-github",
+        "link": "https://github.com/rafael180496"
+      }
+    ]
+  }
+}
