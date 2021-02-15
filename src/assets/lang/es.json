@@ -1,13 +1,146 @@
 {
   "locale": "en-mx",
+  "titles": {
+    "about": "Sobre mi",
+    "skilleng": "Habilidad en lenguajes",
+    "skilfra": "Habilidad en framework e librería y herramientas"
+  },
   "info": {
     "name": "Rafael Hidalgo",
+    "post": "Desarrollador de sistema  y desarrollador web",
+    "aboutmeitems": [
+      {
+        "title": "Edad",
+        "val": "24"
+      },
+      {
+        "title": "Correo",
+        "val": "rafael180496@gmail.com"
+      },
+      {
+        "title": "Telefono",
+        "val": "+505-8884-2174"
+      },
+      {
+        "title": "Dirrecion",
+        "val": "Ciudad Doral, Managua km 18, Nicaragua"
+      },
+      {
+        "title": "Identificacion",
+        "val": "001-180496-0013A"
+      }
+    ],
+    "lib_skills": [
+      {
+        "title": "React(JS)",
+        "val": 80
+      },
+      {
+        "title": "Grahql(JS,GO)",
+        "val": 60
+      },
+      {
+        "title": "Boostrap(Css)",
+        "val": 70
+      },
+      {
+        "title": "NodeJS(JS)",
+        "val": 80
+      },
+      {
+        "title": "GORM(GO)",
+        "val": 80
+      },
+      {
+        "title": "Flutter(Dart)",
+        "val": 80
+      },
+      {
+        "title": "Asp .net MVC(C#)",
+        "val": 70
+      },
+      {
+        "title": "Git",
+        "val": 90
+      },
+      {
+        "title": "Docker,Docker Compose",
+        "val": 80
+      },
+      {
+        "title": "Aws",
+        "val": 60
+      },
+      {
+        "title": "Heroku",
+        "val": 75
+      },
+      {
+        "title": "Oracle",
+        "val": 90
+      },
+      {
+        "title": "PostgreSQL",
+        "val": 90
+      }
+    ],
+    "language_skills": [
+      {
+        "title": "Javascript",
+        "val": 90
+      },
+      {
+        "title": "Golang",
+        "val": 100
+      },
+      {
+        "title": "C#",
+        "val": 70
+      },
+      {
+        "title": "COBOL",
+        "val": 70
+      },
+      {
+        "title": "PYTHON",
+        "val": 80
+      },
+      {
+        "title": "Pro C",
+        "val": 70
+      },
+      {
+        "title": "PL/SQL",
+        "val": 90
+      },
+      {
+        "title": "CSS",
+        "val": 40
+      },
+      {
+        "title": "HTML",
+        "val": 60
+      },
+      {
+        "title": "Kotlin",
+        "val": 60
+      },
+      {
+        "title": "Dart",
+        "val": 60
+      },
+      {
+        "title": "Visual Basic",
+        "val": 60
+      }
+    ],
     "social": [
       {
         "name": "Githud",
         "icon": "fab fa-github",
         "link": "https://github.com/rafael180496"
       }
-    ]
+    ],
+    "aboutme": "Hola soy Rafael soy un apasionado al desarrollo backend y frontend\n,soy exporto en libreria para serivicio rest api e me gusta el desarrollo frontend en React"
   }
 }
