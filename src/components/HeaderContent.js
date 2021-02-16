@@ -24,13 +24,12 @@ const SocialArray = ({ social, datalang, isfooter }) => {
       <ul className="nav justify-content-center">
         {!isfooter && (
           <>
-            <SocialCard
-              key="998"
-              name={data.locale}
-              text={data.locale}
-              icon="far fa-language"
-              action={langAction}
-            ></SocialCard>
+            <li className="nav-item">
+              <button className="btn btn-dark" onClick={langAction}>
+                <i className="far fa-language">{data.locale}</i>
+                <span className="menu-title sr-only">{data.locale}</span>
+              </button>
+            </li>
             <SocialCard
               key="999"
               name="PDF"

@@ -1,15 +1,9 @@
 import React from "react";
 
-const SocialCard = ({
-  name = "",
-  icon = "",
-  text = "",
-  link = "!#",
-  action = () => {},
-}) => {
+const SocialCard = ({ name = "", icon = "", text = "", link = "" }) => {
   return (
     <li className="nav-item">
-      <a className="nav-link" href={link} title={name} onClick={action}>
+      <a className="nav-link" href={link} title={name}>
         <i className={icon}>{text}</i>
         <span className="menu-title sr-only">{name}</span>
       </a>
