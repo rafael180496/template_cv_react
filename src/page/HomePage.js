@@ -3,7 +3,7 @@ import BodyContent from "../components/BodyContent";
 import HeaderContent from "../components/HeaderContent";
 import { langReducer, LangContext } from "../provider/langContext";
 const init = () => {
-  const datalang = require("../assets/lang/es.json");
+  const datalang = require("../assets/lang/en.json");
   return { locale: "ES", datalang: datalang };
 };
 
