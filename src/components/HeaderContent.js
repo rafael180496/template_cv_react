@@ -1,35 +1,96 @@
 import React, { useContext } from "react";
 import { LangContext } from "../provider/langContext";
 import SocialCard from "./SocialCard";
+import jsPDF from "jspdf";
+import { renderToString } from "react-dom/server";
+import { BodyPDF } from "./BodyContent";
 
-const HeaderContent = () => {
-  const { datalang } = useContext(LangContext);
-  const { info } = datalang;
+const SocialArray = ({ social, datalang, isfooter }) => {
+  const { dispatch } = useContext(LangContext);
+  const { data } = useContext(LangContext);
+  const print = () => {
+    const string = renderToString(<BodyPDF datalang={datalang}></BodyPDF>);
+    const pdf = new jsPDF("p", "mm", "a4");
+    pdf.fromHTML(string);
+    pdf.save("pdf");
+  };
+  const langAction = () => {
+    dispatch({
+      lang: data.locale,
+    });
+  };
   return (
-    <header className="d-print-none">
-      <div className="container text-center text-lg-left">
-        <div className="py-3 clearfix">
-          <h1 className="site-title mb-0">{info.name}</h1>
-          <div className="site-nav">
-            <nav role="navigation">
-              <ul className="nav justify-content-center">
-                {info.social.map((item, i) => {
-                  const { name, icon, link } = item;
-                  return (
-                    <SocialCard
-                      key={i}
-                      name={name}
-                      icon={icon}
-                      link={link}
-                    ></SocialCard>
-                  );
-                })}
-              </ul>
-            </nav>
+    <nav role="navigation">
+      <ul className="nav justify-content-center">
+        {!isfooter && (
+          <>
+            <SocialCard
+              key="998"
+              name={data.locale}
+              text={data.locale}
+              icon="far fa-language"
+              action={langAction}
+            ></SocialCard>
+            <SocialCard
+              key="999"
+              name="PDF"
+              icon="far fa-file-pdf"
+              action={print}
+            ></SocialCard>
+          </>
+        )}
+
+        {social.map((item, i) => {
+          const { name, icon, link } = item;
+          return (
+            <SocialCard
+              key={i}
+              name={name}
+              icon={icon}
+              link={link}
+            ></SocialCard>
+          );
+        })}
+      </ul>
+    </nav>
+  );
+};
+const HeaderContent = ({ isfooter = false, datalang }) => {
+  return (
+    <>
+      {isfooter ? (
+        <footer className="pt-4 pb-4 text-muted text-center d-print-none">
+          <div className="container">
+            <div className="my-3">
+              <div className="h4">{datalang.info.name}</div>
+              <div className="footer-nav">
+                <SocialArray
+                  social={datalang.info.social}
+                  datalang={datalang}
+                  isfooter={isfooter}
+                ></SocialArray>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </header>
+        </footer>
+      ) : (
+        <header className="d-print-none">
+          <div className="container text-center text-lg-left">
+            <div className="py-3 clearfix">
+              <h1 className="site-title mb-0">{datalang.info.name}</h1>
+
+              <div className="site-nav">
+                <SocialArray
+                  social={datalang.info.social}
+                  datalang={datalang}
+                  isfooter={isfooter}
+                ></SocialArray>
+              </div>
+            </div>
+          </div>
+        </header>
+      )}
+    </>
   );
 };
 

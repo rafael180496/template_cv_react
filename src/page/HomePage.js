@@ -1,19 +1,22 @@
-import React, {  useReducer } from "react";
+import React, { useReducer } from "react";
 import BodyContent from "../components/BodyContent";
 import HeaderContent from "../components/HeaderContent";
 import { langReducer, LangContext } from "../provider/langContext";
 const init = () => {
   const datalang = require("../assets/lang/es.json");
-  return datalang;
+  return { locale: "EN", datalang: datalang };
 };
 
 const HomePage = () => {
-  const [datalang, dispatch] = useReducer(langReducer, {}, init);
-
+  const [data, dispatch] = useReducer(langReducer, {}, init);
   return (
-    <LangContext.Provider value={{ datalang, dispatch }}>
-      <HeaderContent></HeaderContent>
-      <BodyContent></BodyContent>
+    <LangContext.Provider value={{ data, dispatch }}>
+      <HeaderContent datalang={data.datalang}></HeaderContent>
+      <BodyContent datalang={data.datalang}> </BodyContent>
+      <HeaderContent
+        isfooter={true}
+        datalang={data.datalang}
+      ></HeaderContent>
     </LangContext.Provider>
   );
 };

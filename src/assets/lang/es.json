@@ -3,11 +3,41 @@
   "titles": {
     "about": "Sobre mi",
     "skilleng": "Habilidad en lenguajes",
-    "skilfra": "Habilidad en framework e librería y herramientas"
+    "skilfra": "Habilidad en framework e librería y herramientas",
+    "workt": "Experiencia laboral y proyectos elaborados",
+    "edugt": "Education"
   },
   "info": {
     "name": "Rafael Hidalgo",
     "post": "Desarrollador de sistema  y desarrollador web",
+    "workitems": [
+      {
+        "work": "Coordinador y desarrollador",
+        "emp": "a the data age",
+        "time": "Marzo,2017 - Presente",
+        "descrip": " Coordinación de desarrollos en el sistema comercial O-SGC; llevando a cabo las tareas de análisis de la solución requerida, planificación y asignación de tareas a programadores, seguimiento de las modificaciones e implementaciones de sistemas, especializándose en el desarrollo de los programas del facturador batch.\nCoordinacion de desarrollo de aplicacion de gestion comercial TDA.(Creador de Ambientes de desarrollo Docker e api rest en golang).\n"
+      },
+      {
+        "work": "Soporte de api rest",
+        "emp": "a Workana",
+        "time": "Marzo,2020 - Presente",
+        "descrip": "Soporte de servicio AWS en golang creando nuevas peticiones."
+      },
+      {
+        "work": "Proyecto Crazysales",
+        "emp": "a Loterial publica",
+        "time": "Mayo,2020 - Agosto,2020",
+        "descrip": "Proyecto en flutter de ticketa para loteros publicos."
+      }
+    ],
+    "educationitems": [
+      {
+        "work": "Ingenieria en Computacion",
+        "emp": "a Universidad Politecnica de Nicaragua",
+        "time": "Marzo,2014 - Diciembre,2019",
+        "descrip": "es un profesional capaz de investigar, analizar, diseñar, construir y evaluar sistemascomputacionales que integre hardware, software, y comunicaciones con dispositivos digitales y sus interfaces con otros dispositivos y usuarios, para satisfacer las necesidades científicas, tecnológicas y funcionales de los negocios y las organizaciones en una economía nacional. "
+      }
+    ],
     "aboutmeitems": [
       {
         "title": "Edad",
@@ -139,8 +169,13 @@
         "name": "Githud",
         "icon": "fab fa-github",
         "link": "https://github.com/rafael180496"
+      },
+      {
+        "name": "Linkedin",
+        "icon": "fab fa-linkedin-in",
+        "link": "https://www.linkedin.com/in/rafael-antonio-hidalgo-romero-71608a116/"
       }
     ],
-    "aboutme": "Hola soy Rafael soy un apasionado al desarrollo backend y frontend\n,soy exporto en libreria para serivicio rest api e me gusta el desarrollo frontend en React"
+    "aboutme": "Hola soy Rafael soy un apasionado al desarrollo backend y frontend, \nSoy experto en libreria para servicio rest api e me gusta el desarrollo frontend en React"
   }
 }

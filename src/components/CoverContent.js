@@ -8,14 +8,24 @@ const CoverContent = ({ post, name }) => {
           <h2 className="h1 mt-2" data-aos="fade-left" data-aos-delay="0">
             {name}
           </h2>
-          <p data-aos="fade-left" >
-            {post}
-          </p>
+          <p data-aos="fade-left">{post}</p>
           <div
             className="d-print-none"
             data-aos="fade-left"
             data-aos-delay="200"
           ></div>
+        </div>
+      </div>
+    </div>
+  );
+};
+export const CoverPDF = ({ post, name }) => {
+  return (
+    <div className=" p-3 ">
+      <div className="row">
+        <div className="col-lg-8 col-md-7 text-center text-md-start">
+          <h2 className="h1 ">{name}</h2>
+          <p>{post}</p>
         </div>
       </div>
     </div>

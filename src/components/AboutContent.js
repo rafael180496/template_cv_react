@@ -36,7 +36,7 @@ const CardInfoArray = ({ aboutmeitems }) => {
 const AboutContent = ({ titles, info }) => {
   const { aboutmeitems } = info;
   return (
-    <div className="about-section pt-4 px-sm-3 px-5 mt-5">
+    <div className="about-section pt-1 px-sm-3 px-5 mt-5">
       <div className="row">
         <Aboutme titles={titles} info={info}></Aboutme>
         <CardInfoArray aboutmeitems={aboutmeitems}></CardInfoArray>

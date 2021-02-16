@@ -3,11 +3,41 @@
   "titles": {
     "about": "About Me",
     "skilleng": "Language Skills",
-    "skilfra": "Skill in framework and library and tools"
+    "skilfra": "Skill in framework and library and tools",
+    "workt": "Work experience and projects developed",
+    "edugt": "Educacion"
   },
   "info": {
     "name": "Rafael Hidalgo",
     "post": "System developer and web developer",
+    "workitems": [
+      {
+        "work": "Coordinator and developer",
+        "emp": "at the data age",
+        "time": "March, 2017 - Present",
+        "descrip": "Coordination of developments in the O-SGC commercial system; carrying out the analysis tasks of the required solution, planning and assigning tasks to programmers, monitoring modifications and system implementations, specializing in the development of batch biller programs. \nCoordination of development of TDA commercial management application . (Creator of Docker development environments and rest api in golang). \n"
+      },
+      {
+        "work": "Rest api support",
+        "emp": "at Workana",
+        "time": "March, 2020 - Present",
+        "descrip": "Soporte de servicio AWS en golang creando nuevas peticiones."
+      },
+      {
+        "work": "Crazysales Project",
+        "emp": "at Loterial publishes",
+        "time": "May, 2020 - August, 2020",
+        "descrip": "Ticketa flutter project for public lotteries."
+      }
+    ],
+    "educationitems": [
+      {
+        "work": "Computer Engineering",
+        "emp": "at Polytechnic University of Nicaragua",
+        "time": "March, 2014 - December, 2019",
+        "descrip": "is a professional capable of researching, analyzing, designing, building and evaluating computer systems that integrate hardware, software, and communications with digital devices and their interfaces with other devices and users, to satisfy the scientific, technological and functional needs of businesses and organizations in a national economy."
+      }
+    ],
     "aboutmeitems": [
       {
         "title": "Age",
@@ -95,7 +125,7 @@
       },
       {
         "title": "C#",
-        "val": 80
+        "val": 70
       },
       {
         "title": "COBOL",
@@ -139,8 +169,13 @@
         "name": "Githud",
         "icon": "fab fa-github",
         "link": "https://github.com/rafael180496"
+      },
+      {
+        "name": "Linkedin",
+        "icon": "fab fa-linkedin-in",
+        "link": "https://www.linkedin.com/in/rafael-antonio-hidalgo-romero-71608a116/"
       }
     ],
-    "aboutme": "Hi, I'm Rafael, I'm passionate about backend and frontend development\n, I'm an exporter in library for rest api service and I like frontend development in React."
+    "aboutme": "Hi, I'm Rafael, I'm passionate about backend and frontend development,\n I'm an expert in library for rest api service and I like frontend development in React."
   }
 }

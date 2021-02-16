@@ -1,11 +1,10 @@
-import React, { useContext } from "react";
-import { LangContext } from "../provider/langContext";
+import React from "react";
 import AboutContent from "./AboutContent";
-import CoverContent from "./CoverContent";
+import CoverContent, { CoverPDF } from "./CoverContent";
 import SkillContent from "./SkillContent";
+import WorkContent from "./WorkContent";
 
-const BodyContent = () => {
-  const { datalang } = useContext(LangContext);
+const BodyContent = ({ datalang }) => {
   const { info, titles } = datalang;
   return (
     <div className="page-content">
@@ -25,9 +24,44 @@ const BodyContent = () => {
             color="success"
           ></SkillContent>
           <hr className="d-print-none" />
+          <WorkContent
+            title={titles.workt}
+            works={info.workitems}
+          ></WorkContent>
+          <hr className="d-print-none" />
+          <WorkContent
+            title={titles.edugt}
+            works={info.educationitems}
+            color="success"
+          ></WorkContent>
         </div>
       </div>
     </div>
+  );
+};
+
+export const BodyPDF = ({ datalang }) => {
+  const { info, titles } = datalang;
+  return (
+    <>
+      <CoverPDF name={info.name} post={info.post}></CoverPDF>
+      <AboutContent info={info} titles={titles}></AboutContent>
+      <SkillContent
+        skills={info.language_skills}
+        title={titles.skilleng}
+      ></SkillContent>
+      <SkillContent
+        skills={info.lib_skills}
+        title={titles.skilfra}
+        color="success"
+      ></SkillContent>
+      <WorkContent title={titles.workt} works={info.workitems}></WorkContent>
+      <WorkContent
+        title={titles.edugt}
+        works={info.educationitems}
+        color="success"
+      ></WorkContent>
+    </>
   );
 };
 

@@ -1,19 +1,22 @@
 import { createContext } from "react";
+import dataes from "../assets/lang/es.json";
+import dataen from "../assets/lang/en.json";
 export const LangContext = createContext();
 
 export const langReducer = (state = {}, action) => {
-  const dataes = require("../assets/lang/es.json");
-  const dataen = require("../assets/lang/en.json");
+  console.log(action.locale);
   switch (action.lang) {
-    case "es":
+    case "ES":
       return {
-        ...action.payload,
+        ...state,
+        locale:"EN",
         datalang: dataes,
       };
 
-    case "en":
+    case "EN":
       return {
-        ...action.payload,
+        ...state,
+        locale:"ES",
         datalang: dataen,
       };
 
