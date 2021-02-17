@@ -1,9 +1,14 @@
 import React from "react";
 
-const WorkCard = ({ work, emp, time, descrip, color }) => {
+const WorkCard = ({ work, emp, time, descrip, color, delay }) => {
   const styles = `timeline-card timeline-card-${color} card shadow-sm`;
   return (
-    <div className={styles}>
+    <div
+      className={styles}
+      data-aos="zoom-in-right"
+      data-aos-delay={delay}
+      data-aos-anchor=".skills-section"
+    >
       <div className="card-body">
         <div className="h5 mb-1">
           {work}

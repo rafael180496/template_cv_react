@@ -3,7 +3,7 @@ import React from "react";
 const CardSkill = ({ title, val, delay, color }) => {
   const styles = `progress-bar bg-${color}`;
   return (
-    <div className="col-3">
+    <div className="col-sm-6 col-md-4">
       <span>{title}</span>
       <div className="progress my-1">
         <div
