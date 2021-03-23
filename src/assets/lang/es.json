@@ -75,11 +75,11 @@
     "lib_skills": [
       {
         "title": "React(JS)",
-        "val": 80
+        "val": 70
       },
       {
         "title": "Grahql(JS,GO)",
-        "val": 60
+        "val": 50
       },
       {
         "title": "Boostrap(Css)",
@@ -111,7 +111,7 @@
       },
       {
         "title": "Aws",
-        "val": 60
+        "val": 50
       },
       {
         "title": "Heroku",
