@@ -18,6 +18,18 @@
         "descrip": " Coordinación de desarrollos en el sistema comercial O-SGC; llevando a cabo las tareas de análisis de la solución requerida, planificación y asignación de tareas a programadores, seguimiento de las modificaciones e implementaciones de sistemas, especializándose en el desarrollo de los programas del facturador batch.\nCoordinacion de desarrollo de aplicacion de gestion comercial TDA.(Creador de Ambientes de desarrollo Docker e api rest en golang).\n"
       },
       {
+        "work": "Proyecto de Facturacion electronica en Energuate Guatemala",
+        "emp": "a the data age",
+        "time": "Agosto,2019 - Diciembre,2019",
+        "descrip": " Coordinación de desarrollos en el sistema de certificacion electronica o FEL para Energuate encargado de crear el demonio que se comunica con Sap de guatemala para firma las facturas del sistema comercial"
+      },
+      {
+        "work": "Proyecto de Facturacion electronica en Salvador AES",
+        "emp": "a the data age",
+        "time": "Agosto,2021 - Presente",
+        "descrip": " Coordinación de desarrollos en el sistema de certificacion electronica o FEL para Aes encargado de crear el demonio que se comunica con hacienda de salvador para firma las facturas del sistema comercial esto certifica los documentos legales de la empresa"
+      },
+      {
         "work": "Soporte de api rest",
         "emp": "a Workana",
         "time": "Marzo,2020 - Presente",

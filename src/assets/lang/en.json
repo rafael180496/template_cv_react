@@ -18,10 +18,22 @@
         "descrip": "Coordination of developments in the O-SGC commercial system; carrying out the analysis tasks of the required solution, planning and assigning tasks to programmers, monitoring modifications and system implementations, specializing in the development of batch biller programs. \nCoordination of development of TDA commercial management application . (Creator of Docker development environments and rest api in golang). \n"
       },
       {
+        "work": "Electronic billing project in Energuate Guatemala",
+        "emp": "at the data age",
+        "time": "August, 2019 - December, 2019",
+        "descrip": "Coordination of developments in the electronic certification system or FEL for Energuate in charge of creating the demon that communicates with Sap of Guatemala to sign the invoices of the commercial system"
+      },
+      {
+        "work": "Electronic billing project in Salvador AES",
+        "emp": "at the data age",
+        "time": "August, 2021 - Present",
+        "descrip": "Coordination of developments in the electronic certification system or FEL for Aes in charge of creating the demon that communicates with the Hacienda de Salvador to sign the invoices of the commercial system, this certifies the legal documents of the company"
+      },
+      {
         "work": "Rest api support",
         "emp": "at Workana",
         "time": "March, 2020 - Present",
-        "descrip": "Soporte de servicio AWS en golang creando nuevas peticiones."
+        "descrip": "AWS service support in golang creating new requests."
       },
       {
         "work": "Crazysales Project",
