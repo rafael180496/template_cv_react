@@ -8,25 +8,43 @@
     "edugt": "Education"
   },
   "info": {
-    "name": "Rafael Hidalgo",
-    "post": "System developer and web developer",
+    "name": "Rafael Antonio Hidalgo Romero",
+    "post": "Full stack developer",
     "workitems": [
       {
+        "work": "Backend Developer",
+        "emp": "at ZeroQ (Chile)",
+        "time": "September, 2021 - Present",
+        "descrip": "Backend developer in go and node js with specialization in web socket systems for customer service."
+      },
+      {
+        "work": "Desarrollador full stack and PM",
+        "emp": "at AnanaSoft (Costa Rica)",
+        "time": "June, 2021 - Present",
+        "descrip": "Freelance developer in real estate systems with React.js and serveless technologies."
+      },
+      {
+        "work": "Freelance Developer",
+        "emp": "at Sigeme (Guatemala)",
+        "time": "June, 2021 - Present",
+        "descrip": "Coordination of developments in the SGC commercial system carrying out the tasks of analysis of the required solution, planning and assigning tasks to programmers, monitoring of modifications and system implementations, specializing in the development of batch biller programs."
+      },
+      {
         "work": "Coordinator and developer",
-        "emp": "at the data age",
-        "time": "March, 2017 - Present",
-        "descrip": "Coordination of developments in the O-SGC commercial system; carrying out the analysis tasks of the required solution, planning and assigning tasks to programmers, monitoring modifications and system implementations, specializing in the development of batch biller programs. \nCoordination of development of TDA commercial management application . (Creator of Docker development environments and rest api in golang). \n"
+        "emp": "a the data age",
+        "time": "March, 2017 - June, 2021",
+        "descrip": "Coordination of developments in the O-SGC commercial system; carrying out the tasks of analysis of the required solution, planning and assigning tasks to programmers, monitoring of modifications and system implementations, specializing in the development of batch biller programs. \n Coordination of development of TDA commercial management application . (Creator of Docker development environments and rest api in golang). \n"
       },
       {
         "work": "Electronic billing project in Energuate Guatemala",
-        "emp": "at the data age",
+        "emp": "a the data age",
         "time": "August, 2019 - December, 2019",
         "descrip": "Coordination of developments in the electronic certification system or FEL for Energuate in charge of creating the demon that communicates with SAT of Guatemala to sign the invoices of the commercial system"
       },
       {
         "work": "Electronic billing project in Salvador AES",
-        "emp": "at the data age",
-        "time": "August, 2021 - Present",
+        "emp": "a the data age",
+        "time": "August, 2020 - June, 2021",
         "descrip": "Coordination of developments in the electronic certification system or FEL for Aes in charge of creating the demon that communicates with the Hacienda de Salvador to sign the invoices of the commercial system, this certifies the legal documents of the company"
       },
       {

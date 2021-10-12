@@ -1,19 +1,12 @@
 import React, { useContext } from "react";
 import { LangContext } from "../provider/langContext";
 import SocialCard from "./SocialCard";
-import jsPDF from "jspdf";
-import { renderToString } from "react-dom/server";
-import { BodyPDF } from "./BodyContent";
+
 
 const SocialArray = ({ social, datalang, isfooter }) => {
   const { dispatch } = useContext(LangContext);
   const { data } = useContext(LangContext);
-  const print = () => {
-    const string = renderToString(<BodyPDF datalang={datalang}></BodyPDF>);
-    const pdf = new jsPDF("p", "mm", "a4");
-    pdf.fromHTML(string);
-    pdf.save("pdf");
-  };
+
   const langAction = () => {
     dispatch({
       lang: data.locale,
@@ -30,12 +23,6 @@ const SocialArray = ({ social, datalang, isfooter }) => {
                 <span className="menu-title sr-only">{data.locale}</span>
               </button>
             </li>
-            <SocialCard
-              key="999"
-              name="PDF"
-              icon="far fa-file-pdf"
-              action={print}
-            ></SocialCard>
           </>
         )}
 

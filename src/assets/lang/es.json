@@ -8,13 +8,31 @@
     "edugt": "Educacion"
   },
   "info": {
-    "name": "Rafael Hidalgo",
-    "post": "Desarrollador de sistema  y desarrollador web",
+    "name": "Rafael Antonio Hidalgo Romero",
+    "post": "Desarrollador full stack",
     "workitems": [
+      {
+        "work": "Desarrollador Backend",
+        "emp": "en ZeroQ (Chile)",
+        "time": "Septiembre,2021 - Presente",
+        "descrip": "Desarrollador backend en go y node js con especializacion en web socket de sistemas para atencion a cliente."
+      },
+      {
+        "work": "Desarrollador full stack",
+        "emp": "en AnanaSoft (Costa Rica)",
+        "time": "Junio,2021 - Presente",
+        "descrip": "Desarrollador freelance en sistemas de inmuebles con tecnologias React.js y serveless."
+      },
+      {
+        "work": "Desarrollador freelance",
+        "emp": "en Sigeme (Guatemala)",
+        "time": "Junio,2021 - Presente",
+        "descrip": " Coordinación de desarrollos en el sistema comercial SGC llevando a cabo las tareas de análisis de la solución requerida, planificación y asignación de tareas a programadores, seguimiento de las modificaciones e implementaciones de sistemas, especializándose en el desarrollo de los programas del facturador batch."
+      },
       {
         "work": "Coordinador y desarrollador",
         "emp": "a the data age",
-        "time": "Marzo,2017 - Presente",
+        "time": "Marzo,2017 - Junio,2021",
         "descrip": " Coordinación de desarrollos en el sistema comercial O-SGC; llevando a cabo las tareas de análisis de la solución requerida, planificación y asignación de tareas a programadores, seguimiento de las modificaciones e implementaciones de sistemas, especializándose en el desarrollo de los programas del facturador batch.\nCoordinacion de desarrollo de aplicacion de gestion comercial TDA.(Creador de Ambientes de desarrollo Docker e api rest en golang).\n"
       },
       {
@@ -26,7 +44,7 @@
       {
         "work": "Proyecto de Facturacion electronica en Salvador AES",
         "emp": "a the data age",
-        "time": "Agosto,2021 - Presente",
+        "time": "Agosto,2020 - Junio,2021",
         "descrip": " Coordinación de desarrollos en el sistema de certificacion electronica o FEL para Aes encargado de crear el demonio que se comunica con hacienda de salvador para firma las facturas del sistema comercial esto certifica los documentos legales de la empresa"
       },
       {
@@ -75,7 +93,7 @@
     "lib_skills": [
       {
         "title": "React(JS)",
-        "val": 70
+        "val": 80
       },
       {
         "title": "Grahql(JS,GO)",
