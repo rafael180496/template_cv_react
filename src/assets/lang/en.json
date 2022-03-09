@@ -18,16 +18,16 @@
         "descrip": "Backend developer in go and node js with specialization in web socket systems for customer service."
       },
       {
-        "work": "Desarrollador full stack and PM",
-        "emp": "at AnanaSoft (Costa Rica)",
-        "time": "June, 2021 - Present",
-        "descrip": "Freelance developer in real estate systems with React.js and serveless technologies."
-      },
-      {
         "work": "Freelance Developer",
         "emp": "at Sigeme (Guatemala)",
         "time": "June, 2021 - Present",
         "descrip": "Coordination of developments in the SGC commercial system carrying out the tasks of analysis of the required solution, planning and assigning tasks to programmers, monitoring of modifications and system implementations, specializing in the development of batch biller programs."
+      },
+      {
+        "work": "Desarrollador full stack and PM",
+        "emp": "at AnanaSoft (Costa Rica)",
+        "time": "June, 2021 - January, 2022",
+        "descrip": "Freelance developer in real estate systems with React.js and serveless technologies."
       },
       {
         "work": "Coordinator and developer",
@@ -50,7 +50,7 @@
       {
         "work": "Rest api support",
         "emp": "at Workana",
-        "time": "March, 2020 - Present",
+        "time": "March, 2020 - January, 2022",
         "descrip": "AWS service support in golang creating new requests."
       },
       {
@@ -71,7 +71,7 @@
     "aboutmeitems": [
       {
         "title": "Age",
-        "val": "24"
+        "val": "25"
       },
       {
         "title": "Email",
