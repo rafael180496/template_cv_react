@@ -9,10 +9,16 @@
   },
   "info": {
     "name": "Rafael Antonio Hidalgo Romero",
-    "post": "Desarrollador full stack",
+    "post": "Desarrollador full stack con 6 años de experiencia en desarrollos a gran escala.",
     "workitems": [
       {
         "work": "Desarrollador Backend",
+        "emp": "en Zerviz (Chile)",
+        "time": "Marzo,2021 - Presente",
+        "descrip": "Desarrollador Backend en typescript con nodejs en el framework nestJS con tecnologias AWS sobre microservicios."
+      },
+      {
+        "work": "Desarrollador Backend(NodeJS)",
         "emp": "en ZeroQ (Chile)",
         "time": "Septiembre,2021 - Presente",
         "descrip": "Desarrollador backend en go y node js con especializacion en web socket de sistemas para atencion a cliente."
@@ -71,7 +77,7 @@
     "aboutmeitems": [
       {
         "title": "Edad",
-        "val": "25"
+        "val": "26"
       },
       {
         "title": "Correo",
@@ -93,11 +99,19 @@
     "lib_skills": [
       {
         "title": "React(JS)",
+        "val": 60
+      },
+      {
+        "title": "NodeJS",
+        "val": 80
+      },
+      {
+        "title": "NestJS",
         "val": 80
       },
       {
         "title": "Grahql(JS,GO)",
-        "val": 50
+        "val": 40
       },
       {
         "title": "Boostrap(Css)",
@@ -105,7 +119,7 @@
       },
       {
         "title": "NodeJS(JS)",
-        "val": 80
+        "val": 90
       },
       {
         "title": "GORM(GO)",
@@ -117,7 +131,7 @@
       },
       {
         "title": "Asp .net MVC(C#)",
-        "val": 70
+        "val": 60
       },
       {
         "title": "Git",
@@ -150,12 +164,16 @@
         "val": 90
       },
       {
+        "title": "Typescript",
+        "val": 90
+      },
+      {
         "title": "Golang",
         "val": 100
       },
       {
         "title": "C#",
-        "val": 70
+        "val": 60
       },
       {
         "title": "COBOL",
@@ -183,7 +201,7 @@
       },
       {
         "title": "Kotlin",
-        "val": 60
+        "val": 50
       },
       {
         "title": "Dart",
@@ -191,7 +209,7 @@
       },
       {
         "title": "Visual Basic",
-        "val": 60
+        "val": 50
       }
     ],
     "social": [
