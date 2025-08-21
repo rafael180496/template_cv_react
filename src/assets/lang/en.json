@@ -224,6 +224,6 @@
         "link": "https://www.linkedin.com/in/rafael-antonio-hidalgo-romero-71608a116/"
       }
     ],
-    "aboutme": "Hi, I'm Rafael, I'm passionate about backend and frontend development,\n I'm an expert in library for rest api service and I like frontend development in React."
+    "aboutme": "I'm Rafael, a full stack developer and technology consultant with over 7 years of experience creating innovative solutions for international companies. I specialize in microservices architectures, distributed systems, and cloud technologies, having worked with clients like Millicom (TIGO), Copa Airlines, and Rosen on large-scale projects.\n\nMy passion lies in transforming complex ideas into robust and scalable systems. I have experience leading development teams from conceptualization to implementation, using technologies like Node.js, Golang, React, Vue.js, and AWS and Azure platforms.\n\nI enjoy tackling technical challenges that require creative solutions, especially in high-concurrency systems, REST APIs, and complex integrations. My goal is always to deliver real value through clean code, solid architectures, and effective collaboration."
   }
 }
