@@ -9,7 +9,7 @@
   },
   "info": {
     "name": "Rafael Antonio Hidalgo Romero",
-    "post": "Desarrollador full stack y consultor tecnológico con más de 7 años de experiencia en desarrollos a gran escala, especializado en arquitecturas de microservicios, sistemas distribuidos y soluciones cloud.",
+    "post": "Desarrollador full stack y consultor tecnológico con DYNAMIC_EXPERIENCE_YEARS años de experiencia en desarrollos a gran escala, especializado en arquitecturas de microservicios, sistemas distribuidos y soluciones cloud.",
     "workitems": [
       {
         "work": "Consultor Tecnológico y Desarrollador",
@@ -42,28 +42,28 @@
         "descrip": "Lideré el desarrollo del sistema comercial O-SGC, gestionando un equipo de desarrollo multidisciplinario. Implementé API REST utilizando Golang y administré entornos de desarrollo con Docker. Creación de demonio certificador elaborado en Golang y Python para sistemas de facturación electrónica. Coordinación de desarrollos llevando a cabo análisis de soluciones, planificación y asignación de tareas, seguimiento de modificaciones e implementaciones de sistemas, especializándose en el desarrollo de programas de facturador batch.\nTecnologías: Golang, Python, Docker, SQL, API REST, sistemas batch."
       },
       {
-        "work": "Proyecto de Facturacion electronica en Energuate Guatemala",
-        "emp": "a the data age",
+        "work": "Proyecto de Facturación Electrónica en Energuate Guatemala",
+        "emp": "en The Data Age",
         "time": "Agosto,2019 - Diciembre,2019",
-        "descrip": " Coordinación de desarrollos en el sistema de certificacion electronica o FEL para Energuate encargado de crear el demonio que se comunica con SAT de guatemala para firma las facturas del sistema comercial"
+        "descrip": "Coordinación de desarrollos en el sistema de certificación electrónica o FEL para Energuate, encargado de crear el demonio que se comunica con SAT de Guatemala para firmar las facturas del sistema comercial"
       },
       {
-        "work": "Proyecto de Facturacion electronica en Salvador AES",
-        "emp": "a the data age",
+        "work": "Proyecto de Facturación Electrónica en El Salvador AES",
+        "emp": "en The Data Age",
         "time": "Agosto,2020 - Junio,2021",
-        "descrip": " Coordinación de desarrollos en el sistema de certificacion electronica o FEL para Aes encargado de crear el demonio que se comunica con hacienda de salvador para firma las facturas del sistema comercial esto certifica los documentos legales de la empresa"
+        "descrip": "Coordinación de desarrollos en el sistema de certificación electrónica o FEL para AES, encargado de crear el demonio que se comunica con Hacienda de El Salvador para firmar las facturas del sistema comercial. Esto certifica los documentos legales de la empresa."
       },
       {
-        "work": "Soporte de api rest",
-        "emp": "a Workana",
+        "work": "Soporte de API REST",
+        "emp": "en Workana",
         "time": "Marzo,2020 - Enero,2022",
-        "descrip": "Soporte de servicio AWS en golang creando nuevas peticiones."
+        "descrip": "Soporte de servicios AWS en Golang creando nuevas peticiones y endpoints."
       },
       {
         "work": "Proyecto Crazysales",
-        "emp": "a Loterial publica",
+        "emp": "en Lotería Pública",
         "time": "Mayo,2020 - Agosto,2020",
-        "descrip": "Proyecto en flutter de ticketa para loteros publicos."
+        "descrip": "Proyecto en Flutter de ticketing para loteros públicos."
       }
     ],
     "educationitems": [
@@ -88,7 +88,7 @@
         "val": "+505-8884-2174"
       },
       {
-        "title": "Dirrecion",
+        "title": "Dirección",
         "val": "Ciudad Doral, Managua km 18, Nicaragua"
       },
       {
@@ -108,6 +108,6 @@
         "link": "https://www.linkedin.com/in/rafael-antonio-hidalgo-romero-71608a116/"
       }
     ],
-    "aboutme": "Soy Rafael, un desarrollador full stack y consultor tecnológico con más de 7 años creando soluciones innovadoras para empresas internacionales. Me especializo en arquitecturas de microservicios, sistemas distribuidos y tecnologías cloud, habiendo trabajado con clientes como Millicom (TIGO), Copa Airlines y Rosen en proyectos de gran escala.\n\nMi pasión radica en transformar ideas complejas en sistemas robustos y escalables. Tengo experiencia liderando equipos de desarrollo, desde la conceptualización hasta la implementación, utilizando tecnologías como Node.js, Golang, React, Vue.js y plataformas AWS y Azure.\n\nDisfruto enfrentar desafíos técnicos que requieren soluciones creativas, especialmente en sistemas de alta concurrencia, APIs REST, y integraciones complejas. Mi objetivo es siempre entregar valor real a través de código limpio, arquitecturas sólidas y colaboración efectiva."
+    "aboutme": "Soy Rafael, un desarrollador full stack y consultor tecnológico con DYNAMIC_EXPERIENCE_YEARS años de experiencia creando soluciones innovadoras para empresas internacionales. Me especializo en arquitecturas de microservicios, sistemas distribuidos y tecnologías cloud, habiendo trabajado con clientes como Millicom (TIGO), Copa Airlines y Rosen en proyectos de gran escala.\n\nMi pasión radica en transformar ideas complejas en sistemas robustos y escalables. Tengo experiencia liderando equipos de desarrollo, desde la conceptualización hasta la implementación, utilizando tecnologías como Node.js, Golang, React, Vue.js y plataformas AWS y Azure.\n\nDisfruto enfrentar desafíos técnicos que requieren soluciones creativas, especialmente en sistemas de alta concurrencia, APIs REST, y integraciones complejas. Mi objetivo es siempre entregar valor real a través de código limpio, arquitecturas sólidas y colaboración efectiva."
   }
 }

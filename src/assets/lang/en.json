@@ -9,7 +9,7 @@
   },
   "info": {
     "name": "Rafael Antonio Hidalgo Romero",
-    "post": "Full stack developer and technology consultant with over 7 years of experience in large-scale development, specialized in microservices architectures, distributed systems, and cloud solutions.",
+    "post": "Full stack developer and technology consultant with DYNAMIC_EXPERIENCE_YEARS years of experience in large-scale development, specialized in microservices architectures, distributed systems, and cloud solutions.",
     "workitems": [
       {
         "work": "Technology Consultant and Developer",
@@ -30,7 +30,7 @@
         "descrip": "Development and coordination of the SGC commercial system from planning to final implementation. Implementation of batch billing programs using Cobol, significantly improving billing process efficiency. Constant communication with clients to ensure project success and delivery of customized solutions.\nTechnologies: Cobol, SQL, batch systems."
       },
       {
-        "work": "Desarrollador full stack and PM",
+        "work": "Full Stack Developer and PM",
         "emp": "at AnanaSoft (Costa Rica)",
         "time": "June, 2021 - January, 2022",
         "descrip": "Freelance developer in real estate systems with React.js and serveless technologies."
@@ -42,28 +42,28 @@
         "descrip": "Led the development of the O-SGC commercial system, managing a multidisciplinary development team. Implemented REST API using Golang and managed development environments with Docker. Created certification daemon developed in Golang and Python for electronic billing systems. Coordinated developments carrying out solution analysis, planning and task assignment, monitoring modifications and system implementations, specializing in batch biller program development.\nTechnologies: Golang, Python, Docker, SQL, REST API, batch systems."
       },
       {
-        "work": "Electronic billing project in Energuate Guatemala",
-        "emp": "a the data age",
+        "work": "Electronic Billing Project in Energuate Guatemala",
+        "emp": "at The Data Age",
         "time": "August, 2019 - December, 2019",
-        "descrip": "Coordination of developments in the electronic certification system or FEL for Energuate in charge of creating the demon that communicates with SAT of Guatemala to sign the invoices of the commercial system"
+        "descrip": "Coordination of developments in the electronic certification system (FEL) for Energuate, in charge of creating the daemon that communicates with Guatemala's SAT to sign the invoices of the commercial system"
       },
       {
-        "work": "Electronic billing project in Salvador AES",
-        "emp": "a the data age",
+        "work": "Electronic Billing Project in El Salvador AES",
+        "emp": "at The Data Age",
         "time": "August, 2020 - June, 2021",
-        "descrip": "Coordination of developments in the electronic certification system or FEL for Aes in charge of creating the demon that communicates with the Hacienda de Salvador to sign the invoices of the commercial system, this certifies the legal documents of the company"
+        "descrip": "Coordination of developments in the electronic certification system (FEL) for AES, in charge of creating the daemon that communicates with El Salvador's Ministry of Finance to sign the invoices of the commercial system. This certifies the legal documents of the company."
       },
       {
-        "work": "Rest api support",
+        "work": "REST API Support",
         "emp": "at Workana",
         "time": "March, 2020 - January, 2022",
-        "descrip": "AWS service support in golang creating new requests."
+        "descrip": "AWS service support in Golang creating new requests and endpoints."
       },
       {
         "work": "Crazysales Project",
-        "emp": "at Loterial publishes",
+        "emp": "at Public Lottery",
         "time": "May, 2020 - August, 2020",
-        "descrip": "Ticketa flutter project for public lotteries."
+        "descrip": "Ticketing Flutter project for public lottery agents."
       }
     ],
     "educationitems": [
@@ -88,8 +88,8 @@
         "val": "+505-8884-2174"
       },
       {
-        "title": "Addres",
-        "val": "Doral city, Managua km 18, Nicaragua"
+        "title": "Address",
+        "val": "Doral City, Managua km 18, Nicaragua"
       },
       {
         "title": "Identification",
@@ -108,6 +108,6 @@
         "link": "https://www.linkedin.com/in/rafael-antonio-hidalgo-romero-71608a116/"
       }
     ],
-    "aboutme": "I'm Rafael, a full stack developer and technology consultant with over 7 years of experience creating innovative solutions for international companies. I specialize in microservices architectures, distributed systems, and cloud technologies, having worked with clients like Millicom (TIGO), Copa Airlines, and Rosen on large-scale projects.\n\nMy passion lies in transforming complex ideas into robust and scalable systems. I have experience leading development teams from conceptualization to implementation, using technologies like Node.js, Golang, React, Vue.js, and AWS and Azure platforms.\n\nI enjoy tackling technical challenges that require creative solutions, especially in high-concurrency systems, REST APIs, and complex integrations. My goal is always to deliver real value through clean code, solid architectures, and effective collaboration."
+    "aboutme": "I'm Rafael, a full stack developer and technology consultant with DYNAMIC_EXPERIENCE_YEARS years of experience creating innovative solutions for international companies. I specialize in microservices architectures, distributed systems, and cloud technologies, having worked with clients like Millicom (TIGO), Copa Airlines, and Rosen on large-scale projects.\n\nMy passion lies in transforming complex ideas into robust and scalable systems. I have experience leading development teams from conceptualization to implementation, using technologies like Node.js, Golang, React, Vue.js, and AWS and Azure platforms.\n\nI enjoy tackling technical challenges that require creative solutions, especially in high-concurrency systems, REST APIs, and complex integrations. My goal is always to deliver real value through clean code, solid architectures, and effective collaboration."
   }
 }

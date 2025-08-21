@@ -1,6 +1,10 @@
 import React from "react";
+import { getCurrentExperienceYears } from "../service/util";
 
 const CoverContent = ({ post, name }) => {
+  // Reemplazar DYNAMIC_EXPERIENCE_YEARS con el valor calculado
+  const processedPost = post.replace('DYNAMIC_EXPERIENCE_YEARS', getCurrentExperienceYears());
+
   return (
     <div className="cv-header relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-900 opacity-95"></div>
@@ -30,7 +34,7 @@ const CoverContent = ({ post, name }) => {
               data-aos="fade-left" 
               data-aos-delay="50"
             >
-              {post}
+              {processedPost}
             </p>
             
             <div 

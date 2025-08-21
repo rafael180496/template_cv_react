@@ -1,7 +1,11 @@
 import React from "react";
-import { getCurrentAge } from "../service/util";
+import { getCurrentAge, getCurrentExperienceYears } from "../service/util";
 
 const Aboutme = ({ titles, info }) => {
+  // Reemplazar DYNAMIC_EXPERIENCE_YEARS con el valor calculado
+  const processedAboutMe = info.aboutme.replace('DYNAMIC_EXPERIENCE_YEARS', getCurrentExperienceYears());
+  const processedPost = info.post.replace('DYNAMIC_EXPERIENCE_YEARS', getCurrentExperienceYears());
+
   return (
     <div
       className="lg:col-span-2"
@@ -10,7 +14,7 @@ const Aboutme = ({ titles, info }) => {
     >
       <h2 className="section-title">{titles.about}</h2>
       <div className="max-w-none">
-        <p className="text-gray-600 leading-relaxed whitespace-pre-line text-base">{info.aboutme}</p>
+        <p className="text-gray-600 leading-relaxed whitespace-pre-line text-base">{processedAboutMe}</p>
       </div>
     </div>
   );
