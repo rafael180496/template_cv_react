@@ -12,8 +12,8 @@ const App = () => {
     }
   }, [])
   return (
-    <div className="App">
-      <HomePage></HomePage>
+    <div className="App antialiased">
+      <HomePage />
     </div>
   );
 };
