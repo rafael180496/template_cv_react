@@ -1,16 +1,25 @@
 import React from "react";
 
-const SocialCard = ({ name = "", icon = "", text = "", link = "", delay = 0 }) => {
+const SocialCard = ({
+  name = "",
+  icon = "",
+  text = "",
+  link = "",
+  delay = 0,
+}) => {
   const getHoverColor = () => {
-    if (name.toLowerCase().includes('github')) return 'hover:bg-gray-700 hover:text-white';
-    if (name.toLowerCase().includes('linkedin')) return 'hover:bg-blue-600 hover:text-white';
-    if (name.toLowerCase().includes('twitter')) return 'hover:bg-blue-400 hover:text-white';
-    return 'hover:bg-primary-600 hover:text-white';
+    if (name.toLowerCase().includes("github"))
+      return "hover:bg-gray-700 hover:text-white";
+    if (name.toLowerCase().includes("linkedin"))
+      return "hover:bg-blue-600 hover:text-white";
+    if (name.toLowerCase().includes("twitter"))
+      return "hover:bg-blue-400 hover:text-white";
+    return "hover:bg-primary-600 hover:text-white";
   };
 
   return (
-    <a 
-      href={link} 
+    <a
+      href={link}
       title={name}
       target="_blank"
       rel="noopener noreferrer"

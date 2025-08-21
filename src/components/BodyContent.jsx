@@ -84,7 +84,11 @@ export const BodyPDF = ({ datalang }) => {
       </div>
 
       <div className="p-6 border-b border-gray-200">
-        <WorkContent title={titles.workt} works={info.workitems} stats={stats}></WorkContent>
+        <WorkContent
+          title={titles.workt}
+          works={info.workitems}
+          stats={stats}
+        ></WorkContent>
       </div>
 
       <div className="p-6">

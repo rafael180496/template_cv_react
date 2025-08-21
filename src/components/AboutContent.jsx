@@ -3,17 +3,18 @@ import { getCurrentAge, getCurrentExperienceYears } from "../service/util";
 
 const Aboutme = ({ titles, info }) => {
   // Reemplazar DYNAMIC_EXPERIENCE_YEARS con el valor calculado
-  const processedAboutMe = info.aboutme.replace('DYNAMIC_EXPERIENCE_YEARS', getCurrentExperienceYears());
+  const processedAboutMe = info.aboutme.replace(
+    "DYNAMIC_EXPERIENCE_YEARS",
+    getCurrentExperienceYears()
+  );
 
   return (
-    <div
-      className="lg:col-span-2"
-      data-aos="fade-up"
-      data-aos-delay="50"
-    >
+    <div className="lg:col-span-2" data-aos="fade-up" data-aos-delay="50">
       <h2 className="section-title">{titles.about}</h2>
       <div className="max-w-none">
-        <p className="text-gray-600 leading-relaxed whitespace-pre-line text-base">{processedAboutMe}</p>
+        <p className="text-gray-600 leading-relaxed whitespace-pre-line text-base">
+          {processedAboutMe}
+        </p>
       </div>
     </div>
   );
@@ -24,11 +25,7 @@ const CardInfo = ({ title, val, delay, icon }) => {
   const displayValue = val === "DYNAMIC_AGE" ? getCurrentAge() : val;
 
   return (
-    <div
-      className="contact-info"
-      data-aos="fade-up"
-      data-aos-delay={delay}
-    >
+    <div className="contact-info" data-aos="fade-up" data-aos-delay={delay}>
       {icon && <i className={`${icon} text-primary-600 w-5 text-center`}></i>}
       <div className="flex-1">
         <span className="font-medium text-gray-700">{title}:</span>
@@ -40,21 +37,23 @@ const CardInfo = ({ title, val, delay, icon }) => {
 
 const CardInfoArray = ({ aboutmeitems }) => {
   const iconMap = {
-    'Edad': 'fas fa-birthday-cake',
-    'Age': 'fas fa-birthday-cake',
-    'Correo': 'fas fa-envelope',
-    'Email': 'fas fa-envelope',
-    'Telefono': 'fas fa-phone',
-    'Phone': 'fas fa-phone',
-    'Direccion': 'fas fa-map-marker-alt',
-    'Address': 'fas fa-map-marker-alt',
-    'Cedula': 'fas fa-id-card',
-    'ID': 'fas fa-id-card'
+    Edad: "fas fa-birthday-cake",
+    Age: "fas fa-birthday-cake",
+    Correo: "fas fa-envelope",
+    Email: "fas fa-envelope",
+    Telefono: "fas fa-phone",
+    Phone: "fas fa-phone",
+    Direccion: "fas fa-map-marker-alt",
+    Address: "fas fa-map-marker-alt",
+    Cedula: "fas fa-id-card",
+    ID: "fas fa-id-card",
   };
 
   return (
     <div className="lg:col-span-1">
-      <h3 className="text-xl font-semibold text-gray-900 mb-4">Información de Contacto</h3>
+      <h3 className="text-xl font-semibold text-gray-900 mb-4">
+        Información de Contacto
+      </h3>
       <div className="space-y-3">
         {aboutmeitems.map((item, i) => {
           return (

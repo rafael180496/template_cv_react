@@ -74,8 +74,13 @@ const HeaderContent = ({ isfooter = false, datalang }) => {
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
-                <p>©{ new Date().getFullYear()} {datalang.info.name}. Desarrollador Full Stack.</p>
-                <p className="mt-1">Construido con React + Vite + Tailwind CSS</p>
+                <p>
+                  ©{new Date().getFullYear()} {datalang.info.name}.
+                  Desarrollador Full Stack.
+                </p>
+                <p className="mt-1">
+                  Construido con React + Vite + Tailwind CSS
+                </p>
               </div>
             </div>
           </div>
@@ -91,7 +96,11 @@ const HeaderContent = ({ isfooter = false, datalang }) => {
               >
                 <div className="w-10 h-10 rounded-full bg-primary-600 flex items-center justify-center">
                   <span className="text-white font-bold text-sm">
-                    {datalang.info.name.split(' ').map(n => n[0]).slice(0, 2).join('')}
+                    {datalang.info.name
+                      .split(" ")
+                      .map((n) => n[0])
+                      .slice(0, 2)
+                      .join("")}
                   </span>
                 </div>
                 <h1
