@@ -5,7 +5,7 @@
       "val": 85
     },
     {
-      "title": "Vue.js", 
+      "title": "Vue.js",
       "val": 80
     },
     {
@@ -29,10 +29,6 @@
       "val": 70
     },
     {
-      "title": "Bootstrap CSS",
-      "val": 80
-    },
-    {
       "title": "Flutter (Dart)",
       "val": 75
     },
@@ -46,7 +42,7 @@
     },
     {
       "title": "AWS Services",
-      "val": 75
+      "val": 70
     },
     {
       "title": "Azure DevOps",
@@ -63,6 +59,18 @@
     {
       "title": "MongoDB",
       "val": 75
+    },
+    {
+      "title": "Zendesk",
+      "val": 80
+    },
+    {
+      "title": "Chatwoot",
+      "val": 80
+    },
+    {
+      "title": "Five9",
+      "val": 50
     }
   ],
   "language_skills": [
@@ -87,8 +95,20 @@
       "val": 75
     },
     {
-      "title": "C#",
+      "title": "Kotlin",
+      "val": 60
+    },
+    {
+      "title": "Ruby",
       "val": 70
+    },
+    {
+      "title": "C#",
+      "val": 60
+    },
+    {
+      "title": "C",
+      "val": 80
     },
     {
       "title": "COBOL",
@@ -97,10 +117,6 @@
     {
       "title": "Dart",
       "val": 75
-    },
-    {
-      "title": "Ruby",
-      "val": 70
     },
     {
       "title": "SQL",
