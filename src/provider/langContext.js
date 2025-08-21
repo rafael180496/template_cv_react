@@ -4,7 +4,6 @@ import dataen from "../assets/lang/en.json";
 export const LangContext = createContext();
 
 export const langReducer = (state = {}, action) => {
-  console.log(action.locale);
   switch (action.lang) {
     case "ES":
       return {
