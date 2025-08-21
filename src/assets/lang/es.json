@@ -2,8 +2,8 @@
   "locale": "en-mx",
   "titles": {
     "about": "Sobre mi",
-    "skilleng": "Habilidad en lenguajes",
-    "skilfra": "Habilidad en framework e librería y herramientas",
+    "skilleng": "Lenguajes de Programación",
+    "skilfra": "Frameworks, Herramientas y Plataformas",
     "workt": "Experiencia laboral y proyectos elaborados",
     "edugt": "Educacion"
   },

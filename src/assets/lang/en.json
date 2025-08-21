@@ -2,8 +2,8 @@
   "locale": "en-us",
   "titles": {
     "about": "About Me",
-    "skilleng": "Language Skills",
-    "skilfra": "Skill in framework and library and tools",
+    "skilleng": "Programming Languages",
+    "skilfra": "Frameworks, Tools & Platforms",
     "workt": "Work experience and projects developed",
     "edugt": "Education"
   },
