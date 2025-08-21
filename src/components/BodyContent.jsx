@@ -3,6 +3,7 @@ import AboutContent from "./AboutContent";
 import CoverContent, { CoverPDF } from "./CoverContent";
 import SkillContent from "./SkillContent";
 import WorkContent from "./WorkContent";
+import skillsData from "../assets/skills.json";
 
 const BodyContent = ({ datalang }) => {
   const { info, titles } = datalang;
@@ -14,12 +15,12 @@ const BodyContent = ({ datalang }) => {
           <AboutContent info={info} titles={titles}></AboutContent>
           <hr className="d-print-none" />
           <SkillContent
-            skills={info.language_skills}
+            skills={skillsData.language_skills}
             title={titles.skilleng}
           ></SkillContent>
           <hr className="d-print-none" />
           <SkillContent
-            skills={info.lib_skills}
+            skills={skillsData.lib_skills}
             title={titles.skilfra}
             color="success"
           ></SkillContent>
@@ -47,11 +48,11 @@ export const BodyPDF = ({ datalang }) => {
       <CoverPDF name={info.name} post={info.post}></CoverPDF>
       <AboutContent info={info} titles={titles}></AboutContent>
       <SkillContent
-        skills={info.language_skills}
+        skills={skillsData.language_skills}
         title={titles.skilleng}
       ></SkillContent>
       <SkillContent
-        skills={info.lib_skills}
+        skills={skillsData.lib_skills}
         title={titles.skilfra}
         color="success"
       ></SkillContent>

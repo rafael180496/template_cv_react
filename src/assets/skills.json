@@ -1,0 +1,110 @@
+{
+  "lib_skills": [
+    {
+      "title": "React.js",
+      "val": 85
+    },
+    {
+      "title": "Vue.js", 
+      "val": 80
+    },
+    {
+      "title": "Node.js",
+      "val": 90
+    },
+    {
+      "title": "NestJS",
+      "val": 85
+    },
+    {
+      "title": "Spring Boot",
+      "val": 75
+    },
+    {
+      "title": "Ruby on Rails",
+      "val": 70
+    },
+    {
+      "title": "GraphQL",
+      "val": 70
+    },
+    {
+      "title": "Bootstrap CSS",
+      "val": 80
+    },
+    {
+      "title": "Flutter (Dart)",
+      "val": 75
+    },
+    {
+      "title": "Git & GitHub",
+      "val": 95
+    },
+    {
+      "title": "Docker & Docker Compose",
+      "val": 85
+    },
+    {
+      "title": "AWS Services",
+      "val": 75
+    },
+    {
+      "title": "Azure DevOps",
+      "val": 70
+    },
+    {
+      "title": "PostgreSQL",
+      "val": 90
+    },
+    {
+      "title": "Oracle Database",
+      "val": 85
+    },
+    {
+      "title": "MongoDB",
+      "val": 75
+    }
+  ],
+  "language_skills": [
+    {
+      "title": "JavaScript",
+      "val": 95
+    },
+    {
+      "title": "TypeScript",
+      "val": 90
+    },
+    {
+      "title": "Golang",
+      "val": 95
+    },
+    {
+      "title": "Python",
+      "val": 80
+    },
+    {
+      "title": "Java",
+      "val": 75
+    },
+    {
+      "title": "C#",
+      "val": 70
+    },
+    {
+      "title": "COBOL",
+      "val": 75
+    },
+    {
+      "title": "Dart",
+      "val": 75
+    },
+    {
+      "title": "Ruby",
+      "val": 70
+    },
+    {
+      "title": "SQL",
+      "val": 90
+    }
+  ]
+}
