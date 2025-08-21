@@ -22,23 +22,25 @@ const MinimalistCV = ({ datalang }) => {
       style={{
         width: "210mm",
         minHeight: "auto",
-        padding: "12mm",
+        padding: "8mm",
         fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-        fontSize: "10px",
-        lineHeight: "1.3",
+        fontSize: "9px",
+        lineHeight: "1.2",
         color: "#1f2937",
         position: "relative",
+        maxWidth: "210mm",
+        overflow: "visible"
       }}
     >
-      {/* Header Mejorado */}
+      {/* Header Optimizado */}
       <div
         style={{
-          marginBottom: "25px",
+          marginBottom: "15px",
           background: "linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)",
           color: "white",
-          padding: "20px",
-          borderRadius: "8px",
-          boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+          padding: "12px 16px",
+          borderRadius: "6px",
+          boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
         }}
       >
         <div
@@ -46,26 +48,27 @@ const MinimalistCV = ({ datalang }) => {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
+            gap: "15px"
           }}
         >
-          <div>
+          <div style={{ flex: 1 }}>
             <h1
               style={{
-                fontSize: "28px",
+                fontSize: "20px",
                 fontWeight: "bold",
-                marginBottom: "8px",
-                margin: 0,
-                letterSpacing: "0.5px",
+                margin: "0 0 4px 0",
+                letterSpacing: "0.3px",
+                lineHeight: "1.1"
               }}
             >
               {info.name}
             </h1>
             <p
               style={{
-                fontSize: "13px",
-                margin: "5px 0 0 0",
+                fontSize: "10px",
+                margin: "0",
                 opacity: "0.95",
-                lineHeight: "1.4",
+                lineHeight: "1.3",
               }}
             >
               {processedPost}
@@ -73,15 +76,16 @@ const MinimalistCV = ({ datalang }) => {
           </div>
           <div
             style={{
-              width: "80px",
-              height: "80px",
+              width: "50px",
+              height: "50px",
               borderRadius: "50%",
-              backgroundColor: "rgba(255, 255, 255, 0.2)",
+              backgroundColor: "rgba(255, 255, 255, 0.25)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              fontSize: "32px",
+              fontSize: "18px",
               fontWeight: "bold",
+              flexShrink: 0
             }}
           >
             {info.name
@@ -93,51 +97,51 @@ const MinimalistCV = ({ datalang }) => {
         </div>
       </div>
 
-      {/* Información de contacto y About Me Mejorado */}
+      {/* Información de contacto y About Me Optimizado */}
       <div
         style={{
           display: "grid",
           gridTemplateColumns: "1fr 2fr",
-          gap: "25px",
-          marginBottom: "25px",
+          gap: "12px",
+          marginBottom: "15px",
         }}
       >
         {/* Contacto */}
         <div
           style={{
             backgroundColor: "#f8fafc",
-            padding: "18px",
-            borderRadius: "8px",
+            padding: "10px",
+            borderRadius: "6px",
             border: "1px solid #e2e8f0",
           }}
         >
           <h2
             style={{
-              fontSize: "16px",
+              fontSize: "12px",
               fontWeight: "bold",
               color: "#1e40af",
-              marginBottom: "15px",
-              borderBottom: "2px solid #3b82f6",
-              paddingBottom: "5px",
-              margin: "0 0 15px 0",
+              marginBottom: "8px",
+              borderBottom: "1px solid #3b82f6",
+              paddingBottom: "3px",
+              margin: "0 0 8px 0",
             }}
           >
-            📋 Información de Contacto
+            📋 Contacto
           </h2>
           {info.aboutmeitems?.map((item, i) => (
             <div
               key={i}
               style={{
-                marginBottom: "8px",
-                fontSize: "10px",
+                marginBottom: "4px",
+                fontSize: "8px",
                 display: "flex",
-                alignItems: "center",
+                alignItems: "flex-start",
               }}
             >
-              <strong style={{ color: "#374151", minWidth: "70px" }}>
+              <strong style={{ color: "#374151", minWidth: "45px", fontSize: "7px" }}>
                 {item.title}:
               </strong>
-              <span style={{ marginLeft: "8px", color: "#6b7280" }}>
+              <span style={{ marginLeft: "4px", color: "#6b7280", fontSize: "7px", lineHeight: "1.2" }}>
                 {item.val === "DYNAMIC_AGE" ? getCurrentAge() : item.val}
               </span>
             </div>
@@ -146,22 +150,23 @@ const MinimalistCV = ({ datalang }) => {
           {/* Redes sociales */}
           <div
             style={{
-              marginTop: "15px",
-              paddingTop: "10px",
+              marginTop: "8px",
+              paddingTop: "6px",
               borderTop: "1px solid #e2e8f0",
             }}
           >
-            <strong style={{ color: "#374151", fontSize: "11px" }}>
-              🔗 Enlaces Profesionales:
+            <strong style={{ color: "#374151", fontSize: "8px" }}>
+              🔗 Enlaces:
             </strong>
             {info.social?.map((item, i) => (
               <div
                 key={i}
                 style={{
-                  fontSize: "9px",
+                  fontSize: "7px",
                   color: "#2563eb",
-                  marginTop: "5px",
+                  marginTop: "3px",
                   wordBreak: "break-all",
+                  lineHeight: "1.1"
                 }}
               >
                 <strong>{item.name}:</strong> {item.link}
@@ -174,28 +179,28 @@ const MinimalistCV = ({ datalang }) => {
         <div
           style={{
             backgroundColor: "#fefefe",
-            padding: "18px",
-            borderRadius: "8px",
+            padding: "10px",
+            borderRadius: "6px",
             border: "1px solid #e2e8f0",
           }}
         >
           <h2
             style={{
-              fontSize: "16px",
+              fontSize: "12px",
               fontWeight: "bold",
               color: "#1e40af",
-              marginBottom: "15px",
-              borderBottom: "2px solid #3b82f6",
-              paddingBottom: "5px",
-              margin: "0 0 15px 0",
+              marginBottom: "8px",
+              borderBottom: "1px solid #3b82f6",
+              paddingBottom: "3px",
+              margin: "0 0 8px 0",
             }}
           >
             👨‍💻 {titles.about}
           </h2>
           <p
             style={{
-              fontSize: "10px",
-              lineHeight: "1.5",
+              fontSize: "8px",
+              lineHeight: "1.3",
               textAlign: "justify",
               color: "#374151",
               margin: 0,
@@ -206,17 +211,17 @@ const MinimalistCV = ({ datalang }) => {
         </div>
       </div>
 
-      {/* Experiencia Laboral Completa */}
-      <div style={{ marginBottom: "25px" }}>
+      {/* Experiencia Laboral Optimizada */}
+      <div style={{ marginBottom: "15px" }}>
         <h2
           style={{
-            fontSize: "18px",
+            fontSize: "14px",
             fontWeight: "bold",
             color: "#1e40af",
-            marginBottom: "20px",
-            borderBottom: "3px solid #3b82f6",
-            paddingBottom: "8px",
-            margin: "0 0 20px 0",
+            marginBottom: "10px",
+            borderBottom: "2px solid #3b82f6",
+            paddingBottom: "4px",
+            margin: "0 0 10px 0",
             textAlign: "center",
           }}
         >
@@ -227,12 +232,12 @@ const MinimalistCV = ({ datalang }) => {
           <div
             key={i}
             style={{
-              marginBottom: "20px",
+              marginBottom: "8px",
               backgroundColor: i % 2 === 0 ? "#f8fafc" : "#ffffff",
-              padding: "15px",
-              borderRadius: "8px",
+              padding: "8px",
+              borderRadius: "4px",
               border: "1px solid #e2e8f0",
-              boxShadow: "0 1px 3px rgba(0, 0, 0, 0.05)",
+              pageBreakInside: "avoid"
             }}
           >
             <div
@@ -240,26 +245,29 @@ const MinimalistCV = ({ datalang }) => {
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "flex-start",
-                marginBottom: "8px",
+                marginBottom: "4px",
+                gap: "8px"
               }}
             >
               <div style={{ flex: 1 }}>
                 <h3
                   style={{
-                    fontSize: "13px",
+                    fontSize: "10px",
                     fontWeight: "bold",
                     color: "#1e40af",
-                    margin: "0 0 3px 0",
+                    margin: "0 0 2px 0",
+                    lineHeight: "1.2"
                   }}
                 >
                   {item.work}
                 </h3>
                 <p
                   style={{
-                    fontSize: "11px",
+                    fontSize: "8px",
                     color: "#059669",
                     margin: "0",
                     fontWeight: "600",
+                    lineHeight: "1.2"
                   }}
                 >
                   {item.emp}
@@ -267,14 +275,14 @@ const MinimalistCV = ({ datalang }) => {
               </div>
               <span
                 style={{
-                  fontSize: "9px",
+                  fontSize: "7px",
                   color: "#6b7280",
                   fontStyle: "italic",
                   backgroundColor: "#e0f2fe",
-                  padding: "4px 8px",
-                  borderRadius: "12px",
+                  padding: "2px 6px",
+                  borderRadius: "8px",
                   whiteSpace: "nowrap",
-                  marginLeft: "10px",
+                  flexShrink: 0
                 }}
               >
                 📅 {item.time}
@@ -283,52 +291,40 @@ const MinimalistCV = ({ datalang }) => {
 
             <div
               style={{
-                fontSize: "9px",
-                lineHeight: "1.4",
+                fontSize: "7px",
+                lineHeight: "1.3",
                 textAlign: "justify",
                 color: "#374151",
-                marginTop: "8px",
+                marginTop: "4px",
               }}
             >
               {item.descrip?.split("\n").map((paragraph, pIndex) => (
                 <p
                   key={pIndex}
                   style={{
-                    margin: "0 0 6px 0",
-                    textIndent: paragraph.startsWith("•") ? "0" : "8px",
+                    margin: "0 0 3px 0",
+                    textIndent: paragraph.startsWith("•") ? "0" : "4px",
                   }}
                 >
                   {paragraph}
                 </p>
               ))}
             </div>
-
-            {/* Separador visual */}
-            {i < info.workitems.length - 1 && (
-              <div
-                style={{
-                  marginTop: "12px",
-                  height: "1px",
-                  background:
-                    "linear-gradient(to right, transparent, #cbd5e1, transparent)",
-                }}
-              />
-            )}
           </div>
         ))}
       </div>
 
       {/* Educación */}
-      <div style={{ marginBottom: "25px" }}>
+      <div style={{ marginBottom: "12px" }}>
         <h2
           style={{
-            fontSize: "18px",
+            fontSize: "14px",
             fontWeight: "bold",
             color: "#1e40af",
-            marginBottom: "15px",
-            borderBottom: "3px solid #3b82f6",
-            paddingBottom: "8px",
-            margin: "0 0 15px 0",
+            marginBottom: "8px",
+            borderBottom: "2px solid #3b82f6",
+            paddingBottom: "4px",
+            margin: "0 0 8px 0",
             textAlign: "center",
           }}
         >
@@ -338,39 +334,41 @@ const MinimalistCV = ({ datalang }) => {
           <div
             key={i}
             style={{
-              marginBottom: "15px",
+              marginBottom: "8px",
               backgroundColor: "#fefefe",
-              padding: "15px",
-              borderRadius: "8px",
+              padding: "8px",
+              borderRadius: "4px",
               border: "1px solid #e2e8f0",
-              boxShadow: "0 1px 3px rgba(0, 0, 0, 0.05)",
+              pageBreakInside: "avoid"
             }}
           >
             <h3
               style={{
-                fontSize: "13px",
+                fontSize: "10px",
                 fontWeight: "bold",
                 color: "#1e40af",
-                margin: "0 0 5px 0",
+                margin: "0 0 2px 0",
+                lineHeight: "1.2"
               }}
             >
               {item.work}
             </h3>
             <p
               style={{
-                fontSize: "11px",
+                fontSize: "8px",
                 color: "#059669",
-                margin: "0 0 5px 0",
+                margin: "0 0 2px 0",
                 fontWeight: "600",
+                lineHeight: "1.2"
               }}
             >
               {item.emp}
             </p>
             <p
               style={{
-                fontSize: "10px",
+                fontSize: "7px",
                 color: "#6b7280",
-                margin: "0 0 8px 0",
+                margin: "0 0 4px 0",
                 fontStyle: "italic",
               }}
             >
@@ -379,8 +377,8 @@ const MinimalistCV = ({ datalang }) => {
             {item.descrip && (
               <p
                 style={{
-                  fontSize: "9px",
-                  lineHeight: "1.4",
+                  fontSize: "7px",
+                  lineHeight: "1.3",
                   textAlign: "justify",
                   color: "#374151",
                   margin: "0",
@@ -393,19 +391,19 @@ const MinimalistCV = ({ datalang }) => {
         ))}
       </div>
 
-      {/* Skills y Tecnologías Completas */}
-      <div style={{ marginBottom: "25px" }}>
+      {/* Skills y Tecnologías Optimizadas */}
+      <div style={{ marginBottom: "12px" }}>
         {/* Lenguajes de Programación */}
-        <div style={{ marginBottom: "20px" }}>
+        <div style={{ marginBottom: "10px" }}>
           <h2
             style={{
-              fontSize: "16px",
+              fontSize: "12px",
               fontWeight: "bold",
               color: "#1e40af",
-              marginBottom: "15px",
-              borderBottom: "2px solid #3b82f6",
-              paddingBottom: "5px",
-              margin: "0 0 15px 0",
+              marginBottom: "6px",
+              borderBottom: "1px solid #3b82f6",
+              paddingBottom: "2px",
+              margin: "0 0 6px 0",
             }}
           >
             💻 {titles.skilleng || "Lenguajes de Programación"}
@@ -413,8 +411,8 @@ const MinimalistCV = ({ datalang }) => {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fill, minmax(120px, 1fr))",
-              gap: "8px",
+              gridTemplateColumns: "repeat(auto-fill, minmax(70px, 1fr))",
+              gap: "3px",
             }}
           >
             {skillsData.language_skills?.map((skill, i) => (
@@ -437,9 +435,9 @@ const MinimalistCV = ({ datalang }) => {
                       : skill.val >= 50
                       ? "#a16207"
                       : "#991b1b",
-                  padding: "6px 8px",
-                  borderRadius: "6px",
-                  fontSize: "9px",
+                  padding: "3px 4px",
+                  borderRadius: "3px",
+                  fontSize: "7px",
                   fontWeight: "600",
                   textAlign: "center",
                   border: "1px solid",
@@ -451,11 +449,12 @@ const MinimalistCV = ({ datalang }) => {
                       : skill.val >= 50
                       ? "#fde68a"
                       : "#fecaca",
+                  lineHeight: "1.1"
                 }}
               >
                 <div>{skill.title}</div>
                 <div
-                  style={{ fontSize: "8px", marginTop: "2px", opacity: "0.8" }}
+                  style={{ fontSize: "6px", marginTop: "1px", opacity: "0.8" }}
                 >
                   {skill.val}%
                 </div>
@@ -465,25 +464,25 @@ const MinimalistCV = ({ datalang }) => {
         </div>
 
         {/* Frameworks y Herramientas */}
-        <div style={{ marginBottom: "20px" }}>
+        <div style={{ marginBottom: "10px" }}>
           <h2
             style={{
-              fontSize: "16px",
+              fontSize: "12px",
               fontWeight: "bold",
               color: "#1e40af",
-              marginBottom: "15px",
-              borderBottom: "2px solid #3b82f6",
-              paddingBottom: "5px",
-              margin: "0 0 15px 0",
+              marginBottom: "6px",
+              borderBottom: "1px solid #3b82f6",
+              paddingBottom: "2px",
+              margin: "0 0 6px 0",
             }}
           >
-            🛠️ {titles.skilfra || "Frameworks, Herramientas y Plataformas"}
+            🛠️ {titles.skilfra || "Frameworks y Herramientas"}
           </h2>
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fill, minmax(110px, 1fr))",
-              gap: "6px",
+              gridTemplateColumns: "repeat(auto-fill, minmax(70px, 1fr))",
+              gap: "3px",
             }}
           >
             {skillsData.lib_skills?.map((skill, i) => (
@@ -492,18 +491,106 @@ const MinimalistCV = ({ datalang }) => {
                 style={{
                   backgroundColor: "#f0fdf4",
                   color: "#15803d",
-                  padding: "5px 8px",
-                  borderRadius: "6px",
-                  fontSize: "9px",
+                  padding: "3px 4px",
+                  borderRadius: "3px",
+                  fontSize: "7px",
                   fontWeight: "600",
                   textAlign: "center",
                   border: "1px solid #bbf7d0",
+                  lineHeight: "1.1"
                 }}
               >
                 {skill.title}
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Resumen Compacto */}
+        <div
+          style={{
+            marginTop: "10px",
+            padding: "6px",
+            backgroundColor: "#f0f9ff",
+            borderRadius: "4px",
+            border: "1px solid #0ea5e9",
+            textAlign: "center",
+          }}
+        >
+          <p
+            style={{
+              fontSize: "8px",
+              color: "#0369a1",
+              margin: "0 0 2px 0",
+              fontWeight: "600",
+            }}
+          >
+            <strong>{getCurrentExperienceYears()} años</strong> desarrollando soluciones full-stack
+          </p>
+          <p
+            style={{
+              fontSize: "7px",
+              color: "#0c4a6e",
+              margin: "0",
+              lineHeight: "1.2",
+            }}
+          >
+            Especializado en microservicios, cloud (AWS), Flutter y arquitecturas escalables
+          </p>
+        </div>
+      </div>
+
+      {/* Footer Compacto */}
+      <div
+        style={{
+          marginTop: "15px",
+          padding: "6px 8px",
+          background: "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)",
+          borderRadius: "4px",
+          border: "1px solid #cbd5e1",
+          textAlign: "center",
+          pageBreakInside: "avoid"
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            flexWrap: "wrap",
+            gap: "5px",
+          }}
+        >
+          <span style={{ fontSize: "6px", color: "#64748b" }}>
+            📄 CV generado automáticamente
+          </span>
+          <span
+            style={{
+              fontSize: "8px",
+              fontWeight: "bold",
+              color: "#1e40af",
+            }}
+          >
+            {info.name}
+          </span>
+          <span style={{ fontSize: "6px", color: "#64748b" }}>
+            📅{" "}
+            {new Date().toLocaleDateString("es-ES", {
+              year: "numeric",
+              month: "short",
+              day: "numeric",
+            })}
+          </span>
+        </div>
+        <div
+          style={{
+            marginTop: "3px",
+            fontSize: "5px",
+            color: "#94a3b8",
+            fontStyle: "italic",
+          }}
+        >
+          React + Vite + Tailwind CSS • Full Stack Developer
         </div>
       </div>
     </div>
@@ -550,12 +637,14 @@ const PdfGenerator = ({ datalang }) => {
               .pdf-cv {
                 width: 210mm !important;
                 min-height: auto !important;
-                padding: 12mm !important;
+                padding: 8mm !important;
                 box-sizing: border-box;
                 background: white !important;
                 color: #1f2937 !important;
-                font-size: 10px !important;
-                line-height: 1.3 !important;
+                font-size: 9px !important;
+                line-height: 1.2 !important;
+                max-width: 100% !important;
+                overflow: visible !important;
               }
               .no-print {
                 display: none !important;
@@ -579,25 +668,34 @@ const PdfGenerator = ({ datalang }) => {
                             @media print {
                 @page {
                   size: A4;
-                  margin: 5mm;
+                  margin: 3mm;
                 }
                 body {
                   margin: 0 !important;
-                  font-size: 9px !important;
+                  font-size: 8px !important;
+                  line-height: 1.1 !important;
                 }
                 .pdf-cv {
                   width: 100% !important;
                   height: auto !important;
                   margin: 0 !important;
-                  padding: 8mm !important;
-                  font-size: 9px !important;
-                  line-height: 1.2 !important;
+                  padding: 5mm !important;
+                  font-size: 8px !important;
+                  line-height: 1.1 !important;
+                  max-width: none !important;
+                  overflow: visible !important;
                 }
                 .print-button { display: none !important; }
                 * {
                   -webkit-print-color-adjust: exact !important;
                   print-color-adjust: exact !important;
                   color-adjust: exact !important;
+                }
+                h1, h2, h3 {
+                  page-break-after: avoid !important;
+                }
+                div {
+                  page-break-inside: avoid !important;
                 }
               }
             </style>
