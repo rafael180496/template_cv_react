@@ -1,4 +1,5 @@
 import React from "react";
+import { getCurrentAge } from "../service/util";
 
 const Aboutme = ({ titles, info }) => {
   return (
@@ -14,6 +15,9 @@ const Aboutme = ({ titles, info }) => {
 };
 
 const CardInfo = ({ title, val, delay }) => {
+  // Si el valor es "DYNAMIC_AGE", calculamos la edad actual
+  const displayValue = val === "DYNAMIC_AGE" ? getCurrentAge() : val;
+
   return (
     <>
       <div
@@ -28,7 +32,7 @@ const CardInfo = ({ title, val, delay }) => {
         data-aos="zoom-in-right"
         data-aos-delay={delay}
       >
-        <div className="pb-1 text-secondary">{val}</div>
+        <div className="pb-1 text-secondary">{displayValue}</div>
       </div>
     </>
   );

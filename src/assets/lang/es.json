@@ -77,7 +77,7 @@
     "aboutmeitems": [
       {
         "title": "Edad",
-        "val": "26"
+        "val": "DYNAMIC_AGE"
       },
       {
         "title": "Correo",
