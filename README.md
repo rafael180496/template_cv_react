@@ -100,7 +100,7 @@ npm run dev
 ### **Scripts Disponibles**
 ```bash
 npm run dev       # 🚀 Desarrollo (localhost:5173)
-npm run build     # 📦 Build para producción  
+npm run build     # 📦 Build para producción
 npm run preview   # 👀 Preview del build
 npm run deploy    # 🌐 Deploy a GitHub Pages
 ```
@@ -119,7 +119,7 @@ template_cv_react/
 │   ├── 📂 components/
 │   │   ├── 🏠 CoverContent.jsx    # Header principal
 │   │   ├── 👤 AboutContent.jsx    # Información personal
-│   │   ├── 🎯 SkillContent.jsx    # Habilidades técnicas  
+│   │   ├── 🎯 SkillContent.jsx    # Habilidades técnicas
 │   │   ├── 💼 WorkContent.jsx     # Experiencia laboral
 │   │   ├── 🌐 HeaderContent.jsx   # Navegación y social
 │   │   ├── 🔗 SocialCard.jsx      # Enlaces sociales
@@ -260,7 +260,7 @@ AOS.init({
 ### **🔧 Optimizaciones**
 - ✅ **Code Splitting** con Vite
 - ✅ **Tree Shaking** automático
-- ✅ **Asset Optimization** 
+- ✅ **Asset Optimization**
 - ✅ **Lazy Loading** de imágenes
 - ✅ **Minificación** CSS/JS
 
@@ -279,7 +279,7 @@ npm run deploy
 # Vercel
 npm run build && vercel --prod
 
-# Netlify  
+# Netlify
 npm run build && netlify deploy --prod --dir=dist
 
 # Surge
@@ -327,7 +327,7 @@ Este proyecto está bajo la **MIT License** - ver [LICENSE](LICENSE) para detall
 
 ### **Tecnologías Actualizadas**
 - ✅ **React 19** - Última versión estable
-- ✅ **Vite 6** - Build tool de nueva generación  
+- ✅ **Vite 6** - Build tool de nueva generación
 - ✅ **Tailwind CSS 4** - Framework CSS moderno
 - ✅ **ES2023+** - JavaScript actualizado
 
@@ -337,10 +337,10 @@ Este proyecto está bajo la **MIT License** - ver [LICENSE](LICENSE) para detall
 
 **Rafael Antonio Hidalgo Romero**
 
-📧 **Email**: rafael180496@gmail.com  
-🌐 **Portfolio**: [rafael180496.github.io](http://rafael180496.github.io/template_cv_react)  
-💼 **LinkedIn**: [Rafael Hidalgo](https://linkedin.com/in/rafael-hidalgo)  
-👨‍💻 **GitHub**: [rafael180496](https://github.com/rafael180496)  
+📧 **Email**: rafael180496@gmail.com
+🌐 **Portfolio**: [rafael180496.github.io](http://rafael180496.github.io/template_cv_react)
+💼 **LinkedIn**: [Rafael Hidalgo](https://linkedin.com/in/rafael-hidalgo)
+👨‍💻 **GitHub**: [rafael180496](https://github.com/rafael180496)
 📱 **WhatsApp**: +1 (786) 715-5291
 
 ---
