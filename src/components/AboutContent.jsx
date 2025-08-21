@@ -4,7 +4,6 @@ import { getCurrentAge, getCurrentExperienceYears } from "../service/util";
 const Aboutme = ({ titles, info }) => {
   // Reemplazar DYNAMIC_EXPERIENCE_YEARS con el valor calculado
   const processedAboutMe = info.aboutme.replace('DYNAMIC_EXPERIENCE_YEARS', getCurrentExperienceYears());
-  const processedPost = info.post.replace('DYNAMIC_EXPERIENCE_YEARS', getCurrentExperienceYears());
 
   return (
     <div

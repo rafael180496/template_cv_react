@@ -5,7 +5,19 @@
     "skilleng": "Lenguajes de Programación",
     "skilfra": "Frameworks, Herramientas y Plataformas",
     "workt": "Experiencia laboral y proyectos elaborados",
-    "edugt": "Educacion"
+    "edugt": "Educación"
+  },
+  "skillLevels": {
+    "expert": "Experto",
+    "advanced": "Avanzado",
+    "intermediate": "Intermedio",
+    "basic": "Básico"
+  },
+  "stats": {
+    "positions": "Posiciones",
+    "titles": "Títulos",
+    "yearsMax": "Años máx.",
+    "current": "Actuales"
   },
   "info": {
     "name": "Rafael Antonio Hidalgo Romero",

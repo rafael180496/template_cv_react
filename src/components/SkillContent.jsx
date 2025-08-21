@@ -43,7 +43,7 @@ const CardSkill = ({ title, val, delay, color }) => {
   );
 };
 
-const SkillContent = ({ skills, title, color = "primary" }) => {
+const SkillContent = ({ skills, title, color = "primary", skillLevels = {} }) => {
   return (
     <div className="skills-section">
       <h2 className="section-title">{title}</h2>
@@ -68,25 +68,25 @@ const SkillContent = ({ skills, title, color = "primary" }) => {
             <div className="text-2xl font-bold text-primary-600">
               {skills.filter(s => s.val >= 90).length}
             </div>
-            <div className="text-sm text-gray-600">Experto</div>
+            <div className="text-sm text-gray-600">{skillLevels.expert || "Experto"}</div>
           </div>
           <div>
             <div className="text-2xl font-bold text-blue-600">
               {skills.filter(s => s.val >= 70 && s.val < 90).length}
             </div>
-            <div className="text-sm text-gray-600">Avanzado</div>
+            <div className="text-sm text-gray-600">{skillLevels.advanced || "Avanzado"}</div>
           </div>
           <div>
             <div className="text-2xl font-bold text-yellow-600">
               {skills.filter(s => s.val >= 50 && s.val < 70).length}
             </div>
-            <div className="text-sm text-gray-600">Intermedio</div>
+            <div className="text-sm text-gray-600">{skillLevels.intermediate || "Intermedio"}</div>
           </div>
           <div>
             <div className="text-2xl font-bold text-gray-600">
               {skills.filter(s => s.val < 50).length}
             </div>
-            <div className="text-sm text-gray-600">Básico</div>
+            <div className="text-sm text-gray-600">{skillLevels.basic || "Básico"}</div>
           </div>
         </div>
       </div>

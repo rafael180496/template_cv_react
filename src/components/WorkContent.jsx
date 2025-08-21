@@ -66,7 +66,7 @@ const WorkCard = ({ work, emp, time, descrip, color, delay }) => {
   );
 };
 
-const WorkContent = ({ works, title, color = "primary" }) => {
+const WorkContent = ({ works, title, color = "primary", stats = {} }) => {
   return (
     <div className="work-experience-section">
       <h2 className="section-title">{title}</h2>
@@ -75,7 +75,7 @@ const WorkContent = ({ works, title, color = "primary" }) => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
         <div className="text-center p-4 bg-primary-50 rounded-lg">
           <div className="text-2xl font-bold text-primary-600">{works.length}</div>
-          <div className="text-sm text-gray-600">{color === "success" ? "Títulos" : "Posiciones"}</div>
+          <div className="text-sm text-gray-600">{color === "success" ? (stats.titles || "Títulos") : (stats.positions || "Posiciones")}</div>
         </div>
         <div className="text-center p-4 bg-blue-50 rounded-lg">
           <div className="text-2xl font-bold text-blue-600">
@@ -84,13 +84,13 @@ const WorkContent = ({ works, title, color = "primary" }) => {
               return years ? parseInt(years[years.length - 1]) - parseInt(years[0]) : 0;
             }))}
           </div>
-          <div className="text-sm text-gray-600">Años máx.</div>
+          <div className="text-sm text-gray-600">{stats.yearsMax || "Años máx."}</div>
         </div>
         <div className="text-center p-4 bg-emerald-50 rounded-lg">
           <div className="text-2xl font-bold text-emerald-600">
             {works.filter(w => w.time?.includes("Present") || w.time?.includes("Presente")).length}
           </div>
-          <div className="text-sm text-gray-600">Actuales</div>
+          <div className="text-sm text-gray-600">{stats.current || "Actuales"}</div>
         </div>
       </div>
       

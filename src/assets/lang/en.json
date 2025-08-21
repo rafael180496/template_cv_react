@@ -7,6 +7,18 @@
     "workt": "Work experience and projects developed",
     "edugt": "Education"
   },
+  "skillLevels": {
+    "expert": "Expert",
+    "advanced": "Advanced",
+    "intermediate": "Intermediate",
+    "basic": "Basic"
+  },
+  "stats": {
+    "positions": "Positions",
+    "titles": "Degrees",
+    "yearsMax": "Max years",
+    "current": "Current"
+  },
   "info": {
     "name": "Rafael Antonio Hidalgo Romero",
     "post": "Full stack developer and technology consultant with DYNAMIC_EXPERIENCE_YEARS years of experience in large-scale development, specialized in microservices architectures, distributed systems, and cloud solutions.",
