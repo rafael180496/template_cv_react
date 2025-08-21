@@ -1,7 +1,11 @@
 import React from "react";
 import { getCurrentExperienceYears } from "../service/util";
+import PdfGenerator from "./PdfGenerator";
 
-const CoverContent = ({ post, name }) => {
+const CoverContent = ({ datalang }) => {
+  const { info } = datalang;
+  const { name, post } = info;
+
   // Reemplazar DYNAMIC_EXPERIENCE_YEARS con el valor calculado
   const processedPost = post.replace(
     "DYNAMIC_EXPERIENCE_YEARS",
@@ -62,6 +66,15 @@ const CoverContent = ({ post, name }) => {
                 <span>7+ años experiencia</span>
               </div>
             </div>
+
+            {/* Botón PDF */}
+            <div
+              className="mt-8 flex justify-center lg:justify-start"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <PdfGenerator datalang={datalang} />
+            </div>
           </div>
         </div>
       </div>
@@ -73,7 +86,13 @@ const CoverContent = ({ post, name }) => {
   );
 };
 
-export const CoverPDF = ({ post, name }) => {
+export const CoverPDF = ({ datalang }) => {
+  const { info } = datalang;
+  const { name, post } = info;
+
+  // Procesar texto dinámico
+  const processedPost = post.replace('DYNAMIC_EXPERIENCE_YEARS', getCurrentExperienceYears());
+
   return (
     <div className="bg-gray-900 text-white p-8">
       <div className="flex items-center space-x-6">
@@ -94,7 +113,7 @@ export const CoverPDF = ({ post, name }) => {
           >
             {name}
           </h1>
-          <p className="text-gray-300 text-lg leading-relaxed">{post}</p>
+          <p className="text-gray-300 text-lg leading-relaxed">{processedPost}</p>
 
           <div className="flex flex-wrap gap-4 mt-4 text-sm text-gray-400">
             <div className="flex items-center space-x-2">

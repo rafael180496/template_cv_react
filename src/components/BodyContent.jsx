@@ -11,7 +11,7 @@ const BodyContent = ({ datalang }) => {
     <div className="min-h-screen bg-gray-50 py-8">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="cv-container">
-          <CoverContent name={info.name} post={info.post}></CoverContent>
+          <CoverContent datalang={datalang}></CoverContent>
 
           <div className="cv-section">
             <AboutContent info={info} titles={titles}></AboutContent>
@@ -60,7 +60,7 @@ export const BodyPDF = ({ datalang }) => {
   const { info, titles, skillLevels, stats } = datalang;
   return (
     <div className="max-w-4xl mx-auto bg-white">
-      <CoverPDF name={info.name} post={info.post}></CoverPDF>
+      <CoverPDF datalang={datalang}></CoverPDF>
 
       <div className="p-6 border-b border-gray-200">
         <AboutContent info={info} titles={titles}></AboutContent>

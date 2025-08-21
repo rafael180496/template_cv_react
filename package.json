@@ -6,6 +6,7 @@
   "type": "module",
   "dependencies": {
     "aos": "^2.3.4",
+    "html2pdf.js": "^0.10.3",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
@@ -17,10 +18,10 @@
     "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.12",
     "@types/react": "^19.1.1 ",
     "@types/react-dom": "^19.1.1 ",
     "@vitejs/plugin-react": "^5.0.1",
-    "@tailwindcss/postcss": "^4.1.12",
     "autoprefixer": "^10.4.21",
     "eslint": "^9.33.0",
     "eslint-plugin-react": "^7.37.5",
