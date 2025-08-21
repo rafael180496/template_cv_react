@@ -341,7 +341,6 @@ Este proyecto está bajo la **MIT License** - ver [LICENSE](LICENSE) para detall
 🌐 **Portfolio**: [rafael180496.github.io](http://rafael180496.github.io/template_cv_react)
 💼 **LinkedIn**: [Rafael Hidalgo](https://linkedin.com/in/rafael-hidalgo)
 👨‍💻 **GitHub**: [rafael180496](https://github.com/rafael180496)
-📱 **WhatsApp**: +1 (786) 715-5291
 
 ---
 
