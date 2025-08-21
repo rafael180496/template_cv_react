@@ -69,13 +69,13 @@
         "work": "Soporte de API REST",
         "emp": "en Workana",
         "time": "Marzo,2020 - Enero,2022",
-        "descrip": "Soporte de servicios AWS en Golang creando nuevas peticiones y endpoints."
+        "descrip": "Desarrollo y mantenimiento de servicios AWS en Golang, creando múltiples endpoints REST para diferentes funcionalidades del sistema. Implementé tests unitarios exhaustivos para garantizar la calidad del código y la estabilidad de los servicios. Desarrollé endpoints para autenticación, gestión de usuarios, procesamiento de datos y integración con servicios externos.\nTecnologías: Golang, AWS Lambda, API Gateway, DynamoDB, Tests unitarios, Git."
       },
       {
         "work": "Proyecto Crazysales",
         "emp": "en Lotería Pública",
         "time": "Mayo,2020 - Agosto,2020",
-        "descrip": "Proyecto en Flutter de ticketing para loteros públicos."
+        "descrip": "Desarrollo de aplicación móvil completa en Flutter para la administración y venta de lotería pública. La app incluye funcionalidades de gestión de inventario de boletos, procesamiento de ventas, reportes de transacciones y integración con impresora térmica para la emisión automática de tickets. Implementé arquitectura MVC, gestión de estado con Provider, y base de datos local SQLite para funcionamiento offline.\nTecnologías: Flutter, Dart, SQLite, Impresión térmica, Provider, MVC, APIs REST."
       }
     ],
     "educationitems": [
