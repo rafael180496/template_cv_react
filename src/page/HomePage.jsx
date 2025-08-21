@@ -2,9 +2,10 @@ import React, { useReducer } from "react";
 import BodyContent from "../components/BodyContent";
 import HeaderContent from "../components/HeaderContent";
 import { langReducer, LangContext } from "../provider/langContext";
+import esData from "../assets/lang/es.json";
+
 const init = () => {
-  const datalang = require("../assets/lang/es.json");
-  return { locale: "EN", datalang: datalang };
+  return { locale: "EN", datalang: esData };
 };
 
 const HomePage = () => {
