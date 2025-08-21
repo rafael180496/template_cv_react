@@ -28,7 +28,7 @@ const CoverContent = ({ post, name }) => {
             <p 
               className="text-lg lg:text-xl text-blue-100 mb-6 max-w-3xl leading-relaxed"
               data-aos="fade-left" 
-              data-aos-delay="100"
+              data-aos-delay="50"
             >
               {post}
             </p>
@@ -36,7 +36,7 @@ const CoverContent = ({ post, name }) => {
             <div 
               className="flex flex-wrap justify-center lg:justify-start gap-4 d-print-none"
               data-aos="fade-left" 
-              data-aos-delay="200"
+              data-aos-delay="100"
             >
               <div className="flex items-center space-x-2 text-blue-100">
                 <i className="fas fa-map-marker-alt"></i>

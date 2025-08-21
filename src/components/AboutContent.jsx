@@ -6,7 +6,7 @@ const Aboutme = ({ titles, info }) => {
     <div
       className="lg:col-span-2"
       data-aos="fade-up"
-      data-aos-delay="100"
+      data-aos-delay="50"
     >
       <h2 className="section-title">{titles.about}</h2>
       <div className="max-w-none">
@@ -57,7 +57,7 @@ const CardInfoArray = ({ aboutmeitems }) => {
           return (
             <CardInfo
               key={i}
-              delay={i * 100 + 200}
+              delay={i * 40 + 150} // Más rápido y fluido
               title={item.title}
               val={item.val}
               icon={iconMap[item.title]}

@@ -96,7 +96,7 @@ const WorkContent = ({ works, title, color = "primary" }) => {
       
       <div className="timeline relative">
         {works.map((item, i) => {
-          return <WorkCard {...item} color={color} key={i} delay={i * 100} />;
+          return <WorkCard {...item} color={color} key={i} delay={i * 50} />; // Más rápido: 100ms → 50ms
         })}
       </div>
     </div>

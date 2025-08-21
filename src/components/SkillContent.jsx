@@ -52,7 +52,7 @@ const SkillContent = ({ skills, title, color = "primary" }) => {
           return (
             <CardSkill
               key={i}
-              delay={i * 50}
+              delay={i * 30} // Más rápido: 50ms → 30ms
               title={item.title}
               val={item.val}
               color={color}

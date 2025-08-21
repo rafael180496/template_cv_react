@@ -111,6 +111,12 @@
     @apply w-10 h-10 rounded-full bg-primary-600 hover:bg-primary-700 text-white flex items-center justify-center transition-all duration-200 hover:scale-110;
   }
 
+  /* Header improvements */
+  .header-blur {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
   /* Professional CV Styles */
   .cv-container {
     @apply max-w-4xl mx-auto bg-white shadow-soft rounded-xl overflow-hidden;
