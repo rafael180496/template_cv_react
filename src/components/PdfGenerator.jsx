@@ -1,188 +1,510 @@
-import React, { useRef } from 'react';
-import { getCurrentAge, getCurrentExperienceYears } from '../service/util';
-import skillsData from '../assets/skills.json';
+import React, { useRef } from "react";
+import { getCurrentAge, getCurrentExperienceYears } from "../service/util";
+import skillsData from "../assets/skills.json";
 
 // Componente minimalista para PDF
 const MinimalistCV = ({ datalang }) => {
   const { info, titles, skillLevels = {}, stats = {} } = datalang;
 
   // Procesar textos dinámicos
-  const processedPost = info.post.replace('DYNAMIC_EXPERIENCE_YEARS', getCurrentExperienceYears());
-  const processedAboutMe = info.aboutme.replace('DYNAMIC_EXPERIENCE_YEARS', getCurrentExperienceYears());
+  const processedPost = info.post.replace(
+    "DYNAMIC_EXPERIENCE_YEARS",
+    getCurrentExperienceYears()
+  );
+  const processedAboutMe = info.aboutme.replace(
+    "DYNAMIC_EXPERIENCE_YEARS",
+    getCurrentExperienceYears()
+  );
 
   return (
-    <div className="pdf-cv bg-white text-gray-800" style={{
-      width: '210mm',
-      minHeight: '297mm',
-      padding: '15mm',
-      fontFamily: 'Arial, sans-serif',
-      fontSize: '11px',
-      lineHeight: '1.4'
-    }}>
-      {/* Header */}
-      <div style={{ marginBottom: '20px', borderBottom: '2px solid #2563eb', paddingBottom: '15px' }}>
-        <h1 style={{
-          fontSize: '24px',
-          fontWeight: 'bold',
-          color: '#1e40af',
-          marginBottom: '5px',
-          margin: 0
-        }}>
-          {info.name}
-        </h1>
-        <p style={{
-          fontSize: '12px',
-          color: '#6b7280',
-          margin: '5px 0',
-          fontStyle: 'italic'
-        }}>
-          {processedPost}
-        </p>
+    <div
+      className="pdf-cv bg-white text-gray-800"
+      style={{
+        width: "210mm",
+        minHeight: "auto",
+        padding: "12mm",
+        fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+        fontSize: "10px",
+        lineHeight: "1.3",
+        color: "#1f2937",
+        position: "relative",
+      }}
+    >
+      {/* Header Mejorado */}
+      <div
+        style={{
+          marginBottom: "25px",
+          background: "linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)",
+          color: "white",
+          padding: "20px",
+          borderRadius: "8px",
+          boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
+          <div>
+            <h1
+              style={{
+                fontSize: "28px",
+                fontWeight: "bold",
+                marginBottom: "8px",
+                margin: 0,
+                letterSpacing: "0.5px",
+              }}
+            >
+              {info.name}
+            </h1>
+            <p
+              style={{
+                fontSize: "13px",
+                margin: "5px 0 0 0",
+                opacity: "0.95",
+                lineHeight: "1.4",
+              }}
+            >
+              {processedPost}
+            </p>
+          </div>
+          <div
+            style={{
+              width: "80px",
+              height: "80px",
+              borderRadius: "50%",
+              backgroundColor: "rgba(255, 255, 255, 0.2)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              fontSize: "32px",
+              fontWeight: "bold",
+            }}
+          >
+            {info.name
+              .split(" ")
+              .map((n) => n[0])
+              .slice(0, 2)
+              .join("")}
+          </div>
+        </div>
       </div>
 
-      {/* Información de contacto y About Me */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginBottom: '20px' }}>
+      {/* Información de contacto y About Me Mejorado */}
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 2fr",
+          gap: "25px",
+          marginBottom: "25px",
+        }}
+      >
         {/* Contacto */}
-        <div>
-          <h2 style={{ fontSize: '14px', fontWeight: 'bold', color: '#1e40af', marginBottom: '10px' }}>
-            Información de Contacto
+        <div
+          style={{
+            backgroundColor: "#f8fafc",
+            padding: "18px",
+            borderRadius: "8px",
+            border: "1px solid #e2e8f0",
+          }}
+        >
+          <h2
+            style={{
+              fontSize: "16px",
+              fontWeight: "bold",
+              color: "#1e40af",
+              marginBottom: "15px",
+              borderBottom: "2px solid #3b82f6",
+              paddingBottom: "5px",
+              margin: "0 0 15px 0",
+            }}
+          >
+            📋 Información de Contacto
           </h2>
           {info.aboutmeitems?.map((item, i) => (
-            <div key={i} style={{ marginBottom: '5px', fontSize: '10px' }}>
-              <strong>{item.title}:</strong> {item.val === "DYNAMIC_AGE" ? getCurrentAge() : item.val}
+            <div
+              key={i}
+              style={{
+                marginBottom: "8px",
+                fontSize: "10px",
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <strong style={{ color: "#374151", minWidth: "70px" }}>
+                {item.title}:
+              </strong>
+              <span style={{ marginLeft: "8px", color: "#6b7280" }}>
+                {item.val === "DYNAMIC_AGE" ? getCurrentAge() : item.val}
+              </span>
             </div>
           ))}
 
           {/* Redes sociales */}
-          <div style={{ marginTop: '10px' }}>
-            <strong>Enlaces:</strong>
+          <div
+            style={{
+              marginTop: "15px",
+              paddingTop: "10px",
+              borderTop: "1px solid #e2e8f0",
+            }}
+          >
+            <strong style={{ color: "#374151", fontSize: "11px" }}>
+              🔗 Enlaces Profesionales:
+            </strong>
             {info.social?.map((item, i) => (
-              <div key={i} style={{ fontSize: '10px', color: '#2563eb' }}>
-                {item.name}: {item.link}
+              <div
+                key={i}
+                style={{
+                  fontSize: "9px",
+                  color: "#2563eb",
+                  marginTop: "5px",
+                  wordBreak: "break-all",
+                }}
+              >
+                <strong>{item.name}:</strong> {item.link}
               </div>
             ))}
           </div>
         </div>
 
         {/* About Me */}
-        <div>
-          <h2 style={{ fontSize: '14px', fontWeight: 'bold', color: '#1e40af', marginBottom: '10px' }}>
-            {titles.about}
+        <div
+          style={{
+            backgroundColor: "#fefefe",
+            padding: "18px",
+            borderRadius: "8px",
+            border: "1px solid #e2e8f0",
+          }}
+        >
+          <h2
+            style={{
+              fontSize: "16px",
+              fontWeight: "bold",
+              color: "#1e40af",
+              marginBottom: "15px",
+              borderBottom: "2px solid #3b82f6",
+              paddingBottom: "5px",
+              margin: "0 0 15px 0",
+            }}
+          >
+            👨‍💻 {titles.about}
           </h2>
-          <p style={{ fontSize: '10px', lineHeight: '1.4', textAlign: 'justify' }}>
-            {processedAboutMe.substring(0, 400)}...
+          <p
+            style={{
+              fontSize: "10px",
+              lineHeight: "1.5",
+              textAlign: "justify",
+              color: "#374151",
+              margin: 0,
+            }}
+          >
+            {processedAboutMe}
           </p>
         </div>
       </div>
 
-      {/* Experiencia Laboral */}
-      <div style={{ marginBottom: '20px' }}>
-        <h2 style={{
-          fontSize: '16px',
-          fontWeight: 'bold',
-          color: '#1e40af',
-          marginBottom: '15px',
-          borderBottom: '1px solid #e5e7eb',
-          paddingBottom: '5px'
-        }}>
-          {titles.workt}
+      {/* Experiencia Laboral Completa */}
+      <div style={{ marginBottom: "25px" }}>
+        <h2
+          style={{
+            fontSize: "18px",
+            fontWeight: "bold",
+            color: "#1e40af",
+            marginBottom: "20px",
+            borderBottom: "3px solid #3b82f6",
+            paddingBottom: "8px",
+            margin: "0 0 20px 0",
+            textAlign: "center",
+          }}
+        >
+          💼 {titles.workt}
         </h2>
-        {info.workitems?.slice(0, 4).map((item, i) => (
-          <div key={i} style={{ marginBottom: '15px' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <h3 style={{ fontSize: '12px', fontWeight: 'bold', color: '#374151', margin: 0 }}>
-                {item.work}
-              </h3>
-              <span style={{ fontSize: '10px', color: '#6b7280', fontStyle: 'italic' }}>
-                {item.time}
+
+        {info.workitems?.map((item, i) => (
+          <div
+            key={i}
+            style={{
+              marginBottom: "20px",
+              backgroundColor: i % 2 === 0 ? "#f8fafc" : "#ffffff",
+              padding: "15px",
+              borderRadius: "8px",
+              border: "1px solid #e2e8f0",
+              boxShadow: "0 1px 3px rgba(0, 0, 0, 0.05)",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "flex-start",
+                marginBottom: "8px",
+              }}
+            >
+              <div style={{ flex: 1 }}>
+                <h3
+                  style={{
+                    fontSize: "13px",
+                    fontWeight: "bold",
+                    color: "#1e40af",
+                    margin: "0 0 3px 0",
+                  }}
+                >
+                  {item.work}
+                </h3>
+                <p
+                  style={{
+                    fontSize: "11px",
+                    color: "#059669",
+                    margin: "0",
+                    fontWeight: "600",
+                  }}
+                >
+                  {item.emp}
+                </p>
+              </div>
+              <span
+                style={{
+                  fontSize: "9px",
+                  color: "#6b7280",
+                  fontStyle: "italic",
+                  backgroundColor: "#e0f2fe",
+                  padding: "4px 8px",
+                  borderRadius: "12px",
+                  whiteSpace: "nowrap",
+                  marginLeft: "10px",
+                }}
+              >
+                📅 {item.time}
               </span>
             </div>
-            <p style={{ fontSize: '11px', color: '#2563eb', margin: '2px 0' }}>{item.emp}</p>
-            <p style={{ fontSize: '10px', lineHeight: '1.3', textAlign: 'justify' }}>
-              {item.descrip?.substring(0, 200)}...
-            </p>
+
+            <div
+              style={{
+                fontSize: "9px",
+                lineHeight: "1.4",
+                textAlign: "justify",
+                color: "#374151",
+                marginTop: "8px",
+              }}
+            >
+              {item.descrip?.split("\n").map((paragraph, pIndex) => (
+                <p
+                  key={pIndex}
+                  style={{
+                    margin: "0 0 6px 0",
+                    textIndent: paragraph.startsWith("•") ? "0" : "8px",
+                  }}
+                >
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+
+            {/* Separador visual */}
+            {i < info.workitems.length - 1 && (
+              <div
+                style={{
+                  marginTop: "12px",
+                  height: "1px",
+                  background:
+                    "linear-gradient(to right, transparent, #cbd5e1, transparent)",
+                }}
+              />
+            )}
           </div>
         ))}
       </div>
 
-      {/* Skills */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginBottom: '20px' }}>
-        {/* Educación */}
-        <div>
-          <h2 style={{ fontSize: '14px', fontWeight: 'bold', color: '#1e40af', marginBottom: '10px' }}>
-            {titles.edugt}
-          </h2>
-          {info.educationitems?.map((item, i) => (
-            <div key={i} style={{ marginBottom: '10px' }}>
-              <h3 style={{ fontSize: '11px', fontWeight: 'bold', color: '#374151' }}>{item.work}</h3>
-              <p style={{ fontSize: '10px', color: '#2563eb' }}>{item.emp}</p>
-              <p style={{ fontSize: '10px', color: '#6b7280' }}>{item.time}</p>
-            </div>
-          ))}
-        </div>
-
-        {/* Skills y Tecnologías */}
-        <div>
-          <h2 style={{ fontSize: '14px', fontWeight: 'bold', color: '#1e40af', marginBottom: '10px' }}>
-            {titles.skilleng || 'Tecnologías'}
-          </h2>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '5px', marginBottom: '10px' }}>
-            {skillsData.language_skills?.slice(0, 8).map((skill, i) => (
-              <span key={i} style={{
-                backgroundColor: skill.val >= 80 ? '#dcfce7' : skill.val >= 60 ? '#dbeafe' : '#fef3c7',
-                color: skill.val >= 80 ? '#166534' : skill.val >= 60 ? '#1e40af' : '#a16207',
-                padding: '2px 6px',
-                borderRadius: '3px',
-                fontSize: '9px',
-                fontWeight: '500'
-              }}>
-                {skill.title} ({skill.val}%)
-              </span>
-            ))}
-          </div>
-
-          <h3 style={{ fontSize: '12px', fontWeight: 'bold', color: '#374151', marginBottom: '5px' }}>
-            {titles.skilfra || 'Frameworks & Tools'}
-          </h3>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '5px', marginBottom: '10px' }}>
-            {skillsData.lib_skills?.slice(0, 6).map((skill, i) => (
-              <span key={i} style={{
-                backgroundColor: '#f0fdf4',
-                color: '#15803d',
-                padding: '2px 6px',
-                borderRadius: '3px',
-                fontSize: '9px',
-                fontWeight: '500'
-              }}>
-                {skill.title}
-              </span>
-            ))}
-          </div>
-
-          <div style={{ marginTop: '10px', padding: '8px', backgroundColor: '#f8fafc', borderRadius: '4px' }}>
-            <p style={{ fontSize: '10px', color: '#374151', margin: 0 }}>
-              <strong>Experiencia:</strong> {getCurrentExperienceYears()} años desarrollando soluciones full-stack
+      {/* Educación */}
+      <div style={{ marginBottom: "25px" }}>
+        <h2
+          style={{
+            fontSize: "18px",
+            fontWeight: "bold",
+            color: "#1e40af",
+            marginBottom: "15px",
+            borderBottom: "3px solid #3b82f6",
+            paddingBottom: "8px",
+            margin: "0 0 15px 0",
+            textAlign: "center",
+          }}
+        >
+          🎓 {titles.edugt}
+        </h2>
+        {info.educationitems?.map((item, i) => (
+          <div
+            key={i}
+            style={{
+              marginBottom: "15px",
+              backgroundColor: "#fefefe",
+              padding: "15px",
+              borderRadius: "8px",
+              border: "1px solid #e2e8f0",
+              boxShadow: "0 1px 3px rgba(0, 0, 0, 0.05)",
+            }}
+          >
+            <h3
+              style={{
+                fontSize: "13px",
+                fontWeight: "bold",
+                color: "#1e40af",
+                margin: "0 0 5px 0",
+              }}
+            >
+              {item.work}
+            </h3>
+            <p
+              style={{
+                fontSize: "11px",
+                color: "#059669",
+                margin: "0 0 5px 0",
+                fontWeight: "600",
+              }}
+            >
+              {item.emp}
             </p>
-            <p style={{ fontSize: '9px', color: '#6b7280', margin: '2px 0 0 0' }}>
-              Especializado en microservicios, cloud computing y arquitecturas escalables
+            <p
+              style={{
+                fontSize: "10px",
+                color: "#6b7280",
+                margin: "0 0 8px 0",
+                fontStyle: "italic",
+              }}
+            >
+              📅 {item.time}
             </p>
+            {item.descrip && (
+              <p
+                style={{
+                  fontSize: "9px",
+                  lineHeight: "1.4",
+                  textAlign: "justify",
+                  color: "#374151",
+                  margin: "0",
+                }}
+              >
+                {item.descrip}
+              </p>
+            )}
           </div>
-        </div>
+        ))}
       </div>
 
-      {/* Footer */}
-      <div style={{
-        position: 'absolute',
-        bottom: '15mm',
-        left: '15mm',
-        right: '15mm',
-        textAlign: 'center',
-        fontSize: '9px',
-        color: '#6b7280',
-        borderTop: '1px solid #e5e7eb',
-        paddingTop: '10px'
-      }}>
-        <p>CV generado automáticamente - {new Date().toLocaleDateString()}</p>
+      {/* Skills y Tecnologías Completas */}
+      <div style={{ marginBottom: "25px" }}>
+        {/* Lenguajes de Programación */}
+        <div style={{ marginBottom: "20px" }}>
+          <h2
+            style={{
+              fontSize: "16px",
+              fontWeight: "bold",
+              color: "#1e40af",
+              marginBottom: "15px",
+              borderBottom: "2px solid #3b82f6",
+              paddingBottom: "5px",
+              margin: "0 0 15px 0",
+            }}
+          >
+            💻 {titles.skilleng || "Lenguajes de Programación"}
+          </h2>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fill, minmax(120px, 1fr))",
+              gap: "8px",
+            }}
+          >
+            {skillsData.language_skills?.map((skill, i) => (
+              <div
+                key={i}
+                style={{
+                  backgroundColor:
+                    skill.val >= 85
+                      ? "#dcfce7"
+                      : skill.val >= 70
+                      ? "#dbeafe"
+                      : skill.val >= 50
+                      ? "#fef3c7"
+                      : "#fef2f2",
+                  color:
+                    skill.val >= 85
+                      ? "#166534"
+                      : skill.val >= 70
+                      ? "#1e40af"
+                      : skill.val >= 50
+                      ? "#a16207"
+                      : "#991b1b",
+                  padding: "6px 8px",
+                  borderRadius: "6px",
+                  fontSize: "9px",
+                  fontWeight: "600",
+                  textAlign: "center",
+                  border: "1px solid",
+                  borderColor:
+                    skill.val >= 85
+                      ? "#bbf7d0"
+                      : skill.val >= 70
+                      ? "#bfdbfe"
+                      : skill.val >= 50
+                      ? "#fde68a"
+                      : "#fecaca",
+                }}
+              >
+                <div>{skill.title}</div>
+                <div
+                  style={{ fontSize: "8px", marginTop: "2px", opacity: "0.8" }}
+                >
+                  {skill.val}%
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Frameworks y Herramientas */}
+        <div style={{ marginBottom: "20px" }}>
+          <h2
+            style={{
+              fontSize: "16px",
+              fontWeight: "bold",
+              color: "#1e40af",
+              marginBottom: "15px",
+              borderBottom: "2px solid #3b82f6",
+              paddingBottom: "5px",
+              margin: "0 0 15px 0",
+            }}
+          >
+            🛠️ {titles.skilfra || "Frameworks, Herramientas y Plataformas"}
+          </h2>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fill, minmax(110px, 1fr))",
+              gap: "6px",
+            }}
+          >
+            {skillsData.lib_skills?.map((skill, i) => (
+              <div
+                key={i}
+                style={{
+                  backgroundColor: "#f0fdf4",
+                  color: "#15803d",
+                  padding: "5px 8px",
+                  borderRadius: "6px",
+                  fontSize: "9px",
+                  fontWeight: "600",
+                  textAlign: "center",
+                  border: "1px solid #bbf7d0",
+                }}
+              >
+                {skill.title}
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -190,14 +512,16 @@ const MinimalistCV = ({ datalang }) => {
 
 const PdfGenerator = ({ datalang }) => {
   const pdfRef = useRef();
-  const isEnglish = datalang.locale === 'en-us';
+  const isEnglish = datalang.locale === "en-us";
 
-    const generatePDF = async () => {
+  const generatePDF = async () => {
     try {
       // Crear una nueva ventana con el contenido del CV
-      const printWindow = window.open('', '_blank', 'width=800,height=1000');
+      const printWindow = window.open("", "_blank", "width=800,height=1000");
       const pdfContent = pdfRef.current.innerHTML;
-      const fileName = `CV_${datalang.info.name.replace(/\s+/g, '_')}_${new Date().toISOString().split('T')[0]}`;
+      const fileName = `CV_${datalang.info.name.replace(/\s+/g, "_")}_${
+        new Date().toISOString().split("T")[0]
+      }`;
 
       printWindow.document.write(`
         <!DOCTYPE html>
@@ -225,11 +549,13 @@ const PdfGenerator = ({ datalang }) => {
               }
               .pdf-cv {
                 width: 210mm !important;
-                min-height: 297mm !important;
-                padding: 15mm !important;
+                min-height: auto !important;
+                padding: 12mm !important;
                 box-sizing: border-box;
                 background: white !important;
                 color: #1f2937 !important;
+                font-size: 10px !important;
+                line-height: 1.3 !important;
               }
               .no-print {
                 display: none !important;
@@ -250,21 +576,35 @@ const PdfGenerator = ({ datalang }) => {
               .print-button:hover {
                 background: #1d4ed8;
               }
-              @media print {
-                body { margin: 0 !important; }
+                            @media print {
+                @page {
+                  size: A4;
+                  margin: 5mm;
+                }
+                body {
+                  margin: 0 !important;
+                  font-size: 9px !important;
+                }
                 .pdf-cv {
                   width: 100% !important;
                   height: auto !important;
                   margin: 0 !important;
-                  padding: 10mm !important;
+                  padding: 8mm !important;
+                  font-size: 9px !important;
+                  line-height: 1.2 !important;
                 }
                 .print-button { display: none !important; }
+                * {
+                  -webkit-print-color-adjust: exact !important;
+                  print-color-adjust: exact !important;
+                  color-adjust: exact !important;
+                }
               }
             </style>
           </head>
           <body>
             <button class="print-button" onclick="window.print()">
-              📄 ${isEnglish ? 'Print/Save as PDF' : 'Imprimir/Guardar PDF'}
+              📄 ${isEnglish ? "Print/Save as PDF" : "Imprimir/Guardar PDF"}
             </button>
             ${pdfContent}
             <script>
@@ -292,12 +632,11 @@ const PdfGenerator = ({ datalang }) => {
       `);
 
       printWindow.document.close();
-
     } catch (error) {
-      console.error('Error al generar PDF:', error);
+      console.error("Error al generar PDF:", error);
       const message = isEnglish
-        ? 'Error generating PDF. Please try again.'
-        : 'Error al generar el PDF. Por favor, inténtalo de nuevo.';
+        ? "Error generating PDF. Please try again."
+        : "Error al generar el PDF. Por favor, inténtalo de nuevo.";
       alert(message);
     }
   };
@@ -317,7 +656,7 @@ const PdfGenerator = ({ datalang }) => {
       </button>
 
       {/* Contenido oculto para generar PDF */}
-      <div style={{ position: 'absolute', left: '-9999px', top: '-9999px' }}>
+      <div style={{ position: "absolute", left: "-9999px", top: "-9999px" }}>
         <div ref={pdfRef}>
           <MinimalistCV datalang={datalang} />
         </div>
