@@ -9,25 +9,25 @@
   },
   "info": {
     "name": "Rafael Antonio Hidalgo Romero",
-    "post": "Desarrollador full stack con 6 años de experiencia en desarrollos a gran escala.",
+    "post": "Desarrollador full stack y consultor tecnológico con más de 7 años de experiencia en desarrollos a gran escala, especializado en arquitecturas de microservicios, sistemas distribuidos y soluciones cloud.",
     "workitems": [
       {
-        "work": "Desarrollador Backend",
-        "emp": "en Zerviz (Chile)",
+        "work": "Consultor Tecnológico y Desarrollador",
+        "emp": "en Zerviz (Consultoría)",
         "time": "Marzo,2021 - Presente",
-        "descrip": "Desarrollador Backend en typescript con nodejs en el framework nestJS con tecnologias AWS sobre microservicios."
+        "descrip": "Consultor tecnológico para diversos clientes internacionales:\n• Millicom (TIGO): Implementación de servicios AWS Lambda, desarrollo con React y Zendesk, migración de Zendesk a Chatwoot en 9 países con Vue.js y Ruby on Rails.\n• Copa Airlines: Creación de scripts en Five9 para mejorar la integración de voz.\n• Rosen: Desarrollo de microservicios con Spring Boot y gestión de pipelines en Azure DevOps.\n• Abcdin: Desarrollo de backend con Node.js, TypeScript, NestJS y consumidores SQS para AWS.\nTecnologías: Node.js, TypeScript, NestJS, React.js, Vue.js, Ruby on Rails, SQS, Azure DevOps, Spring Boot, Java."
       },
       {
-        "work": "Desarrollador Backend(NodeJS)",
+        "work": "Desarrollador Backend Senior",
         "emp": "en ZeroQ (Chile)",
         "time": "Septiembre,2021 - Presente",
-        "descrip": "Desarrollador backend en go y node js con especializacion en web socket de sistemas para atencion a cliente."
+        "descrip": "Desarrollo de sistemas backend especializados en comunicaciones en tiempo real y atención al cliente. Implementación de arquitecturas con WebSockets para sistemas de chat y soporte técnico. Desarrollo con Go y Node.js, enfocado en alta concurrencia y escalabilidad para plataformas de atención al cliente."
       },
       {
-        "work": "Desarrollador freelance",
-        "emp": "en Sigeme (Guatemala)",
+        "work": "Coordinador y Desarrollador Backend",
+        "emp": "en Sigeme (Freelance - Guatemala)",
         "time": "Junio,2021 - Presente",
-        "descrip": " Coordinación de desarrollos en el sistema comercial SGC llevando a cabo las tareas de análisis de la solución requerida, planificación y asignación de tareas a programadores, seguimiento de las modificaciones e implementaciones de sistemas, especializándose en el desarrollo de los programas del facturador batch."
+        "descrip": "Desarrollo y coordinación del sistema comercial SGC desde la planificación hasta la implementación final. Implementación de programas para facturación batch utilizando Cobol, mejorando significativamente la eficiencia del proceso de facturación. Mantenimiento de comunicación constante con clientes para garantizar el éxito de cada proyecto y entrega de soluciones personalizadas.\nTecnologías: Cobol, SQL, sistemas batch."
       },
       {
         "work": "Desarrollador full stack",
@@ -36,10 +36,10 @@
         "descrip": "Desarrollador freelance en sistemas de inmuebles con tecnologias React.js y serveless."
       },
       {
-        "work": "Coordinador y desarrollador",
-        "emp": "a the data age",
+        "work": "Coordinador y Desarrollador",
+        "emp": "en The Data Age",
         "time": "Marzo,2017 - Junio,2021",
-        "descrip": " Coordinación de desarrollos en el sistema comercial O-SGC; llevando a cabo las tareas de análisis de la solución requerida, planificación y asignación de tareas a programadores, seguimiento de las modificaciones e implementaciones de sistemas, especializándose en el desarrollo de los programas del facturador batch.\nCoordinacion de desarrollo de aplicacion de gestion comercial TDA.(Creador de Ambientes de desarrollo Docker e api rest en golang).\n"
+        "descrip": "Lideré el desarrollo del sistema comercial O-SGC, gestionando un equipo de desarrollo multidisciplinario. Implementé API REST utilizando Golang y administré entornos de desarrollo con Docker. Creación de demonio certificador elaborado en Golang y Python para sistemas de facturación electrónica. Coordinación de desarrollos llevando a cabo análisis de soluciones, planificación y asignación de tareas, seguimiento de modificaciones e implementaciones de sistemas, especializándose en el desarrollo de programas de facturador batch.\nTecnologías: Golang, Python, Docker, SQL, API REST, sistemas batch."
       },
       {
         "work": "Proyecto de Facturacion electronica en Energuate Guatemala",

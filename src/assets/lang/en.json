@@ -9,25 +9,25 @@
   },
   "info": {
     "name": "Rafael Antonio Hidalgo Romero",
-    "post": "Full stack developer with 6 years of experience in large-scale development.",
+    "post": "Full stack developer and technology consultant with over 7 years of experience in large-scale development, specialized in microservices architectures, distributed systems, and cloud solutions.",
     "workitems": [
       {
-        "work": "Backend Developer",
-        "emp": "en Zerviz (Chile)",
-        "time": "at March,2021 - Present",
-        "descrip": "Desarrollador Backend en typescript con nodejs en el framework nestJS con tecnologias AWS sobre microservicios."
+        "work": "Technology Consultant and Developer",
+        "emp": "at Zerviz (Consultancy)",
+        "time": "March, 2021 - Present",
+        "descrip": "Technology consultant for diverse international clients:\n• Millicom (TIGO): Implementation of AWS Lambda services, React and Zendesk development, Zendesk to Chatwoot migration across 9 countries using Vue.js and Ruby on Rails.\n• Copa Airlines: Creation of Five9 scripts to improve voice integration.\n• Rosen: Microservices development with Spring Boot and Azure DevOps pipeline management.\n• Abcdin: Backend development with Node.js, TypeScript, NestJS, and SQS consumers for AWS.\nTechnologies: Node.js, TypeScript, NestJS, React.js, Vue.js, Ruby on Rails, SQS, Azure DevOps, Spring Boot, Java."
       },
       {
-        "work": "Backend Developer(NodeJS)",
+        "work": "Senior Backend Developer",
         "emp": "at ZeroQ (Chile)",
         "time": "September, 2021 - Present",
-        "descrip": "Backend developer in go and node js with specialization in web socket systems for customer service."
+        "descrip": "Development of backend systems specialized in real-time communications and customer service. Implementation of WebSocket architectures for chat and technical support systems. Development with Go and Node.js, focused on high concurrency and scalability for customer service platforms."
       },
       {
-        "work": "Freelance Developer",
-        "emp": "at Sigeme (Guatemala)",
+        "work": "Backend Coordinator and Developer",
+        "emp": "at Sigeme (Freelance - Guatemala)",
         "time": "June, 2021 - Present",
-        "descrip": "Coordination of developments in the SGC commercial system carrying out the tasks of analysis of the required solution, planning and assigning tasks to programmers, monitoring of modifications and system implementations, specializing in the development of batch biller programs."
+        "descrip": "Development and coordination of the SGC commercial system from planning to final implementation. Implementation of batch billing programs using Cobol, significantly improving billing process efficiency. Constant communication with clients to ensure project success and delivery of customized solutions.\nTechnologies: Cobol, SQL, batch systems."
       },
       {
         "work": "Desarrollador full stack and PM",
@@ -36,10 +36,10 @@
         "descrip": "Freelance developer in real estate systems with React.js and serveless technologies."
       },
       {
-        "work": "Coordinator and developer",
-        "emp": "a the data age",
+        "work": "Coordinator and Developer",
+        "emp": "at The Data Age",
         "time": "March, 2017 - June, 2021",
-        "descrip": "Coordination of developments in the O-SGC commercial system; carrying out the tasks of analysis of the required solution, planning and assigning tasks to programmers, monitoring of modifications and system implementations, specializing in the development of batch biller programs. \n Coordination of development of TDA commercial management application . (Creator of Docker development environments and rest api in golang). \n"
+        "descrip": "Led the development of the O-SGC commercial system, managing a multidisciplinary development team. Implemented REST API using Golang and managed development environments with Docker. Created certification daemon developed in Golang and Python for electronic billing systems. Coordinated developments carrying out solution analysis, planning and task assignment, monitoring modifications and system implementations, specializing in batch biller program development.\nTechnologies: Golang, Python, Docker, SQL, REST API, batch systems."
       },
       {
         "work": "Electronic billing project in Energuate Guatemala",
