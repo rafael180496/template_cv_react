@@ -209,17 +209,30 @@ Intermedio, Básico) y su color se derivan de ese número.
 ## 🌐 Despliegue
 
 El despliegue es automático: **cada push a `master` publica el sitio**.
-`.github/workflows/deploy.yml` corre `npm ci`, `npm run lint`, `npm run build`
-y sube `dist/` a GitHub Pages. Los pull requests corren lint y build, pero no
-publican.
+[.github/workflows/deploy.yml](.github/workflows/deploy.yml) corre `npm ci`,
+`npm run lint` y `npm run build`, y publica el contenido de `dist/` en la rama
+**`gh-pages`**. Los pull requests corren lint y build, pero no publican.
 
-### Configuración inicial (una sola vez)
+```
+push a master → lint + build → commit único en gh-pages → GitHub Pages sirve esa rama
+```
 
-En el repositorio: **Settings → Pages → Build and deployment → Source:
-`GitHub Actions`**.
+La rama `gh-pages` es un artefacto, no historia: cada publicación la reescribe
+con un solo commit (`force_orphan`), así no quedan restos de builds viejos.
+No hace falta tocarla nunca a mano — y no conviene trabajar parada en ella.
 
-Con la fuente en `Deploy from a branch` el workflow sube el artefacto y el
-sitio no cambia, sin ningún error visible.
+### Configuración del repositorio (una sola vez)
+
+**Settings → Pages → Build and deployment**
+
+| Campo | Valor |
+|---|---|
+| Source | `Deploy from a branch` |
+| Branch | **`gh-pages`** / `(root)` |
+
+Con `Branch: master` se publica el código fuente en lugar del build: el sitio
+pide `/src/index.jsx`, que en producción no existe compilado, y queda en blanco
+sin ningún error de despliegue que lo explique.
 
 ### Base path
 

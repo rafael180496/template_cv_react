@@ -9,9 +9,6 @@ on:
     branches: [master]
   workflow_dispatch:
 
-permissions:
-  contents: read
-
 # Un despliegue a la vez. Si llegan dos pushes seguidos, el segundo espera en
 # lugar de pisar al primero a mitad de publicación.
 concurrency:
@@ -19,9 +16,12 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
-    name: Lint y build
+  deploy:
+    name: Lint, build y publicar
     runs-on: ubuntu-latest
+    permissions:
+      # Publicar es un push a la rama gh-pages, así que hace falta escritura.
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -42,24 +42,16 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Subir artefacto de Pages
+      - name: Publicar en la rama gh-pages
         if: github.event_name != 'pull_request'
-        uses: actions/upload-pages-artifact@v5
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          path: dist
-
-  deploy:
-    name: Publicar en GitHub Pages
-    needs: build
-    if: github.event_name != 'pull_request'
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Desplegar
-        id: deployment
-        uses: actions/deploy-pages@v5
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: gh-pages
+          # La rama es un artefacto, no historia: cada publicación la deja con
+          # un único commit y sin restos de builds anteriores.
+          force_orphan: true
+          user_name: github-actions[bot]
+          user_email: github-actions[bot]@users.noreply.github.com
+          commit_message: "deploy: ${{ github.sha }}"
