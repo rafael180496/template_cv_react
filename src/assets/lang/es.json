@@ -16,7 +16,8 @@
   "stats": {
     "positions": "Posiciones",
     "titles": "Títulos",
-    "yearsMax": "Años máx.",
+    "totalExperience": "Experiencia total",
+    "studyYears": "Años de estudio",
     "current": "Actuales"
   },
   "info": {
@@ -27,55 +28,55 @@
         "work": "Consultor Tecnológico y Desarrollador",
         "emp": "en Zerviz (Consultoría)",
         "time": "Marzo,2021 - Presente",
-        "descrip": "Consultor tecnológico para diversos clientes internacionales:\n• Millicom (TIGO): Implementación de servicios AWS Lambda, desarrollo con React y Zendesk, migración de Zendesk a Chatwoot en 9 países con Vue.js y Ruby on Rails.\n• Copa Airlines: Creación de scripts en Five9 para mejorar la integración de voz.\n• Rosen: Desarrollo de microservicios con Spring Boot y gestión de pipelines en Azure DevOps.\n• Abcdin: Desarrollo de backend con Node.js, TypeScript, NestJS y consumidores SQS para AWS.\nTecnologías: Node.js, TypeScript, NestJS, React.js, Vue.js, Ruby on Rails, SQS, Azure DevOps, Spring Boot, Java."
+        "descrip": "Consultoría tecnológica y desarrollo para clientes corporativos internacionales, con responsabilidad sobre el ciclo completo de cada cuenta.\n• Millicom (TIGO): servicios serverless en AWS Lambda y desarrollo sobre Zendesk con React. Migración de Zendesk a Chatwoot en 9 países, con Vue.js y Ruby on Rails.\n• Copa Airlines: scripts en Five9 para mejorar la integración de voz del centro de contacto.\n• Rosen: microservicios en Spring Boot y gestión de pipelines de CI/CD en Azure DevOps.\n• Abcdin: backend en Node.js, TypeScript y NestJS, con consumidores SQS para procesamiento asíncrono en AWS.\nTecnologías: Node.js, TypeScript, NestJS, React.js, Vue.js, Ruby on Rails, Spring Boot, Java, AWS Lambda, SQS, Azure DevOps."
       },
       {
         "work": "Desarrollador Backend Senior",
         "emp": "en ZeroQ (Chile)",
         "time": "Septiembre,2021 - Septiembre,2026",
-        "descrip": "Desarrollo de sistemas backend especializados en comunicaciones en tiempo real y atención al cliente. Implementación de arquitecturas con WebSockets para sistemas de chat y soporte técnico. Desarrollo con Go y Node.js, enfocado en alta concurrencia y escalabilidad para plataformas de atención al cliente."
+        "descrip": "Desarrollo de servicios backend para una plataforma de atención al cliente, con foco en comunicaciones en tiempo real.\n• Arquitecturas basadas en WebSockets para los módulos de chat y soporte técnico.\n• Servicios en Go y Node.js diseñados para alta concurrencia y escalabilidad.\nTecnologías: Go, Node.js, WebSockets."
       },
       {
         "work": "Coordinador y Desarrollador Backend",
         "emp": "en Sigeme (Freelance - Guatemala)",
         "time": "Junio,2021 - Presente",
-        "descrip": "Desarrollo y coordinación del sistema comercial SGC desde la planificación hasta la implementación final. Implementación de programas para facturación batch utilizando Cobol, mejorando significativamente la eficiencia del proceso de facturación. Mantenimiento de comunicación constante con clientes para garantizar el éxito de cada proyecto y entrega de soluciones personalizadas.\nTecnologías: Cobol, SQL, sistemas batch."
+        "descrip": "Coordinación y desarrollo del sistema comercial SGC, desde la planificación hasta la puesta en producción.\n• Programas de facturación batch en COBOL que mejoraron la eficiencia del proceso de facturación.\n• Interlocución directa con el cliente para relevar requerimientos y asegurar la entrega de cada proyecto.\nTecnologías: COBOL, SQL, procesos batch."
       },
       {
         "work": "Desarrollador full stack",
         "emp": "en AnanaSoft (Costa Rica)",
         "time": "Junio,2021 - Enero,2022",
-        "descrip": "Desarrollador freelance en sistemas de inmuebles con tecnologias React.js y serveless."
+        "descrip": "Desarrollo freelance de un sistema de gestión inmobiliaria.\n• Interfaz en React.js sobre una arquitectura serverless.\nTecnologías: React.js, Serverless."
       },
       {
         "work": "Coordinador y Desarrollador",
         "emp": "en The Data Age",
         "time": "Marzo,2017 - Junio,2021",
-        "descrip": "Lideré el desarrollo del sistema comercial O-SGC, gestionando un equipo de desarrollo multidisciplinario. Implementé API REST utilizando Golang y administré entornos de desarrollo con Docker. Creación de demonio certificador elaborado en Golang y Python para sistemas de facturación electrónica. Coordinación de desarrollos llevando a cabo análisis de soluciones, planificación y asignación de tareas, seguimiento de modificaciones e implementaciones de sistemas, especializándose en el desarrollo de programas de facturador batch.\nTecnologías: Golang, Python, Docker, SQL, API REST, sistemas batch."
+        "descrip": "Liderazgo del desarrollo del sistema comercial O-SGC al frente de un equipo multidisciplinario.\n• Análisis de soluciones, planificación y asignación de tareas, y seguimiento de las implementaciones.\n• APIs REST en Golang y administración de entornos de desarrollo con Docker.\n• Demonio certificador en Golang y Python para sistemas de facturación electrónica.\n• Especialización en el desarrollo de programas de facturación batch.\nTecnologías: Golang, Python, Docker, SQL, API REST, procesos batch."
       },
       {
         "work": "Proyecto de Facturación Electrónica en Energuate Guatemala",
         "emp": "en The Data Age",
         "time": "Agosto,2019 - Diciembre,2019",
-        "descrip": "Coordinación de desarrollos en el sistema de certificación electrónica o FEL para Energuate, encargado de crear el demonio que se comunica con SAT de Guatemala para firmar las facturas del sistema comercial"
+        "descrip": "Coordinación del desarrollo del sistema de certificación electrónica (FEL) para Energuate.\n• Demonio de comunicación con la SAT de Guatemala para la firma de las facturas emitidas por el sistema comercial."
       },
       {
         "work": "Proyecto de Facturación Electrónica en El Salvador AES",
         "emp": "en The Data Age",
         "time": "Agosto,2020 - Junio,2021",
-        "descrip": "Coordinación de desarrollos en el sistema de certificación electrónica o FEL para AES, encargado de crear el demonio que se comunica con Hacienda de El Salvador para firmar las facturas del sistema comercial. Esto certifica los documentos legales de la empresa."
+        "descrip": "Coordinación del desarrollo del sistema de certificación electrónica (FEL) para AES.\n• Demonio de comunicación con el Ministerio de Hacienda de El Salvador para la firma de las facturas del sistema comercial, requisito legal para la validez de los documentos de la empresa."
       },
       {
         "work": "Soporte de API REST",
         "emp": "en Workana",
         "time": "Marzo,2020 - Enero,2022",
-        "descrip": "Desarrollo y mantenimiento de servicios AWS en Golang, creando múltiples endpoints REST para diferentes funcionalidades del sistema. Implementé tests unitarios exhaustivos para garantizar la calidad del código y la estabilidad de los servicios. Desarrollé endpoints para autenticación, gestión de usuarios, procesamiento de datos y integración con servicios externos.\nTecnologías: Golang, AWS Lambda, API Gateway, DynamoDB, Tests unitarios, Git."
+        "descrip": "Desarrollo y mantenimiento de servicios sobre AWS para clientes internacionales.\n• Endpoints REST en Golang para autenticación, gestión de usuarios, procesamiento de datos e integración con servicios externos.\n• Cobertura con tests unitarios para garantizar la calidad del código y la estabilidad de los servicios.\nTecnologías: Golang, AWS Lambda, API Gateway, DynamoDB, Tests unitarios, Git."
       },
       {
         "work": "Proyecto Crazysales",
         "emp": "en Lotería Pública",
         "time": "Mayo,2020 - Agosto,2020",
-        "descrip": "Desarrollo de aplicación móvil completa en Flutter para la administración y venta de lotería pública. La app incluye funcionalidades de gestión de inventario de boletos, procesamiento de ventas, reportes de transacciones y integración con impresora térmica para la emisión automática de tickets. Implementé arquitectura MVC, gestión de estado con Provider, y base de datos local SQLite para funcionamiento offline.\nTecnologías: Flutter, Dart, SQLite, Impresión térmica, Provider, MVC, APIs REST."
+        "descrip": "Aplicación móvil en Flutter para la administración y venta de lotería pública.\n• Gestión de inventario de boletos, procesamiento de ventas y reportes de transacciones.\n• Integración con impresora térmica para la emisión automática de tickets.\n• Arquitectura MVC, gestión de estado con Provider y base de datos local SQLite para operar sin conexión.\nTecnologías: Flutter, Dart, SQLite, Provider, MVC, APIs REST, Impresión térmica."
       }
     ],
     "educationitems": [
@@ -83,7 +84,7 @@
         "work": "Ingeniería en Computación",
         "emp": "Universidad Politécnica de Nicaragua",
         "time": "Marzo 2014 - Diciembre 2018",
-        "descrip": "La Ingeniería en Computación es un programa académico que forma profesionales altamente capacitados para diseñar, desarrollar y mantener sistemas computacionales complejos, integrando tanto hardware como software. Durante esta carrera desarrollé competencias para aplicar tecnología informática innovadora en diversas áreas empresariales y científicas.\n\nComo ingeniero en computación, adquirí expertise en la resolución de problemas complejos a través de la tecnología y la innovación, con enfoque en sistemas distribuidos, arquitecturas de software, y la integración de dispositivos digitales. La formación incluyó análisis, diseño y evaluación de sistemas que satisfacen necesidades tecnológicas y funcionales de organizaciones modernas, preparándome para liderar proyectos tecnológicos de gran escala."
+        "descrip": "Formación en el diseño, desarrollo y mantenimiento de sistemas computacionales complejos, integrando hardware y software.\n• Énfasis en sistemas distribuidos, arquitecturas de software e integración de dispositivos digitales.\n• Análisis, diseño y evaluación de sistemas orientados a necesidades reales de organizaciones.\n• Base técnica sobre la que se apoya mi trabajo posterior liderando proyectos tecnológicos de gran escala."
       }
     ],
     "aboutmeitems": [

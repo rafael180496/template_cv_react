@@ -4,6 +4,7 @@ import {
   isCurrentPosition,
   positionMonths,
   sortPositions,
+  totalSpanMonths,
   stripTechLine,
 } from "../service/util";
 import Reveal from "./Reveal";
@@ -98,7 +99,7 @@ const WorkCard = ({ work, emp, time, descrip, tone, delay, lang, ui }) => {
 const WorkContent = ({ works, title, color = "primary", stats = {}, ui, lang }) => {
   const tone = TONES[color] ?? TONES.primary;
   const ordered = sortPositions(works);
-  const longest = Math.max(0, ...ordered.map((item) => positionMonths(item.time)));
+  const span = totalSpanMonths(ordered);
   const currentCount = ordered.filter((item) => isCurrentPosition(item.time)).length;
 
   return (
@@ -118,10 +119,10 @@ const WorkContent = ({ works, title, color = "primary", stats = {}, ui, lang }) 
         </div>
         <div className="stat-tile">
           <div className="text-2xl font-bold text-sky-600 dark:text-sky-400">
-            {longest > 0 ? formatDuration(longest, lang) : "—"}
+            {span > 0 ? formatDuration(span, lang) : "—"}
           </div>
           <div className="text-sm text-gray-600 dark:text-slate-400">
-            {stats.yearsMax}
+            {color === "success" ? stats.studyYears : stats.totalExperience}
           </div>
         </div>
         <div className="stat-tile">

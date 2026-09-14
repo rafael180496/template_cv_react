@@ -1,5 +1,8 @@
-import { applyDynamicTokens, getCurrentExperienceYears } from "../service/util";
-import Avatar from "./Avatar";
+import {
+  applyDynamicTokens,
+  getCurrentExperienceYears,
+  getInitials,
+} from "../service/util";
 import PdfGenerator from "./PdfGenerator";
 import Reveal from "./Reveal";
 
@@ -40,7 +43,12 @@ const CoverContent = ({ datalang }) => {
 
       <div className="relative flex flex-col items-center gap-8 text-center lg:flex-row lg:items-start lg:text-left">
         <Reveal variant="zoom" className="flex-shrink-0">
-          <Avatar name={info.name} className="h-32 w-32 lg:h-40 lg:w-40" />
+          <div
+            aria-hidden="true"
+            className="flex h-28 w-28 items-center justify-center rounded-full bg-white/15 text-4xl font-bold text-white ring-4 ring-white/25 lg:h-36 lg:w-36 lg:text-5xl"
+          >
+            {getInitials(info.name)}
+          </div>
         </Reveal>
 
         <div className="min-w-0 flex-1">

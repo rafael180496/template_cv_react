@@ -16,7 +16,8 @@
   "stats": {
     "positions": "Positions",
     "titles": "Degrees",
-    "yearsMax": "Max years",
+    "totalExperience": "Total experience",
+    "studyYears": "Years of study",
     "current": "Current"
   },
   "info": {
@@ -27,55 +28,55 @@
         "work": "Technology Consultant and Developer",
         "emp": "at Zerviz (Consultancy)",
         "time": "March, 2021 - Present",
-        "descrip": "Technology consultant for diverse international clients:\n• Millicom (TIGO): Implementation of AWS Lambda services, React and Zendesk development, Zendesk to Chatwoot migration across 9 countries using Vue.js and Ruby on Rails.\n• Copa Airlines: Creation of Five9 scripts to improve voice integration.\n• Rosen: Microservices development with Spring Boot and Azure DevOps pipeline management.\n• Abcdin: Backend development with Node.js, TypeScript, NestJS, and SQS consumers for AWS.\nTechnologies: Node.js, TypeScript, NestJS, React.js, Vue.js, Ruby on Rails, SQS, Azure DevOps, Spring Boot, Java."
+        "descrip": "Technology consulting and development for international enterprise clients, owning the full delivery cycle of each account.\n• Millicom (TIGO): serverless services on AWS Lambda and Zendesk development with React. Zendesk to Chatwoot migration across 9 countries, using Vue.js and Ruby on Rails.\n• Copa Airlines: Five9 scripting to improve contact-center voice integration.\n• Rosen: microservices in Spring Boot and CI/CD pipeline management on Azure DevOps.\n• Abcdin: backend in Node.js, TypeScript and NestJS, with SQS consumers for asynchronous processing on AWS.\nTechnologies: Node.js, TypeScript, NestJS, React.js, Vue.js, Ruby on Rails, Spring Boot, Java, AWS Lambda, SQS, Azure DevOps."
       },
       {
         "work": "Senior Backend Developer",
         "emp": "at ZeroQ (Chile)",
         "time": "September, 2021 - September, 2026",
-        "descrip": "Development of backend systems specialized in real-time communications and customer service. Implementation of WebSocket architectures for chat and technical support systems. Development with Go and Node.js, focused on high concurrency and scalability for customer service platforms."
+        "descrip": "Backend services for a customer-service platform, focused on real-time communications.\n• WebSocket-based architectures for the chat and technical-support modules.\n• Services in Go and Node.js designed for high concurrency and scalability.\nTechnologies: Go, Node.js, WebSockets."
       },
       {
         "work": "Backend Coordinator and Developer",
         "emp": "at Sigeme (Freelance - Guatemala)",
         "time": "June, 2021 - Present",
-        "descrip": "Development and coordination of the SGC commercial system from planning to final implementation. Implementation of batch billing programs using Cobol, significantly improving billing process efficiency. Constant communication with clients to ensure project success and delivery of customized solutions.\nTechnologies: Cobol, SQL, batch systems."
+        "descrip": "Coordination and development of the SGC commercial system, from planning through production rollout.\n• Batch billing programs in COBOL that improved the efficiency of the billing process.\n• Direct client contact to gather requirements and ensure delivery on every project.\nTechnologies: COBOL, SQL, batch processing."
       },
       {
         "work": "Full Stack Developer and PM",
         "emp": "at AnanaSoft (Costa Rica)",
         "time": "June, 2021 - January, 2022",
-        "descrip": "Freelance developer in real estate systems with React.js and serveless technologies."
+        "descrip": "Freelance development of a real-estate management system.\n• React.js front end on a serverless architecture.\nTechnologies: React.js, Serverless."
       },
       {
         "work": "Coordinator and Developer",
         "emp": "at The Data Age",
         "time": "March, 2017 - June, 2021",
-        "descrip": "Led the development of the O-SGC commercial system, managing a multidisciplinary development team. Implemented REST API using Golang and managed development environments with Docker. Created certification daemon developed in Golang and Python for electronic billing systems. Coordinated developments carrying out solution analysis, planning and task assignment, monitoring modifications and system implementations, specializing in batch biller program development.\nTechnologies: Golang, Python, Docker, SQL, REST API, batch systems."
+        "descrip": "Led development of the O-SGC commercial system, heading a multidisciplinary team.\n• Solution analysis, planning and task assignment, plus follow-up on every rollout.\n• REST APIs in Golang and management of development environments with Docker.\n• Certifying daemon in Golang and Python for electronic invoicing systems.\n• Specialisation in batch billing programs.\nTechnologies: Golang, Python, Docker, SQL, REST API, batch processing."
       },
       {
         "work": "Electronic Billing Project in Energuate Guatemala",
         "emp": "at The Data Age",
         "time": "August, 2019 - December, 2019",
-        "descrip": "Coordination of developments in the electronic certification system (FEL) for Energuate, in charge of creating the daemon that communicates with Guatemala's SAT to sign the invoices of the commercial system"
+        "descrip": "Led development of the O-SGC commercial system, heading a multidisciplinary team.\n• Solution analysis, planning and task assignment, plus follow-up on every rollout.\n• REST APIs in Golang and management of development environments with Docker.\n• Certifying daemon in Golang and Python for electronic invoicing systems.\n• Specialisation in batch billing programs.\nTechnologies: Golang, Python, Docker, SQL, REST API, batch processing."
       },
       {
         "work": "Electronic Billing Project in El Salvador AES",
         "emp": "at The Data Age",
         "time": "August, 2020 - June, 2021",
-        "descrip": "Coordination of developments in the electronic certification system (FEL) for AES, in charge of creating the daemon that communicates with El Salvador's Ministry of Finance to sign the invoices of the commercial system. This certifies the legal documents of the company."
+        "descrip": "Led development of the O-SGC commercial system, heading a multidisciplinary team.\n• Solution analysis, planning and task assignment, plus follow-up on every rollout.\n• REST APIs in Golang and management of development environments with Docker.\n• Certifying daemon in Golang and Python for electronic invoicing systems.\n• Specialisation in batch billing programs.\nTechnologies: Golang, Python, Docker, SQL, REST API, batch processing."
       },
       {
         "work": "REST API Support",
         "emp": "at Workana",
         "time": "March, 2020 - January, 2022",
-        "descrip": "Development and maintenance of AWS services in Golang, creating multiple REST endpoints for different system functionalities. Implemented comprehensive unit tests to ensure code quality and service stability. Developed endpoints for authentication, user management, data processing, and integration with external services.\nTechnologies: Golang, AWS Lambda, API Gateway, DynamoDB, Unit Testing, Git."
+        "descrip": "Development and maintenance of AWS services for international clients.\n• REST endpoints in Golang for authentication, user management, data processing and third-party integrations.\n• Unit-test coverage to guarantee code quality and service stability.\nTechnologies: Golang, AWS Lambda, API Gateway, DynamoDB, Unit tests, Git."
       },
       {
         "work": "Crazysales Project",
         "emp": "at Public Lottery",
         "time": "May, 2020 - August, 2020",
-        "descrip": "Development of complete mobile application in Flutter for public lottery administration and sales. The app includes ticket inventory management functionalities, sales processing, transaction reports, and thermal printer integration for automatic ticket issuance. Implemented MVC architecture, state management with Provider, and local SQLite database for offline functionality.\nTechnologies: Flutter, Dart, SQLite, Thermal printing, Provider, MVC, REST APIs."
+        "descrip": "Flutter mobile application for public-lottery administration and sales.\n• Ticket inventory management, sales processing and transaction reporting.\n• Thermal-printer integration for automatic ticket issuing.\n• MVC architecture, state management with Provider and a local SQLite database for offline operation.\nTechnologies: Flutter, Dart, SQLite, Provider, MVC, REST APIs, Thermal printing."
       }
     ],
     "educationitems": [
@@ -83,7 +84,7 @@
         "work": "Computer Engineering",
         "emp": "Polytechnic University of Nicaragua",
         "time": "March 2014 - December 2018",
-        "descrip": "Computer Engineering is an academic program that trains highly skilled professionals to design, develop, and maintain complex computational systems, integrating both hardware and software. During this degree, I developed competencies to apply innovative information technology across various business and scientific areas.\n\nAs a computer engineer, I acquired expertise in solving complex problems through technology and innovation, with a focus on distributed systems, software architectures, and digital device integration. The training included analysis, design, and evaluation of systems that meet the technological and functional needs of modern organizations, preparing me to lead large-scale technological projects."
+        "descrip": "Training in the design, development and maintenance of complex computing systems, integrating hardware and software.\n• Emphasis on distributed systems, software architecture and digital device integration.\n• Analysis, design and evaluation of systems built around real organisational needs.\n• The technical foundation behind my later work leading large-scale technology projects."
       }
     ],
     "aboutmeitems": [

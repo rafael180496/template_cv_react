@@ -96,6 +96,40 @@ export const positionMonths = (time = "") => {
   return monthsBetween(start, end);
 };
 
+/**
+ * Trayectoria que cubre una lista de puestos: del inicio más antiguo hasta el
+ * cierre más reciente, o hasta hoy si alguno sigue vigente.
+ *
+ * Es lo que hay que mostrar como "experiencia total". La duración del puesto
+ * **más largo** —que es lo que se mostraba antes— da un número mucho menor y
+ * se lee como si fuera la carrera entera: con el trabajo más antiguo en marzo
+ * de 2017, la tarjeta decía 5 años en lugar de 9.
+ */
+export const totalSpanMonths = (items = []) => {
+  const starts = [];
+  const ends = [];
+  let open = false;
+
+  for (const item of items) {
+    const [rawStart, rawEnd] = (item.time || "").split(/\s+-\s+|–|—/);
+    const start = parseMonthYear(rawStart || "");
+    if (!start) continue;
+    starts.push(start.getTime());
+
+    if (isCurrentPosition(item.time)) {
+      open = true;
+      continue;
+    }
+    const end = parseMonthYear(rawEnd || rawStart || "");
+    if (end) ends.push(end.getTime());
+  }
+
+  if (!starts.length) return 0;
+  const from = new Date(Math.min(...starts));
+  const to = open ? new Date() : new Date(Math.max(...ends, ...starts));
+  return monthsBetween(from, to);
+};
+
 /** Instante de inicio de un puesto, para ordenar el historial. */
 export const positionStart = (time = "") => {
   const start = parseMonthYear(time.split(/\s+-\s+|–|—/)[0] || "");
@@ -168,7 +202,7 @@ export const extractTechnologies = (descrip = "", max = 8) => {
 export const stripTechLine = (descrip = "") =>
   descrip.replace(TECH_LINE_RE, "").trimEnd();
 
-/** Iniciales para el avatar de respaldo. */
+/** Iniciales para el monograma de la portada y la cabecera. */
 export const getInitials = (name = "") =>
   name
     .split(/\s+/)

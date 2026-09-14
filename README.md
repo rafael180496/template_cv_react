@@ -132,7 +132,6 @@ template_cv_react/
 ├── src/
 │   ├── assets/
 │   │   ├── lang/{es,en}.json      # Todo el contenido del CV
-│   │   ├── img/avatar.jpg
 │   │   └── skills.json            # Habilidades y niveles
 │   ├── components/
 │   │   ├── HeaderContent.jsx      # Cabecera fija + navegación
@@ -142,7 +141,7 @@ template_cv_react/
 │   │   ├── WorkContent.jsx        # Línea de tiempo
 │   │   ├── FooterContent.jsx
 │   │   ├── PdfGenerator.jsx       # Botón de versión imprimible
-│   │   ├── Avatar.jsx, Reveal.jsx, SocialCard.jsx,
+│   │   ├── Reveal.jsx, SocialCard.jsx,
 │   │   └── ThemeToggle.jsx, BackToTop.jsx
 │   ├── hooks/
 │   │   ├── useReveal.js           # Animación al entrar en pantalla
