@@ -15,7 +15,7 @@
   },
   "stats": {
     "positions": "Positions",
-    "titles": "Degrees",
+    "titles": "Qualifications",
     "totalExperience": "Total experience",
     "studyYears": "Years of study",
     "current": "Current"
@@ -81,6 +81,30 @@
     ],
     "educationitems": [
       {
+        "work": "Certifications in AI applied to software development",
+        "emp": "DevTalles",
+        "time": "July 2026",
+        "descrip": "Five DevTalles certifications on the professional use of artificial intelligence across the development cycle:\n• n8n + MCP: automation\n• Vibe Coding\n• Claude Code: complete guide\n• AI for Developers\n• Prompt engineering\nTechnologies: Claude Code, MCP, n8n, Prompt engineering.",
+        "links": [
+          {
+            "label": "View certificate: n8n + MCP: automation",
+            "url": "https://cursos.devtalles.com/certificates/n1r9e0f0ec"
+          },
+          {
+            "label": "View certificate: Vibe Coding",
+            "url": "https://cursos.devtalles.com/certificates/hf40jvnzww"
+          },
+          {
+            "label": "View certificate: Claude Code: complete guide",
+            "url": "https://cursos.devtalles.com/certificates/r5mj4h3utj"
+          },
+          {
+            "label": "View certificate: AI for Developers",
+            "url": "https://cursos.devtalles.com/certificates/0cs91cbgnl"
+          }
+        ]
+      },
+      {
         "work": "Computer Engineering",
         "emp": "Polytechnic University of Nicaragua",
         "time": "March 2014 - December 2018",
@@ -121,7 +145,7 @@
         "link": "https://www.linkedin.com/in/rafael-antonio-hidalgo-romero-71608a116/"
       }
     ],
-    "aboutme": "I'm Rafael, a full stack developer and technology consultant with DYNAMIC_EXPERIENCE_YEARS years of experience creating innovative solutions for international companies. I specialize in microservices architectures, distributed systems, and cloud technologies, having worked with clients like Millicom (TIGO), Copa Airlines, and Rosen on large-scale projects.\n\nMy passion lies in transforming complex ideas into robust and scalable systems. I have experience leading development teams from conceptualization to implementation, using technologies like Node.js, Golang, React, Vue.js, and AWS and Azure platforms.\n\nI enjoy tackling technical challenges that require creative solutions, especially in high-concurrency systems, REST APIs, and complex integrations. My goal is always to deliver real value through clean code, solid architectures, and effective collaboration.",
+    "aboutme": "I'm Rafael, a full stack developer and technology consultant with DYNAMIC_EXPERIENCE_YEARS years of experience creating innovative solutions for international companies. I specialize in microservices architectures, distributed systems, and cloud technologies, having worked with clients like Millicom (TIGO), Copa Airlines, and Rosen on large-scale projects.\n\nMy passion lies in transforming complex ideas into robust and scalable systems. I have experience leading development teams from conceptualization to implementation, using technologies like Node.js, Golang, React, Vue.js, and AWS and Azure platforms.\n\nI enjoy tackling technical challenges that require creative solutions, especially in high-concurrency systems, REST APIs, and complex integrations. My goal is always to deliver real value through clean code, solid architectures, and effective collaboration.\n\nI have made artificial intelligence part of how I work: Claude Code and other AI assistants are in my daily development loop for code generation and review, automation of repetitive tasks, documentation and legacy-system analysis. What interests me most is the judgement to apply them well — AI speeds up execution, but architecture, review and accountability for the result stay with the team.",
     "role": "Full Stack Developer & Technology Consultant",
     "location": "Managua, Nicaragua",
     "email": "rafael180496@gmail.com",

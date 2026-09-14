@@ -28,7 +28,7 @@ const TONES = {
   },
 };
 
-const WorkCard = ({ work, emp, time, descrip, tone, delay, lang, ui }) => {
+const WorkCard = ({ work, emp, time, descrip, links, tone, delay, lang, ui }) => {
   const months = positionMonths(time);
   const current = isCurrentPosition(time);
   const technologies = extractTechnologies(descrip);
@@ -90,6 +90,32 @@ const WorkCard = ({ work, emp, time, descrip, tone, delay, lang, ui }) => {
               ))}
             </div>
           )}
+
+          {/*
+            Una credencial que nadie puede comprobar vale menos que una que sí:
+            cada certificado enlaza a su página de verificación del emisor.
+          */}
+          {links?.length > 0 && (
+            <ul className="mt-4 flex flex-col gap-1.5 border-t pt-3 border-gray-100 dark:border-slate-700">
+              {links.map((link) => (
+                <li key={link.url}>
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs font-medium text-primary-600 hover:underline dark:text-primary-400"
+                  >
+                    <i className="fas fa-certificate" aria-hidden="true"></i>
+                    {link.label}
+                    <i
+                      className="fas fa-arrow-up-right-from-square text-[0.6rem] opacity-70"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </div>
     </Reveal>
@@ -99,7 +125,17 @@ const WorkCard = ({ work, emp, time, descrip, tone, delay, lang, ui }) => {
 const WorkContent = ({ works, title, color = "primary", stats = {}, ui, lang }) => {
   const tone = TONES[color] ?? TONES.primary;
   const ordered = sortPositions(works);
-  const span = totalSpanMonths(ordered);
+  /*
+    En experiencia interesa la trayectoria completa: del puesto más antiguo
+    hasta hoy. En educación no, porque la lista mezcla un grado con
+    certificaciones sueltas — el span iría de 2014 al último curso y diría
+    "12 años de estudio". Ahí el número que significa algo es la formación
+    más larga.
+  */
+  const span =
+    color === "success"
+      ? Math.max(0, ...ordered.map((item) => positionMonths(item.time)))
+      : totalSpanMonths(ordered);
   const currentCount = ordered.filter((item) => isCurrentPosition(item.time)).length;
 
   return (

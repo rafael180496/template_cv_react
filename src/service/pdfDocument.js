@@ -74,6 +74,13 @@ const positionBlock = (item, lang) => {
         ${multiline(stripTechLine(item.descrip))}
       </div>
       ${
+        (item.links || []).length
+          ? `<div style="margin-top:3px;font-size:7px;color:${C.accent};">${item.links
+              .map((l) => `${esc(l.label)}: ${esc(l.url)}`)
+              .join("<br/>")}</div>`
+          : ""
+      }
+      ${
         tech.length
           ? `<div style="margin-top:3px;">${tech
               .map(

@@ -192,6 +192,9 @@ Dos convenciones del campo `descrip` que el código aprovecha:
   cuerpo y se muestra como etiquetas.
 - `time` acepta `Mes,Año - Mes,Año` o `Mes,Año - Presente`. De ahí salen la
   duración, el orden del historial y la marca de "Actual".
+- `links` (opcional) es una lista `{ label, url }` que se muestra como enlaces
+  de verificación bajo la entrada, y también en el PDF. Pensado para
+  certificaciones: una credencial que nadie puede comprobar vale menos.
 
 ### Habilidades
 

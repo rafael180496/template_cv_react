@@ -15,7 +15,7 @@
   },
   "stats": {
     "positions": "Posiciones",
-    "titles": "Títulos",
+    "titles": "Formaciones",
     "totalExperience": "Experiencia total",
     "studyYears": "Años de estudio",
     "current": "Actuales"
@@ -81,6 +81,30 @@
     ],
     "educationitems": [
       {
+        "work": "Certificaciones en Inteligencia Artificial aplicada al desarrollo",
+        "emp": "DevTalles",
+        "time": "Julio 2026",
+        "descrip": "Cinco certificaciones de DevTalles sobre el uso profesional de la inteligencia artificial en el ciclo de desarrollo:\n• n8n + MCP: automatización\n• Vibe Coding\n• Claude Code: guía completa\n• IA para Developers\n• Ingeniería de prompts\nTecnologías: Claude Code, MCP, n8n, Ingeniería de prompts.",
+        "links": [
+          {
+            "label": "Ver certificado: n8n + MCP: automatización",
+            "url": "https://cursos.devtalles.com/certificates/n1r9e0f0ec"
+          },
+          {
+            "label": "Ver certificado: Vibe Coding",
+            "url": "https://cursos.devtalles.com/certificates/hf40jvnzww"
+          },
+          {
+            "label": "Ver certificado: Claude Code: guía completa",
+            "url": "https://cursos.devtalles.com/certificates/r5mj4h3utj"
+          },
+          {
+            "label": "Ver certificado: IA para Developers",
+            "url": "https://cursos.devtalles.com/certificates/0cs91cbgnl"
+          }
+        ]
+      },
+      {
         "work": "Ingeniería en Computación",
         "emp": "Universidad Politécnica de Nicaragua",
         "time": "Marzo 2014 - Diciembre 2018",
@@ -121,7 +145,7 @@
         "link": "https://www.linkedin.com/in/rafael-antonio-hidalgo-romero-71608a116/"
       }
     ],
-    "aboutme": "Soy Rafael, un desarrollador full stack y consultor tecnológico con DYNAMIC_EXPERIENCE_YEARS años de experiencia creando soluciones innovadoras para empresas internacionales. Me especializo en arquitecturas de microservicios, sistemas distribuidos y tecnologías cloud, habiendo trabajado con clientes como Millicom (TIGO), Copa Airlines y Rosen en proyectos de gran escala.\n\nMi pasión radica en transformar ideas complejas en sistemas robustos y escalables. Tengo experiencia liderando equipos de desarrollo, desde la conceptualización hasta la implementación, utilizando tecnologías como Node.js, Golang, React, Vue.js y plataformas AWS y Azure.\n\nDisfruto enfrentar desafíos técnicos que requieren soluciones creativas, especialmente en sistemas de alta concurrencia, APIs REST, y integraciones complejas. Mi objetivo es siempre entregar valor real a través de código limpio, arquitecturas sólidas y colaboración efectiva.",
+    "aboutme": "Soy Rafael, un desarrollador full stack y consultor tecnológico con DYNAMIC_EXPERIENCE_YEARS años de experiencia creando soluciones innovadoras para empresas internacionales. Me especializo en arquitecturas de microservicios, sistemas distribuidos y tecnologías cloud, habiendo trabajado con clientes como Millicom (TIGO), Copa Airlines y Rosen en proyectos de gran escala.\n\nMi pasión radica en transformar ideas complejas en sistemas robustos y escalables. Tengo experiencia liderando equipos de desarrollo, desde la conceptualización hasta la implementación, utilizando tecnologías como Node.js, Golang, React, Vue.js y plataformas AWS y Azure.\n\nDisfruto enfrentar desafíos técnicos que requieren soluciones creativas, especialmente en sistemas de alta concurrencia, APIs REST, y integraciones complejas. Mi objetivo es siempre entregar valor real a través de código limpio, arquitecturas sólidas y colaboración efectiva.\n\nIncorporé la inteligencia artificial a mi forma de trabajar: uso Claude Code y otros asistentes de IA como parte del flujo diario de desarrollo, en generación y revisión de código, automatización de tareas repetitivas, documentación y análisis de sistemas heredados. Me interesa sobre todo el criterio para aplicarlos bien: la IA acelera la ejecución, pero la arquitectura, la revisión y la responsabilidad sobre el resultado siguen siendo del equipo.",
     "role": "Desarrollador Full Stack & Consultor Tecnológico",
     "location": "Managua, Nicaragua",
     "email": "rafael180496@gmail.com",
