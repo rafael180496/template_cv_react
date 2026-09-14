@@ -1,24 +1,23 @@
-import React, { useReducer } from "react";
+import BackToTop from "../components/BackToTop";
 import BodyContent from "../components/BodyContent";
+import FooterContent from "../components/FooterContent";
 import HeaderContent from "../components/HeaderContent";
-import { langReducer, LangContext } from "../provider/langContext";
-import esData from "../assets/lang/es.json";
-
-const init = () => {
-  return { locale: "EN", datalang: esData };
-};
+import { useLang } from "../provider/langContext";
 
 const HomePage = () => {
-  const [data, dispatch] = useReducer(langReducer, {}, init);
+  const { datalang } = useLang();
+  const { ui } = datalang;
+
   return (
-    <LangContext.Provider value={{ data, dispatch }}>
-      <HeaderContent datalang={data.datalang}></HeaderContent>
-      <BodyContent datalang={data.datalang}> </BodyContent>
-      <HeaderContent
-        isfooter={true}
-        datalang={data.datalang}
-      ></HeaderContent>
-    </LangContext.Provider>
+    <>
+      <a href="#contenido" className="skip-link">
+        {ui.skipToContent}
+      </a>
+      <HeaderContent />
+      <BodyContent />
+      <FooterContent />
+      <BackToTop label={ui.backToTop} />
+    </>
   );
 };
 

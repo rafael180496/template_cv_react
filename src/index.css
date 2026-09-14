@@ -1,13 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
-/* Tailwind v4 custom theme */
-@theme {
-  /* Font families */
-  --font-family-sans: 'Inter', 'Roboto', system-ui, sans-serif;
-  --font-family-heading: 'Poppins', system-ui, sans-serif;
+/*
+  Modo oscuro por clase en <html>, no por media query: el usuario puede
+  elegir un tema distinto al del sistema y esa elección se persiste.
+  El fallback al sistema lo resuelve el script inline de index.html.
+*/
+@custom-variant dark (&:where(.dark, .dark *));
 
-  /* Custom colors */
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-heading: 'Poppins', system-ui, sans-serif;
+
   --color-primary-50: #f0f9ff;
   --color-primary-100: #e0f2fe;
   --color-primary-200: #bae6fd;
@@ -19,149 +22,160 @@
   --color-primary-800: #075985;
   --color-primary-900: #0c4a6e;
 
-  /* Custom shadows */
-  --shadow-soft: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-
-  /* Custom animations */
-  --animate-fade-in: fadeIn 0.5s ease-in;
-  --animate-slide-up: slideUp 0.5s ease-out;
+  --shadow-soft: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.05);
+  --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -1px rgb(0 0 0 / 0.06);
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
+    /* La cabecera es sticky: sin esto, un ancla deja el título debajo de ella. */
+    scroll-padding-top: 5.5rem;
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
   }
 
   body {
-    @apply text-gray-800 bg-gray-50 antialiased;
-    font-family: 'Inter', system-ui, sans-serif;
+    @apply bg-gray-50 text-gray-800 antialiased;
+    @apply dark:bg-slate-950 dark:text-slate-300;
+    font-family: var(--font-sans);
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold text-gray-900;
-    font-family: 'Poppins', system-ui, sans-serif;
+    @apply font-semibold text-gray-900 dark:text-white;
+    font-family: var(--font-heading);
+  }
+
+  /* Un foco visible y consistente en todo lo que se navega con teclado. */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary-500;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }
 
 @layer components {
-  /* Timeline Components */
+  /* ---- Layout del CV ---- */
+  .cv-container {
+    @apply max-w-4xl mx-auto overflow-hidden rounded-xl shadow-soft;
+    @apply bg-white dark:bg-slate-900 dark:ring-1 dark:ring-slate-800;
+  }
+
+  .cv-section {
+    @apply p-6 sm:p-8 border-b border-gray-100 last:border-b-0;
+    @apply dark:border-slate-800;
+  }
+
+  .cv-section-alt {
+    @apply bg-gray-50 dark:bg-slate-900/60;
+  }
+
+  .section-title {
+    @apply text-2xl font-semibold mb-6 pb-2 border-b-2;
+    @apply text-gray-900 border-primary-200;
+    @apply dark:text-white dark:border-primary-800;
+    font-family: var(--font-heading);
+  }
+
+  /* ---- Tarjetas ---- */
+  .card {
+    @apply rounded-lg overflow-hidden border shadow-card;
+    @apply bg-white border-gray-100;
+    @apply dark:bg-slate-800/60 dark:border-slate-700;
+  }
+
+  .card-body {
+    @apply p-5 sm:p-6;
+  }
+
+  .stat-tile {
+    @apply rounded-lg p-4 text-center;
+    @apply bg-gray-50 dark:bg-slate-800/60;
+  }
+
+  /* ---- Línea de tiempo ---- */
   .timeline {
-    @apply border-l-2 border-gray-200 py-4;
+    @apply relative border-l-2 border-gray-200 dark:border-slate-700 py-4;
   }
 
   .timeline-card {
-    @apply relative ml-8 border-l-2 mb-8 last:mb-4;
+    @apply relative ml-6 sm:ml-8 mb-8 last:mb-2;
   }
 
   .timeline-card::before {
-    @apply absolute -left-2 top-0 w-3 h-3 bg-primary-500 rounded-full border-2 border-white;
+    @apply absolute -left-[2.05rem] sm:-left-[2.55rem] top-6 w-3.5 h-3.5 rounded-full;
+    @apply bg-primary-500 ring-4 ring-gray-50 dark:bg-primary-400 dark:ring-slate-950;
     content: '';
   }
 
   .timeline-card.success::before {
-    @apply bg-emerald-500;
+    @apply bg-emerald-500 dark:bg-emerald-400;
   }
 
-  .timeline-card-body {
-    @apply ml-6 pb-6;
-  }
-
-  /* Progress Bars */
+  /* ---- Barras de nivel ---- */
   .progress {
-    @apply w-full bg-gray-200 rounded-full h-2 overflow-hidden;
+    @apply w-full h-2 rounded-full overflow-hidden;
+    @apply bg-gray-200 dark:bg-slate-700;
   }
 
   .progress-bar {
-    @apply h-full bg-primary-500 transition-all duration-300 ease-out;
+    @apply h-full rounded-full;
+    /* La barra crece al entrar en pantalla; el ancho final lo pone el inline style. */
+    transition: width 900ms cubic-bezier(0.22, 1, 0.36, 1);
   }
 
-  .progress-bar.success {
-    @apply bg-emerald-500;
-  }
-
-  /* Cards */
-  .card {
-    @apply bg-white rounded-lg shadow-card border border-gray-100 overflow-hidden;
-  }
-
-  .card-header {
-    @apply px-6 py-4 bg-gray-50 border-b border-gray-100;
-  }
-
-  .card-body {
-    @apply p-6;
-  }
-
-  /* Buttons */
+  /* ---- Botones ---- */
   .btn {
-    @apply inline-flex items-center px-4 py-2 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2;
+    @apply font-medium transition-colors duration-200;
   }
 
   .btn-primary {
-    @apply bg-primary-600 hover:bg-primary-700 text-white focus:ring-primary-500;
+    @apply bg-primary-600 text-white hover:bg-primary-700;
+    @apply dark:bg-primary-500 dark:hover:bg-primary-400 dark:text-slate-950;
   }
 
-  .btn-secondary {
-    @apply bg-gray-200 hover:bg-gray-300 text-gray-700 focus:ring-gray-500;
-  }
-
-  /* Social Icons */
-  .social-icon {
-    @apply w-10 h-10 rounded-full bg-primary-600 hover:bg-primary-700 text-white flex items-center justify-center transition-all duration-200 hover:scale-110;
-  }
-
-  /* Header improvements */
-  .header-blur {
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-  }
-
-  /* Professional CV Styles */
-  .cv-container {
-    @apply max-w-4xl mx-auto bg-white shadow-soft rounded-xl overflow-hidden;
-  }
-
-  .cv-header {
-    @apply bg-gradient-to-r from-primary-600 to-primary-800 text-white p-8;
-  }
-
-  .cv-section {
-    @apply p-6 border-b border-gray-100 last:border-b-0;
-  }
-
-  .section-title {
-    @apply text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-primary-200;
-    font-family: 'Poppins', system-ui, sans-serif;
-  }
-
-  .skill-item {
-    @apply flex justify-between items-center py-2;
+  .btn-ghost {
+    @apply text-gray-600 hover:bg-gray-100 hover:text-gray-900;
+    @apply dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-white;
   }
 
   .contact-info {
-    @apply flex items-center space-x-3 text-sm text-gray-600 mb-2;
+    @apply flex items-start gap-3 text-sm rounded-lg px-3 py-2;
+    @apply text-gray-600 hover:bg-gray-50;
+    @apply dark:text-slate-400 dark:hover:bg-slate-800/60;
+    transition: background-color 200ms;
   }
 
-  .contact-info i {
-    @apply text-primary-600 w-4;
+  .chip {
+    @apply inline-flex items-center rounded-md px-2 py-1 text-xs font-medium;
+    @apply bg-primary-50 text-primary-700;
+    @apply dark:bg-primary-500/10 dark:text-primary-300;
   }
-}
 
-/* Custom keyframes for animations */
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-@keyframes slideUp {
-  0% {
-    transform: translateY(20px);
-    opacity: 0;
+  /* Enlace "saltar al contenido": invisible hasta que se tabula. */
+  .skip-link {
+    @apply sr-only;
   }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
+
+  .skip-link:focus {
+    @apply not-sr-only fixed top-3 left-3 z-[100] rounded-lg px-4 py-2;
+    @apply bg-primary-600 text-white shadow-lg;
   }
 }
 
@@ -169,49 +183,78 @@
   .text-balance {
     text-wrap: balance;
   }
-
-  .animation-delay-100 {
-    animation-delay: 100ms;
-  }
-
-  .animation-delay-200 {
-    animation-delay: 200ms;
-  }
-
-  .animation-delay-300 {
-    animation-delay: 300ms;
-  }
-
-  .animate-fade-in {
-    animation: fadeIn 0.5s ease-in;
-  }
-
-  .animate-slide-up {
-    animation: slideUp 0.5s ease-out;
-  }
 }
 
-/* AOS Animation Overrides */
-[data-aos] {
+/* ---- Revelado al hacer scroll (reemplaza AOS) ---- */
+.reveal {
   opacity: 0;
-  transition-property: opacity, transform;
+  transform: translateY(18px);
+  transition:
+    opacity 550ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 550ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
 }
 
-[data-aos].aos-animate {
+.reveal[data-reveal='left'] {
+  transform: translateX(-24px);
+}
+
+.reveal[data-reveal='right'] {
+  transform: translateX(24px);
+}
+
+.reveal[data-reveal='zoom'] {
+  transform: scale(0.94);
+}
+
+.reveal.is-visible {
   opacity: 1;
+  transform: none;
 }
 
-/* Print styles */
+/*
+  Sin animación no hay nada que revelar: el contenido tiene que estar visible
+  igual, también cuando el IntersectionObserver no llega a correr.
+*/
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ---- Impresión ---- */
 @media print {
   .d-print-none {
     display: none !important;
   }
 
-  .cv-container {
-    @apply shadow-none max-w-none;
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
   }
 
-  .cv-header {
-    @apply bg-gray-900;
+  html,
+  body {
+    background: #fff !important;
+    color: #111 !important;
+  }
+
+  .cv-container {
+    max-width: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+
+  .cv-section {
+    break-inside: avoid;
+  }
+
+  a[href^='http']::after {
+    content: ' (' attr(href) ')';
+    font-size: 0.7rem;
+    color: #555;
   }
 }

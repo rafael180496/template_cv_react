@@ -1,132 +1,150 @@
-import React from "react";
+import {
+  extractTechnologies,
+  formatDuration,
+  isCurrentPosition,
+  positionMonths,
+  sortPositions,
+  stripTechLine,
+} from "../service/util";
+import Reveal from "./Reveal";
 
-const WorkCard = ({ work, emp, time, descrip, color, delay }) => {
-  const getColorClasses = () => {
-    return color === "success"
-      ? "timeline-card success border-l-emerald-500"
-      : "timeline-card border-l-primary-500";
-  };
+const TONES = {
+  primary: {
+    dot: "",
+    icon: "fas fa-briefcase",
+    iconBox:
+      "bg-primary-50 text-primary-600 dark:bg-primary-500/15 dark:text-primary-300",
+    title: "group-hover:text-primary-700 dark:group-hover:text-primary-300",
+    employer: "text-primary-600 dark:text-primary-400",
+  },
+  success: {
+    dot: "success",
+    icon: "fas fa-graduation-cap",
+    iconBox:
+      "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/15 dark:text-emerald-300",
+    title: "group-hover:text-emerald-700 dark:group-hover:text-emerald-300",
+    employer: "text-emerald-600 dark:text-emerald-400",
+  },
+};
 
-  const getIconColor = () => {
-    return color === "success"
-      ? "text-emerald-600 bg-emerald-50"
-      : "text-primary-600 bg-primary-50";
-  };
-
-  const getIcon = () => {
-    return color === "success" ? "fas fa-graduation-cap" : "fas fa-briefcase";
-  };
+const WorkCard = ({ work, emp, time, descrip, tone, delay, lang, ui }) => {
+  const months = positionMonths(time);
+  const current = isCurrentPosition(time);
+  const technologies = extractTechnologies(descrip);
+  const body = stripTechLine(descrip);
 
   return (
-    <div
-      className={`${getColorClasses()} group`}
-      data-aos="fade-up"
-      data-aos-delay={delay}
+    <Reveal
+      delay={delay}
+      className={`timeline-card group ${tone.dot}`}
     >
-      <div className="timeline-card-body">
-        <div className="card bg-white hover:shadow-lg transition-all duration-300 group-hover:scale-105">
-          <div className="card-body">
-            <div className="flex items-start justify-between mb-3">
-              <div className="flex items-center space-x-3">
-                <div
-                  className={`w-10 h-10 rounded-lg ${getIconColor()} flex items-center justify-center flex-shrink-0`}
+      <div className="card transition-shadow duration-300 hover:shadow-lg">
+        <div className="card-body">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+            <div className="flex min-w-0 items-start gap-3">
+              <span
+                className={`flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg ${tone.iconBox}`}
+              >
+                <i className={`${tone.icon} text-sm`} aria-hidden="true"></i>
+              </span>
+              <div className="min-w-0">
+                <h3
+                  className={`text-base font-semibold text-gray-900 transition-colors dark:text-white sm:text-lg ${tone.title}`}
                 >
-                  <i className={`${getIcon()} text-sm`}></i>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1 group-hover:text-primary-700 transition-colors">
-                    {work}
-                  </h3>
-                  <p className="text-primary-600 font-medium text-sm">{emp}</p>
-                </div>
+                  {work}
+                </h3>
+                <p className={`text-sm font-medium ${tone.employer}`}>{emp}</p>
               </div>
-              <span className="text-xs bg-gray-100 text-gray-600 px-3 py-1 rounded-full font-medium whitespace-nowrap">
+            </div>
+
+            <div className="flex flex-shrink-0 flex-wrap items-center gap-2 sm:justify-end">
+              {current && (
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-100 px-2.5 py-1 text-xs font-semibold text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-300">
+                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                  {ui.currentBadge}
+                </span>
+              )}
+              <span className="whitespace-nowrap rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-600 dark:bg-slate-700 dark:text-slate-300">
                 {time}
               </span>
+              {months > 0 && (
+                <span className="whitespace-nowrap text-xs text-gray-400 dark:text-slate-500">
+                  {formatDuration(months, lang)}
+                </span>
+              )}
             </div>
-
-            <div className="max-w-none">
-              <p className="text-gray-600 leading-relaxed whitespace-pre-line m-0 text-sm">
-                {descrip}
-              </p>
-            </div>
-
-            {/* Tags for technologies (if description contains tech keywords) */}
-            {descrip && (
-              <div className="flex flex-wrap gap-2 mt-4">
-                {descrip
-                  .match(
-                    /Node\.js|React|Vue\.js|TypeScript|JavaScript|Golang|Python|Java|AWS|Docker|Kubernetes/gi
-                  )
-                  ?.slice(0, 6)
-                  .map((tech, i) => (
-                    <span
-                      key={i}
-                      className="inline-flex items-center px-2 py-1 rounded-md bg-primary-50 text-primary-700 text-xs font-medium"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-              </div>
-            )}
           </div>
+
+          <p className="mt-4 whitespace-pre-line text-sm leading-relaxed text-gray-600 dark:text-slate-400">
+            {body}
+          </p>
+
+          {technologies.length > 0 && (
+            <div className="mt-4 flex flex-wrap gap-2">
+              <span className="sr-only">{ui.techStack}</span>
+              {technologies.map((tech) => (
+                <span key={tech} className="chip">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
       </div>
-    </div>
+    </Reveal>
   );
 };
 
-const WorkContent = ({ works, title, color = "primary", stats = {} }) => {
+const WorkContent = ({ works, title, color = "primary", stats = {}, ui, lang }) => {
+  const tone = TONES[color] ?? TONES.primary;
+  const ordered = sortPositions(works);
+  const longest = Math.max(0, ...ordered.map((item) => positionMonths(item.time)));
+  const currentCount = ordered.filter((item) => isCurrentPosition(item.time)).length;
+
   return (
-    <div className="work-experience-section">
-      <h2 className="section-title">{title}</h2>
+    <div>
+      <Reveal as="h2" className="section-title">
+        {title}
+      </Reveal>
 
-      {/* Stats */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-        <div className="text-center p-4 bg-primary-50 rounded-lg">
-          <div className="text-2xl font-bold text-primary-600">
-            {works.length}
+      <Reveal className="mb-8 grid grid-cols-1 gap-3 sm:grid-cols-3">
+        <div className="stat-tile">
+          <div className="text-2xl font-bold text-primary-600 dark:text-primary-400">
+            {ordered.length}
           </div>
-          <div className="text-sm text-gray-600">
-            {color === "success"
-              ? stats.titles || "Títulos"
-              : stats.positions || "Posiciones"}
+          <div className="text-sm text-gray-600 dark:text-slate-400">
+            {color === "success" ? stats.titles : stats.positions}
           </div>
         </div>
-        <div className="text-center p-4 bg-blue-50 rounded-lg">
-          <div className="text-2xl font-bold text-blue-600">
-            {Math.max(
-              ...works.map((w) => {
-                const years = w.time?.match(/(\d{4})/g);
-                return years
-                  ? parseInt(years[years.length - 1]) - parseInt(years[0])
-                  : 0;
-              })
-            )}
+        <div className="stat-tile">
+          <div className="text-2xl font-bold text-sky-600 dark:text-sky-400">
+            {longest > 0 ? formatDuration(longest, lang) : "—"}
           </div>
-          <div className="text-sm text-gray-600">
-            {stats.yearsMax || "Años máx."}
+          <div className="text-sm text-gray-600 dark:text-slate-400">
+            {stats.yearsMax}
           </div>
         </div>
-        <div className="text-center p-4 bg-emerald-50 rounded-lg">
-          <div className="text-2xl font-bold text-emerald-600">
-            {
-              works.filter(
-                (w) =>
-                  w.time?.includes("Present") || w.time?.includes("Presente")
-              ).length
-            }
+        <div className="stat-tile">
+          <div className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">
+            {currentCount}
           </div>
-          <div className="text-sm text-gray-600">
-            {stats.current || "Actuales"}
+          <div className="text-sm text-gray-600 dark:text-slate-400">
+            {stats.current}
           </div>
         </div>
-      </div>
+      </Reveal>
 
-      <div className="timeline relative">
-        {works.map((item, i) => {
-          return <WorkCard {...item} color={color} key={i} delay={i * 50} />; // Más rápido: 100ms → 50ms
-        })}
+      <div className="timeline">
+        {ordered.map((item, i) => (
+          <WorkCard
+            key={`${item.work}-${item.time}`}
+            {...item}
+            tone={tone}
+            delay={Math.min(i, 4) * 60}
+            lang={lang}
+            ui={ui}
+          />
+        ))}
       </div>
     </div>
   );

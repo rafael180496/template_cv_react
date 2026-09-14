@@ -1,82 +1,92 @@
-import React from "react";
-import { getCurrentAge, getCurrentExperienceYears } from "../service/util";
+import { applyDynamicTokens } from "../service/util";
+import Reveal from "./Reveal";
 
-const Aboutme = ({ titles, info }) => {
-  // Reemplazar DYNAMIC_EXPERIENCE_YEARS con el valor calculado
-  const processedAboutMe = info.aboutme.replace(
-    "DYNAMIC_EXPERIENCE_YEARS",
-    getCurrentExperienceYears()
+/** Sin acentos y en minúsculas: el mismo dato se rotula distinto en cada idioma. */
+const normalize = (text = "") =>
+  text
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .toLowerCase();
+
+const FIELDS = [
+  { match: ["edad", "age"], icon: "fas fa-cake-candles" },
+  { match: ["correo", "email"], icon: "fas fa-envelope", href: (v) => `mailto:${v}` },
+  { match: ["telefono", "phone"], icon: "fas fa-phone", href: (v) => `tel:${v.replace(/[^+\d]/g, "")}` },
+  { match: ["direccion", "address"], icon: "fas fa-location-dot" },
+  { match: ["identificacion", "cedula", "id"], icon: "fas fa-id-card" },
+];
+
+const fieldFor = (title) => {
+  const key = normalize(title);
+  return FIELDS.find((field) => field.match.some((m) => key.includes(m)));
+};
+
+const ContactRow = ({ title, val, delay }) => {
+  const field = fieldFor(title);
+  const value = applyDynamicTokens(val);
+  const href = field?.href?.(value);
+
+  const body = (
+    <>
+      <i
+        className={`${field?.icon ?? "fas fa-circle-info"} mt-0.5 w-4 flex-shrink-0 text-center text-primary-600 dark:text-primary-400`}
+        aria-hidden="true"
+      ></i>
+      <span className="min-w-0">
+        <span className="block text-xs font-medium uppercase tracking-wide text-gray-400 dark:text-slate-500">
+          {title}
+        </span>
+        <span className="block break-words text-gray-700 dark:text-slate-300">
+          {value}
+        </span>
+      </span>
+    </>
   );
 
   return (
-    <div className="lg:col-span-2" data-aos="fade-up" data-aos-delay="50">
-      <h2 className="section-title">{titles.about}</h2>
-      <div className="max-w-none">
-        <p className="text-gray-600 leading-relaxed whitespace-pre-line text-base">
-          {processedAboutMe}
+    <Reveal as="li" delay={delay}>
+      {href ? (
+        <a href={href} className="contact-info">
+          {body}
+        </a>
+      ) : (
+        <div className="contact-info">{body}</div>
+      )}
+    </Reveal>
+  );
+};
+
+const AboutContent = ({ info, titles, ui }) => {
+  const aboutme = applyDynamicTokens(info.aboutme);
+
+  return (
+    <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+      <Reveal className="lg:col-span-2">
+        <h2 className="section-title">{titles.about}</h2>
+        <p className="whitespace-pre-line leading-relaxed text-gray-600 dark:text-slate-400">
+          {aboutme}
         </p>
-      </div>
-    </div>
-  );
-};
+      </Reveal>
 
-const CardInfo = ({ title, val, delay, icon }) => {
-  // Si el valor es "DYNAMIC_AGE", calculamos la edad actual
-  const displayValue = val === "DYNAMIC_AGE" ? getCurrentAge() : val;
-
-  return (
-    <div className="contact-info" data-aos="fade-up" data-aos-delay={delay}>
-      {icon && <i className={`${icon} text-primary-600 w-5 text-center`}></i>}
-      <div className="flex-1">
-        <span className="font-medium text-gray-700">{title}:</span>
-        <span className="text-gray-600 ml-2">{displayValue}</span>
-      </div>
-    </div>
-  );
-};
-
-const CardInfoArray = ({ aboutmeitems }) => {
-  const iconMap = {
-    Edad: "fas fa-birthday-cake",
-    Age: "fas fa-birthday-cake",
-    Correo: "fas fa-envelope",
-    Email: "fas fa-envelope",
-    Telefono: "fas fa-phone",
-    Phone: "fas fa-phone",
-    Direccion: "fas fa-map-marker-alt",
-    Address: "fas fa-map-marker-alt",
-    Cedula: "fas fa-id-card",
-    ID: "fas fa-id-card",
-  };
-
-  return (
-    <div className="lg:col-span-1">
-      <h3 className="text-xl font-semibold text-gray-900 mb-4">
-        Información de Contacto
-      </h3>
-      <div className="space-y-3">
-        {aboutmeitems.map((item, i) => {
-          return (
-            <CardInfo
-              key={i}
-              delay={i * 40 + 150} // Más rápido y fluido
+      <div className="lg:col-span-1">
+        <Reveal
+          as="h3"
+          variant="right"
+          className="mb-4 text-lg font-semibold text-gray-900 dark:text-white"
+        >
+          {ui.contactTitle}
+        </Reveal>
+        <ul className="space-y-1">
+          {info.aboutmeitems.map((item, i) => (
+            <ContactRow
+              key={item.title}
               title={item.title}
               val={item.val}
-              icon={iconMap[item.title]}
+              delay={i * 60}
             />
-          );
-        })}
+          ))}
+        </ul>
       </div>
-    </div>
-  );
-};
-
-const AboutContent = ({ titles, info }) => {
-  const { aboutmeitems } = info;
-  return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-      <Aboutme titles={titles} info={info} />
-      <CardInfoArray aboutmeitems={aboutmeitems} />
     </div>
   );
 };

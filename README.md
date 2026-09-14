@@ -1,355 +1,244 @@
-# 📄 Rafael Antonio Hidalgo Romero - CV Digital Interactivo
+# 📄 Rafael Antonio Hidalgo Romero — CV Digital Interactivo
 
-![React](https://img.shields.io/badge/React-19.1.1-61DAFB?style=for-the-badge&logo=react&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-6.3.0-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.1.12-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-Ready-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/React-19.3-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-8.3-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.3-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![Node](https://img.shields.io/badge/Node-24.x-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 
-> **CV Digital Moderno y Profesional** - Desarrollado con las últimas tecnologías web para una experiencia interactiva y responsiva.
+> CV digital bilingüe, con modo oscuro, versión imprimible y despliegue
+> automático a GitHub Pages.
 
-## 🚀 [Ver CV en Vivo](http://rafael180496.github.io/template_cv_react)
+## 🚀 [Ver CV en vivo](https://rafael180496.github.io/template_cv_react/)
 
 ---
 
-## 👨‍💻 Sobre el Desarrollador
+## 👨‍💻 Sobre el desarrollador
 
 **Rafael Antonio Hidalgo Romero**
-*Full Stack Developer & Technology Consultant*
+*Desarrollador Full Stack & Consultor Tecnológico*
 
-- 🎂 **28 años** (nacido 18 de abril, 1996)
-- 💼 **7+ años de experiencia** (desde marzo 2017)
-- 🏢 **Consultor Tecnológico** en Zerviz
-- 🌍 **Ubicación**: Doral City, Florida
-- 📧 **Email**: rafael180496@gmail.com
-- 💻 **GitHub**: [rafael180496](https://github.com/rafael180496)
-- 🔗 **LinkedIn**: [Rafael Hidalgo](https://linkedin.com/in/rafael-hidalgo)
+- 🎂 Nacido el 18 de abril de 1996
+- 💼 Desarrollando profesionalmente desde marzo de 2017
+- 🏢 Consultor tecnológico en Zerviz
+- 🌍 Managua, Nicaragua
+- 📧 rafael180496@gmail.com
+- 💻 [github.com/rafael180496](https://github.com/rafael180496)
+- 🔗 [LinkedIn](https://www.linkedin.com/in/rafael-antonio-hidalgo-romero-71608a116/)
+
+> La edad y los años de experiencia **no están escritos en ningún texto**: se
+> calculan en `src/service/util.js` a partir de la fecha de nacimiento y del
+> inicio de carrera, y los archivos de idioma los interpolan con los
+> marcadores `DYNAMIC_AGE` y `DYNAMIC_EXPERIENCE_YEARS`.
 
 ### 🎯 Especialidades
 
 ```javascript
 const expertise = {
-  backend: ['Node.js', 'Golang', 'Java', 'Spring Boot', 'NestJS'],
-  frontend: ['React', 'Vue.js', 'JavaScript', 'TypeScript'],
-  mobile: ['Flutter', 'React Native', 'Kotlin'],
-  cloud: ['AWS Lambda', 'Docker', 'Microservicios'],
-  databases: ['SQL', 'MongoDB', 'DynamoDB', 'SQLite'],
-  tools: ['Git', 'Azure DevOps', 'Zendesk', 'Five9', 'SQS']
+  backend:   ['Golang', 'Node.js', 'NestJS', 'Java', 'Spring Boot'],
+  frontend:  ['React', 'Vue.js', 'TypeScript'],
+  mobile:    ['Flutter', 'React Native', 'Kotlin'],
+  cloud:     ['AWS Lambda', 'Docker', 'Microservicios', 'Azure DevOps'],
+  databases: ['Oracle', 'PostgreSQL', 'MongoDB', 'DynamoDB'],
+  legacy:    ['COBOL', 'Sistemas batch', 'Facturación electrónica'],
 };
 ```
 
-### 🏆 Experiencia Destacada
+### 🏆 Trayectoria
 
-- **Zerviz (2021-Actual)**: Consultor tecnológico para Millicom(TIGO), Copa Airlines, Rosen, Abcdin
-- **ZeroQ (2021-2022)**: Desarrollo full-stack con Vue.js y Ruby on Rails
-- **Sigeme (2020-2021)**: Coordinador y desarrollador backend del sistema SGC
-- **The Data Age (2017-2021)**: Líder de desarrollo del sistema O-SGC en Golang
-- **Proyectos Freelance**: APIs REST, aplicaciones móviles, sistemas de facturación
-
----
-
-## 🛠️ Tecnologías del Proyecto
-
-### **Frontend**
-- ⚛️ **React 19** - Última versión con createRoot API
-- ⚡ **Vite 6** - Build tool ultra-rápido
-- 🎨 **Tailwind CSS 4** - Framework CSS utility-first
-- 📱 **Responsive Design** - Optimizado para todos los dispositivos
-- ✨ **AOS Animations** - Animaciones smooth on scroll
-
-### **Funcionalidades**
-- 🌐 **Bilingüe** - Español/Inglés dinámico
-- 🎂 **Edad dinámica** - Calculada automáticamente
-- 📊 **Experiencia dinámica** - Años actualizados desde marzo 2017
-- 📄 **Generación PDF** - CV descargable con diseño optimizado
-- 🎯 **Skills interactivos** - Barras de progreso con niveles de expertise
-- 📱 **Mobile-first** - Diseño completamente responsivo
-- ⚡ **Performance optimized** - Carga rápida y animaciones fluidas
-
-### **Características Técnicas**
-- 📦 **ES Modules** - JavaScript moderno
-- 🎨 **Custom Theme** - Colores y tipografías profesionales
-- 🖨️ **Print-optimized PDF** - Sin recortes, diseño compacto
-- 🔄 **Hot Reload** - Desarrollo ágil con Vite
-- 📱 **PWA Ready** - Preparado para Progressive Web App
-- 🚀 **GitHub Pages Deploy** - CI/CD automático
+| Periodo | Puesto |
+|---|---|
+| Mar 2021 — Actual | Consultor tecnológico en **Zerviz** (Millicom/TIGO, Copa Airlines, Rosen, Abcdin) |
+| Jun 2021 — Actual | Coordinador y desarrollador backend en **Sigeme** (Guatemala) |
+| Sep 2021 — Sep 2026 | Desarrollador Backend Senior en **ZeroQ** (Chile) |
+| Jun 2021 — Ene 2022 | Desarrollador full stack en **AnanaSoft** (Costa Rica) |
+| Mar 2017 — Jun 2021 | Coordinador y desarrollador del sistema O-SGC en **The Data Age** |
 
 ---
 
-## 🚀 Inicio Rápido
+## ✨ Qué hace la página
 
-### **Prerrequisitos**
+- **Bilingüe ES/EN** — arranca en el idioma del navegador, recuerda el cambio
+  y actualiza el atributo `lang` del documento.
+- **Modo claro / oscuro** — sigue al sistema operativo mientras el usuario no
+  elija; la elección se persiste. El tema se pinta antes del primer render, así
+  que no hay parpadeo blanco al cargar en oscuro.
+- **Navegación con sección activa** — la cabecera resalta la sección que se
+  está leyendo (`IntersectionObserver`).
+- **Versión imprimible** — el botón de PDF abre el diálogo de impresión del
+  navegador con una maqueta A4 propia, desde un iframe oculto (no lo bloquean
+  los bloqueadores de ventanas emergentes).
+- **Duraciones calculadas** — cada puesto muestra cuánto duró; los que siguen
+  vigentes se miden contra hoy y se marcan como actuales.
+- **Accesible** — enlace para saltar al contenido, foco visible, roles ARIA en
+  las barras de nivel y respeto por `prefers-reduced-motion`.
+
+---
+
+## 🛠️ Stack
+
+| Capa | Tecnología |
+|---|---|
+| UI | React 19 |
+| Build | Vite 8 (Rolldown) |
+| Estilos | Tailwind CSS 4 (CSS-first, sin `tailwind.config.js`) |
+| Animación | `IntersectionObserver` propio (`src/hooks/useReveal.js`) |
+| Iconos | Font Awesome 6 (CDN) |
+| Calidad | ESLint 10 (flat config) |
+| Despliegue | GitHub Actions → GitHub Pages |
+
+> **Sin AOS.** La biblioteca de animaciones se reemplazó por un hook de ~20
+> líneas: era una dependencia sin mantenimiento que además cargaba su CSS desde
+> un CDN externo y no respetaba `prefers-reduced-motion`.
+>
+> **Sin `html2pdf.js`.** Estaba declarada pero nunca se importaba; arrastraba
+> `jspdf`, `html2canvas` y `dompurify` al `node_modules` sin usarse.
+
+---
+
+## 🚀 Inicio rápido
+
+### Requisitos
+
 ```bash
-# Node.js 18+ requerido
-node --version  # v18.0.0+
-npm --version   # v8.0.0+
+nvm use            # lee .nvmrc → Node 24.19.0
+node --version     # >= 22.12 (mínimo declarado en engines)
 ```
 
-### **Instalación**
+### Instalación
+
 ```bash
-# Clonar repositorio
 git clone https://github.com/rafael180496/template_cv_react.git
 cd template_cv_react
-
-# Instalar dependencias
-npm install
-
-# Ejecutar en modo desarrollo
-npm run dev
+npm ci
+npm run dev        # http://localhost:3000
 ```
 
-### **Scripts Disponibles**
-```bash
-npm run dev       # 🚀 Desarrollo (localhost:5173)
-npm run build     # 📦 Build para producción
-npm run preview   # 👀 Preview del build
-npm run deploy    # 🌐 Deploy a GitHub Pages
-```
+### Scripts
+
+| Script | Qué hace |
+|---|---|
+| `npm run dev` | Servidor de desarrollo en el puerto 3000 |
+| `npm run build` | Build de producción en `dist/` |
+| `npm run preview` | Sirve el build para revisarlo |
+| `npm run lint` | ESLint sobre todo el proyecto |
 
 ---
 
-## 📁 Estructura del Proyecto
+## 📁 Estructura
 
 ```
 template_cv_react/
-├── 📂 src/
-│   ├── 📂 assets/
-│   │   ├── 🌐 lang/           # Traducciones ES/EN
-│   │   ├── 🖼️  img/           # Imágenes y assets
-│   │   └── 📊 skills.json     # Datos de habilidades
-│   ├── 📂 components/
-│   │   ├── 🏠 CoverContent.jsx    # Header principal
-│   │   ├── 👤 AboutContent.jsx    # Información personal
-│   │   ├── 🎯 SkillContent.jsx    # Habilidades técnicas
-│   │   ├── 💼 WorkContent.jsx     # Experiencia laboral
-│   │   ├── 🌐 HeaderContent.jsx   # Navegación y social
-│   │   ├── 🔗 SocialCard.jsx      # Enlaces sociales
-│   │   ├── 📄 PdfGenerator.jsx    # Generador de PDF
-│   │   └── 📱 BodyContent.jsx     # Layout principal
-│   ├── 📂 service/
-│   │   └── ⚙️  util.js         # Utilidades y cálculos
-│   ├── 📂 page/
-│   │   └── 🏠 HomePage.jsx     # Página principal
-│   └── 🎨 App.js              # Componente raíz
-├── ⚙️  vite.config.js         # Configuración Vite
-├── 🎨 tailwind.config.js      # Configuración Tailwind
-├── 📦 package.json           # Dependencias y scripts
-└── 📝 README.md              # Este archivo
+├── .github/workflows/deploy.yml   # CI/CD: lint + build + deploy a Pages
+├── src/
+│   ├── assets/
+│   │   ├── lang/{es,en}.json      # Todo el contenido del CV
+│   │   ├── img/avatar.jpg
+│   │   └── skills.json            # Habilidades y niveles
+│   ├── components/
+│   │   ├── HeaderContent.jsx      # Cabecera fija + navegación
+│   │   ├── CoverContent.jsx       # Portada
+│   │   ├── AboutContent.jsx       # Sobre mí + contacto
+│   │   ├── SkillContent.jsx       # Barras de nivel
+│   │   ├── WorkContent.jsx        # Línea de tiempo
+│   │   ├── FooterContent.jsx
+│   │   ├── PdfGenerator.jsx       # Botón de versión imprimible
+│   │   ├── Avatar.jsx, Reveal.jsx, SocialCard.jsx,
+│   │   └── ThemeToggle.jsx, BackToTop.jsx
+│   ├── hooks/
+│   │   ├── useReveal.js           # Animación al entrar en pantalla
+│   │   ├── useTheme.js            # Claro / oscuro
+│   │   └── useActiveSection.js    # Sección activa en la navegación
+│   ├── provider/
+│   │   ├── langContext.js         # Contexto + hook useLang
+│   │   └── LangProvider.jsx       # Estado del idioma
+│   ├── service/
+│   │   ├── util.js                # Fechas, duraciones, tecnologías
+│   │   ├── sections.js            # Ids de las secciones navegables
+│   │   └── pdfDocument.js         # HTML de la versión imprimible
+│   ├── page/HomePage.jsx
+│   ├── App.jsx
+│   ├── index.jsx
+│   └── index.css                  # Tema Tailwind v4 + modo oscuro
+├── eslint.config.js
+├── vite.config.js
+└── .nvmrc
 ```
 
 ---
 
 ## 🎨 Personalización
 
-### **Modificar Información Personal**
-```javascript
-// src/assets/lang/es.json & en.json
+### Contenido
+
+Todo el texto vive en `src/assets/lang/es.json` y `src/assets/lang/en.json`.
+Los dos archivos tienen la misma forma: si se agrega una clave en uno hay que
+agregarla en el otro, o el idioma que falte mostrará el campo vacío.
+
+```jsonc
 {
   "info": {
     "name": "Tu Nombre",
-    "post": "Tu Posición Profesional",
-    "aboutme": "Tu descripción profesional...",
-    // ... más campos
+    "role": "Tu rol",
+    "post": "Resumen con DYNAMIC_EXPERIENCE_YEARS años de experiencia…",
+    "location": "Ciudad, País",
+    "email": "tu@correo.com",
+    "workitems": [{ "work": "…", "emp": "…", "time": "Marzo,2021 - Presente", "descrip": "…" }]
   }
 }
 ```
 
-### **Agregar/Modificar Skills**
-```javascript
-// src/assets/skills.json
-{
-  "language_skills": [
-    {
-      "title": "JavaScript",
-      "val": "90"  // Porcentaje de expertise
-    }
-  ],
-  "lib_skills": [
-    {
-      "title": "React",
-      "val": "85"
-    }
-  ]
-}
-```
+Dos convenciones del campo `descrip` que el código aprovecha:
 
-### **Personalizar Colores**
-```css
-/* src/index.css */
-@theme {
-  --color-primary: {
-    50: #eff6ff;
-    500: #3b82f6;
-    900: #1e3a8a;
-  }
-}
-```
+- Una línea que empiece con `Tecnologías:` (o `Technologies:`) se saca del
+  cuerpo y se muestra como etiquetas.
+- `time` acepta `Mes,Año - Mes,Año` o `Mes,Año - Presente`. De ahí salen la
+  duración, el orden del historial y la marca de "Actual".
+
+### Habilidades
+
+`src/assets/skills.json`, con `val` de 0 a 100. El nivel (Experto, Avanzado,
+Intermedio, Básico) y su color se derivan de ese número.
+
+### Colores y tipografía
+
+`src/index.css`, en el bloque `@theme` (Tailwind v4 se configura en CSS, no en
+`tailwind.config.js`).
 
 ---
 
-## 📱 Características del CV
+## 🌐 Despliegue
 
-### **🎯 Secciones Interactivas**
+El despliegue es automático: **cada push a `master` publica el sitio**.
+`.github/workflows/deploy.yml` corre `npm ci`, `npm run lint`, `npm run build`
+y sube `dist/` a GitHub Pages. Los pull requests corren lint y build, pero no
+publican.
 
-#### **👤 About Me**
-- ✅ Información personal dinámica
-- ✅ Edad calculada automáticamente (28 años)
-- ✅ Enlaces sociales con animaciones
-- ✅ Contacto completo
+### Configuración inicial (una sola vez)
 
-#### **💼 Experiencia Profesional**
-- ✅ Timeline interactivo con hover effects
-- ✅ 8+ posiciones profesionales detalladas
-- ✅ Tecnologías utilizadas como tags
-- ✅ Descripciones completas de proyectos
+En el repositorio: **Settings → Pages → Build and deployment → Source:
+`GitHub Actions`**.
 
-#### **🎓 Educación**
-- ✅ Ingeniería en Computación (2018)
-- ✅ Universidad Politécnica de Nicaragua
-- ✅ Descripción académica completa
+Con la fuente en `Deploy from a branch` el workflow sube el artefacto y el
+sitio no cambia, sin ningún error visible.
 
-#### **💻 Habilidades Técnicas**
-- ✅ 18+ lenguajes de programación
-- ✅ 25+ frameworks y herramientas
-- ✅ Barras de progreso animadas
-- ✅ Niveles de expertise coloreados
+### Base path
 
-#### **📄 PDF Generator**
-- ✅ Generación nativa del navegador
-- ✅ Diseño optimizado sin recortes
-- ✅ Información completa en formato imprimible
-- ✅ Estilos profesionales para reclutadores
-
-### **🌟 Funcionalidades Avanzadas**
-
-#### **🌐 Internacionalización**
-```javascript
-// Cambio dinámico de idioma
-const switchLanguage = (lang) => {
-  // ES: Español completo
-  // EN: English full translation
-}
-```
-
-#### **📊 Analytics Dinámicos**
-```javascript
-// Cálculos automáticos
-getCurrentAge()           // 28 años
-getCurrentExperienceYears() // 7+ años desde 2017
-```
-
-#### **🎨 Animaciones Fluidas**
-```javascript
-// AOS (Animate On Scroll)
-AOS.init({
-  duration: 600,    // Animaciones suaves
-  delay: 50,        // Efectos escalonados
-  easing: 'ease'    // Transiciones naturales
-});
-```
-
----
-
-## 🚀 Performance
-
-### **⚡ Métricas de Rendimiento**
-- ✅ **First Paint**: < 1s
-- ✅ **Interactive**: < 2s
-- ✅ **Bundle Size**: < 500KB
-- ✅ **Mobile Score**: 95+
-
-### **🔧 Optimizaciones**
-- ✅ **Code Splitting** con Vite
-- ✅ **Tree Shaking** automático
-- ✅ **Asset Optimization**
-- ✅ **Lazy Loading** de imágenes
-- ✅ **Minificación** CSS/JS
-
----
-
-## 🌐 Deployment
-
-### **GitHub Pages (Automático)**
-```bash
-# Deploy automático con cada push a main
-npm run deploy
-```
-
-### **Otros Servicios**
-```bash
-# Vercel
-npm run build && vercel --prod
-
-# Netlify
-npm run build && netlify deploy --prod --dir=dist
-
-# Surge
-npm run build && cd dist && surge
-```
+`vite.config.js` fija `base: '/template_cv_react/'` porque es un *project site*
+de GitHub Pages. Si el repositorio cambia de nombre —o el sitio pasa a un
+dominio propio— hay que ajustar ese valor y las rutas absolutas de
+`index.html`, o la página cargará sin estilos.
 
 ---
 
 ## 🤝 Contribuir
 
-### **🐛 Reportar Issues**
-¿Encontraste un bug? [Crear issue](https://github.com/rafael180496/template_cv_react/issues)
-
-### **💡 Sugerencias**
-¿Ideas para mejorar? [Crear discussion](https://github.com/rafael180496/template_cv_react/discussions)
-
-### **🔧 Pull Requests**
-1. Fork el proyecto
-2. Crear feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit cambios (`git commit -m 'Add AmazingFeature'`)
-4. Push branch (`git push origin feature/AmazingFeature`)
-5. Abrir Pull Request
+1. Fork del proyecto
+2. `git checkout -b feature/mi-mejora`
+3. `npm run lint && npm run build` antes de commitear
+4. Pull request contra `master`
 
 ---
 
 ## 📄 Licencia
 
-Este proyecto está bajo la **MIT License** - ver [LICENSE](LICENSE) para detalles.
-
----
-
-## 💼 ¿Por qué elegir este CV?
-
-### **Para Reclutadores**
-- 📱 **Responsivo** en todos los dispositivos
-- 📄 **PDF descargable** optimizado para impresión
-- 🔍 **Información completa** y bien organizada
-- ⚡ **Carga rápida** y experiencia fluida
-
-### **Para Desarrolladores**
-- 🛠️ **Código moderno** React 19 + Vite
-- 🎨 **Diseño profesional** con Tailwind CSS 4
-- 🔧 **Fácil personalización** y mantenimiento
-- 📦 **Estructura escalable** y bien documentada
-
-### **Tecnologías Actualizadas**
-- ✅ **React 19** - Última versión estable
-- ✅ **Vite 6** - Build tool de nueva generación
-- ✅ **Tailwind CSS 4** - Framework CSS moderno
-- ✅ **ES2023+** - JavaScript actualizado
-
----
-
-## 📞 Contacto
-
-**Rafael Antonio Hidalgo Romero**
-
-📧 **Email**: rafael180496@gmail.com
-🌐 **Portfolio**: [rafael180496.github.io](http://rafael180496.github.io/template_cv_react)
-💼 **LinkedIn**: [Rafael Hidalgo](https://linkedin.com/in/rafael-hidalgo)
-👨‍💻 **GitHub**: [rafael180496](https://github.com/rafael180496)
-
----
-
-<div align="center">
-
-**⭐ Si te gusta este proyecto, ¡dale una estrella! ⭐**
-
-*Desarrollado con ❤️ por Rafael Antonio Hidalgo Romero*
-
-**React • Vite • Tailwind CSS • TypeScript Ready**
-
-</div>
+MIT — ver [LICENSE](LICENSE).

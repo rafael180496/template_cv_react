@@ -1,133 +1,105 @@
-import React from "react";
-import { getCurrentExperienceYears } from "../service/util";
+import { applyDynamicTokens, getCurrentExperienceYears } from "../service/util";
+import Avatar from "./Avatar";
 import PdfGenerator from "./PdfGenerator";
+import Reveal from "./Reveal";
 
-const CoverContent = ({ datalang }) => {
-  const { info } = datalang;
-  const { name, post } = info;
-
-  // Reemplazar DYNAMIC_EXPERIENCE_YEARS con el valor calculado
-  const processedPost = post.replace(
-    "DYNAMIC_EXPERIENCE_YEARS",
-    getCurrentExperienceYears()
+const MetaItem = ({ icon, children, href }) => {
+  const className =
+    "inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 text-sm text-blue-50 ring-1 ring-white/15";
+  const content = (
+    <>
+      <i className={`${icon} w-4 text-center`} aria-hidden="true"></i>
+      <span>{children}</span>
+    </>
   );
 
-  return (
-    <div className="cv-header relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-900 opacity-95"></div>
-      <div className="relative z-10">
-        <div className="flex flex-col lg:flex-row items-center lg:items-start space-y-6 lg:space-y-0 lg:space-x-8">
-          <div className="flex-shrink-0">
-            <div className="w-32 h-32 lg:w-40 lg:h-40 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center shadow-2xl">
-              <div className="w-28 h-28 lg:w-36 lg:h-36 rounded-full bg-white/30 flex items-center justify-center">
-                <span className="text-4xl lg:text-5xl font-bold text-white">
-                  {name
-                    .split(" ")
-                    .map((n) => n[0])
-                    .slice(0, 2)
-                    .join("")}
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex-1 text-center lg:text-left">
-            <h1
-              className="text-3xl lg:text-5xl font-bold text-white mb-4 leading-tight"
-              data-aos="fade-left"
-              data-aos-delay="0"
-              style={{ fontFamily: "'Poppins', system-ui, sans-serif" }}
-            >
-              {name}
-            </h1>
-            <p
-              className="text-lg lg:text-xl text-blue-100 mb-6 max-w-3xl leading-relaxed"
-              data-aos="fade-left"
-              data-aos-delay="50"
-            >
-              {processedPost}
-            </p>
-
-            <div
-              className="flex flex-wrap justify-center lg:justify-start gap-4 d-print-none"
-              data-aos="fade-left"
-              data-aos-delay="100"
-            >
-              <div className="flex items-center space-x-2 text-blue-100">
-                <i className="fas fa-map-marker-alt"></i>
-                <span>Nicaragua</span>
-              </div>
-              <div className="flex items-center space-x-2 text-blue-100">
-                <i className="fas fa-envelope"></i>
-                <span>rafael180496@gmail.com</span>
-              </div>
-              <div className="flex items-center space-x-2 text-blue-100">
-                <i className="fas fa-calendar"></i>
-                <span>7+ años experiencia</span>
-              </div>
-            </div>
-
-            {/* Botón PDF */}
-            <div
-              className="mt-8 flex justify-center lg:justify-start"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <PdfGenerator datalang={datalang} />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Decorative elements */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-32 translate-x-32"></div>
-      <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-24 -translate-x-24"></div>
-    </div>
+  return href ? (
+    <a href={href} className={`${className} transition-colors hover:bg-white/20`}>
+      {content}
+    </a>
+  ) : (
+    <span className={className}>{content}</span>
   );
 };
 
-export const CoverPDF = ({ datalang }) => {
-  const { info } = datalang;
-  const { name, post } = info;
-
-  // Procesar texto dinámico
-  const processedPost = post.replace('DYNAMIC_EXPERIENCE_YEARS', getCurrentExperienceYears());
+const CoverContent = ({ datalang }) => {
+  const { info, ui } = datalang;
+  const post = applyDynamicTokens(info.post);
 
   return (
-    <div className="bg-gray-900 text-white p-8">
-      <div className="flex items-center space-x-6">
-        <div className="w-24 h-24 rounded-full bg-gray-700 flex items-center justify-center">
-          <span className="text-2xl font-bold">
-            {name
-              .split(" ")
-              .map((n) => n[0])
-              .slice(0, 2)
-              .join("")}
-          </span>
-        </div>
+    <section className="relative overflow-hidden bg-gradient-to-br from-primary-600 via-primary-700 to-primary-900 px-6 py-10 sm:px-8 sm:py-12">
+      {/* Manchas decorativas, puramente visuales. */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-white/10 blur-2xl"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-24 -left-24 h-56 w-56 rounded-full bg-white/10 blur-2xl"
+      />
 
-        <div className="flex-1">
-          <h1
-            className="text-3xl font-bold mb-2"
-            style={{ fontFamily: "'Poppins', system-ui, sans-serif" }}
+      <div className="relative flex flex-col items-center gap-8 text-center lg:flex-row lg:items-start lg:text-left">
+        <Reveal variant="zoom" className="flex-shrink-0">
+          <Avatar name={info.name} className="h-32 w-32 lg:h-40 lg:w-40" />
+        </Reveal>
+
+        <div className="min-w-0 flex-1">
+          <Reveal
+            as="h1"
+            variant="left"
+            className="text-balance text-3xl font-bold leading-tight text-white lg:text-5xl"
           >
-            {name}
-          </h1>
-          <p className="text-gray-300 text-lg leading-relaxed">{processedPost}</p>
+            {info.name}
+          </Reveal>
 
-          <div className="flex flex-wrap gap-4 mt-4 text-sm text-gray-400">
-            <div className="flex items-center space-x-2">
-              <i className="fas fa-envelope"></i>
-              <span>rafael180496@gmail.com</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <i className="fas fa-calendar"></i>
-              <span>7+ años experiencia</span>
-            </div>
-          </div>
+          <Reveal
+            as="p"
+            variant="left"
+            delay={60}
+            className="mt-2 text-base font-medium text-primary-100 lg:text-lg"
+          >
+            {info.role}
+          </Reveal>
+
+          <Reveal
+            as="p"
+            variant="left"
+            delay={120}
+            className="mt-4 max-w-3xl leading-relaxed text-blue-50/90"
+          >
+            {post}
+          </Reveal>
+
+          <Reveal
+            variant="left"
+            delay={180}
+            className="mt-6 flex flex-wrap justify-center gap-2 lg:justify-start"
+          >
+            <MetaItem icon="fas fa-location-dot">{info.location}</MetaItem>
+            <MetaItem icon="fas fa-envelope" href={`mailto:${info.email}`}>
+              {info.email}
+            </MetaItem>
+            <MetaItem icon="fas fa-briefcase">
+              {getCurrentExperienceYears()} {ui.experienceBadge}
+            </MetaItem>
+          </Reveal>
+
+          <Reveal
+            delay={240}
+            className="d-print-none mt-8 flex flex-wrap justify-center gap-3 lg:justify-start"
+          >
+            <PdfGenerator datalang={datalang} />
+            <a
+              href={`mailto:${info.email}`}
+              className="btn border border-white/30 bg-white/10 text-white backdrop-blur-sm transition-colors hover:bg-white/20"
+            >
+              <i className="fas fa-paper-plane" aria-hidden="true"></i>
+              {ui.contactTitle}
+            </a>
+          </Reveal>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

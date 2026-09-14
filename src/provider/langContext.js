@@ -1,25 +1,11 @@
-import { createContext } from "react";
-import dataes from "../assets/lang/es.json";
-import dataen from "../assets/lang/en.json";
-export const LangContext = createContext();
+import { createContext, useContext } from "react";
 
-export const langReducer = (state = {}, action) => {
-  switch (action.lang) {
-    case "ES":
-      return {
-        ...state,
-        locale:"EN",
-        datalang: dataes,
-      };
+export const LangContext = createContext(null);
 
-    case "EN":
-      return {
-        ...state,
-        locale:"ES",
-        datalang: dataen,
-      };
-
-    default:
-      return state;
+export const useLang = () => {
+  const context = useContext(LangContext);
+  if (!context) {
+    throw new Error("useLang debe usarse dentro de <LangProvider>");
   }
+  return context;
 };

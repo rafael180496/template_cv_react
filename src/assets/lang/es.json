@@ -32,7 +32,7 @@
       {
         "work": "Desarrollador Backend Senior",
         "emp": "en ZeroQ (Chile)",
-        "time": "Septiembre,2021 - Presente",
+        "time": "Septiembre,2021 - Septiembre,2026",
         "descrip": "Desarrollo de sistemas backend especializados en comunicaciones en tiempo real y atención al cliente. Implementación de arquitecturas con WebSockets para sistemas de chat y soporte técnico. Desarrollo con Go y Node.js, enfocado en alta concurrencia y escalabilidad para plataformas de atención al cliente."
       },
       {
@@ -120,6 +120,34 @@
         "link": "https://www.linkedin.com/in/rafael-antonio-hidalgo-romero-71608a116/"
       }
     ],
-    "aboutme": "Soy Rafael, un desarrollador full stack y consultor tecnológico con DYNAMIC_EXPERIENCE_YEARS años de experiencia creando soluciones innovadoras para empresas internacionales. Me especializo en arquitecturas de microservicios, sistemas distribuidos y tecnologías cloud, habiendo trabajado con clientes como Millicom (TIGO), Copa Airlines y Rosen en proyectos de gran escala.\n\nMi pasión radica en transformar ideas complejas en sistemas robustos y escalables. Tengo experiencia liderando equipos de desarrollo, desde la conceptualización hasta la implementación, utilizando tecnologías como Node.js, Golang, React, Vue.js y plataformas AWS y Azure.\n\nDisfruto enfrentar desafíos técnicos que requieren soluciones creativas, especialmente en sistemas de alta concurrencia, APIs REST, y integraciones complejas. Mi objetivo es siempre entregar valor real a través de código limpio, arquitecturas sólidas y colaboración efectiva."
+    "aboutme": "Soy Rafael, un desarrollador full stack y consultor tecnológico con DYNAMIC_EXPERIENCE_YEARS años de experiencia creando soluciones innovadoras para empresas internacionales. Me especializo en arquitecturas de microservicios, sistemas distribuidos y tecnologías cloud, habiendo trabajado con clientes como Millicom (TIGO), Copa Airlines y Rosen en proyectos de gran escala.\n\nMi pasión radica en transformar ideas complejas en sistemas robustos y escalables. Tengo experiencia liderando equipos de desarrollo, desde la conceptualización hasta la implementación, utilizando tecnologías como Node.js, Golang, React, Vue.js y plataformas AWS y Azure.\n\nDisfruto enfrentar desafíos técnicos que requieren soluciones creativas, especialmente en sistemas de alta concurrencia, APIs REST, y integraciones complejas. Mi objetivo es siempre entregar valor real a través de código limpio, arquitecturas sólidas y colaboración efectiva.",
+    "role": "Desarrollador Full Stack & Consultor Tecnológico",
+    "location": "Managua, Nicaragua",
+    "email": "rafael180496@gmail.com",
+    "phone": "+505-8884-2174"
+  },
+  "nav": {
+    "about": "Sobre mí",
+    "skills": "Habilidades",
+    "experience": "Experiencia",
+    "education": "Educación"
+  },
+  "ui": {
+    "skipToContent": "Saltar al contenido",
+    "openMenu": "Abrir menú de secciones",
+    "closeMenu": "Cerrar menú de secciones",
+    "switchLang": "Ver el CV en inglés",
+    "switchToDark": "Activar modo oscuro",
+    "switchToLight": "Activar modo claro",
+    "downloadPdf": "Descargar PDF",
+    "downloadPdfTitle": "Abrir la versión imprimible del CV",
+    "backToTop": "Volver arriba",
+    "contactTitle": "Información de contacto",
+    "experienceBadge": "años de experiencia",
+    "currentBadge": "Actual",
+    "techStack": "Tecnologías",
+    "builtWith": "Construido con React, Vite y Tailwind CSS",
+    "role": "Desarrollador Full Stack",
+    "printHint": "Imprimir / Guardar como PDF"
   }
 }
